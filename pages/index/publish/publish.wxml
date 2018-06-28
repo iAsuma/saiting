@@ -1,0 +1,22 @@
+<!--pages/index/publish/publish.wxml-->
+<view class="content">
+  <view class="form">
+    <view>
+     <text>取消规则</text>
+     <textarea placeholder='定制规则，租客临时取消，该如何处理？“车位主”临时不租用，该如何处理？' maxlength='200'></textarea>
+    </view>
+   <view>
+     <text>超时规则</text>
+     <textarea placeholder='定制规则，若租客订单超时，该如何处理？'  maxlength='200'></textarea>
+    </view>
+    <view>
+     <text>注意点什么</text>
+     <textarea placeholder='停车期间需注意点什么？非必填' maxlength='200'></textarea>
+    </view>
+  </view>
+  <view class="reserve-btm">
+    <button class="btn-red">发布xx</button>
+    <button class="btn-black-outline">跳过 直接发布</button>
+  </view>
+</view>
+  

@@ -4,6 +4,10 @@
     "pages/index/share/share",
     "pages/index/carMesSure/carMesSure",
     "pages/index/choose/choose",
+    "pages/index/publish/publish",
+    "pages/index/licence/licence",
+   
+  
     "pages/mine/mine"
   ],
   "window": {
