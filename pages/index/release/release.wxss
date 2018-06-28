@@ -1,0 +1,58 @@
+/* page/component/pages/public/public.wxss */
+.form{
+  padding:30rpx;
+}
+.item{
+  height:100rpx;
+  line-height:100rpx;
+  border-bottom:1rpx solid #eee;
+}
+.item text{
+  float:left;
+  width:200rpx;
+  font-size: 30rpx;
+}
+.item image{
+  float:right;
+  width:40rpx;
+  height:40rpx;
+  margin-top:-70rpx;
+}
+picker{
+  width:calc(100% - 50rpx);
+}
+.weui-input{
+  color:#999;
+  font-size: 28rpx;
+}
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+}
+.ck-price{
+  width:200rpx;
+  height:60rpx;
+  line-height:60rpx;
+  float:right;
+  border-left: 1rpx solid #eee;
+  margin-top:-80rpx;
+  padding-left:20rpx;
+}
+.priceIpt{
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 28rpx;
+  width:200rpx;
+}
+.ck-price text{
+  font-size: 24rpx;
+  color:#999;
+}
+.ck-price text.red{
+  color:#E83539;
+}

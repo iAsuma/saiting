@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "reserve": "../share/share",
+    "release": "../release/release"
+  }
+}

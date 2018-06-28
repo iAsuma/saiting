@@ -1,0 +1,93 @@
+ <swiper indicator-dots="{{swiper.dots}}" indicator-active-color="{{swiper.active_color}}" >
+  <block>
+    <swiper-item>
+      <text class='demo'>推荐共享</text>
+      <view class="list-detail">
+        <image class="list-left-img" src="/res/images/img.png"></image>
+        <view class="list-detail-top">
+          <label>生物纳米园xx-c09cxx</label> 
+          <text>19/时</text>
+          <image src="/res/icons/icon-yen.png"></image>
+        </view>
+        <view class="list-detail-btm"> 
+          <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
+          </view>
+          <view class="time">
+            <image src="/res/icons/icon-date.png"></image>
+            <label>2018-04-23</label>
+          </view>
+          <view class="line"></view> 
+          <view class="time">
+            <image src="/res/icons/icon-time.png"></image>
+            <label>AM 9:90 PM 12:00</label>
+          </view>
+          <view class="clear"></view>
+          
+        </view>
+       </view>
+    </swiper-item>
+    <swiper-item>
+      <text>我的订单</text>
+      <view class="list-detail">
+        <view class="list-detail-top">生物纳米园停车场-c09c车位 
+          <text>19/时</text>
+          <image src="/res/icons/icon-yen.png"></image>
+        </view>
+        <view class="list-detail-btm"> 
+          <view class="adr nomar">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
+          </view>
+          <view class="time-block">
+            进入时间
+            <label>2018-04-23</label>
+          </view> 
+          <view class="time-block">
+            离开时间
+            <label>AM 9:90 PM 12:00</label>
+          </view>
+          <view class="clear"></view>
+          <button class="btn-yy-outline">立即预约</button>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="reserve-detail">
+  <text>预定xx</text>
+  <view class="reserve-top">
+    <text>xx地址</text>
+    <view>苏州市</view>
+    <image src="/res/icons/location.png"></image>
+    <view>创业产业园5期</view>
+  </view>
+  <view class="reserve-middle">
+    <view class="list5">
+      <text>开始时间</text>
+      <view>06-26</view>
+    </view>
+    <view class="list5">
+      <text>周六</text>
+      <view>10：00</view>
+    </view>
+    <view class="list5">
+      <text class="tt">10H</text>
+      <image  src="/res/icons/toggle.png"></image>
+    </view>
+    <view class="list5">
+      <text>结束时间</text>
+      <view>06-26</view>
+    </view>
+    <view class="list5">
+      <text>周六</text>
+      <view>20：00</view>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <view class="reserve-btm">
+    <button class="btn-red">预定xx</button>
+    <button class="btn-black-outline">我有xx，我要共享</button>
+  </view>
+</view>

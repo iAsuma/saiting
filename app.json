@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/shared/shared",
+    "pages/index/release/release",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "赛停",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF171B",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "res/icons/tabs/tab_home.png",
+        "selectedIconPath": "res/icons/tabs/tab_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "res/icons/tabs/tab_scan.png",
+        "selectedIconPath": "res/icons/tabs/tab_scan.png",
+        "text": "扫一扫"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "res/icons/tabs/tab_mine.png",
+        "selectedIconPath": "res/icons/tabs/tab_mine_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
+}
