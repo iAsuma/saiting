@@ -18,6 +18,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    getLocation: function (e) {
+      //console.log(e)
+      this.triggerEvent('myevent')
+      wx.getLocation({
+        type: '',
+        altitude: true,
+        success: function (res) { 
+          //console.log(res)
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
   }
 })

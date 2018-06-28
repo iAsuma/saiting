@@ -37,6 +37,12 @@ Page({
     })
   },
 
+  onMyEvent: function (e) {
+    console.log(11)
+    console.log(e)
+    e.detail // 自定义组件触发事件时提供的detail对象
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
