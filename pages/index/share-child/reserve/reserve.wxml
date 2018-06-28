@@ -55,14 +55,13 @@
     </swiper-item>
   </block>
 </swiper>
-<button type="primary" bindtap="getLocation">获取位置</button>
 <view class="reserve-detail">
   <text>预定车位</text>
   <view class="reserve-top">
     <text>停车地址</text>
     <view>苏州市</view>
     <image src="/res/icons/positioning.png"></image>
-    <view>创业产业园5期</view>
+    <view><navigator url='../map/map'>创业产业园5期</navigator></view>
   </view>
   <view class="reserve-middle">
     <view class="list5">

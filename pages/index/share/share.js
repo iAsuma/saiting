@@ -30,7 +30,6 @@ Page({
   },
 
   switchTab: function(e){
-    console.log(e.currentTarget.dataset.tab)
     var tab = e.currentTarget.dataset.tab
     this.setData({
       tmp:tab

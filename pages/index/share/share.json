@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "reserve": "../reserve/reserve",
-    "release": "../release/release"
+    "reserve": "../share-child/reserve/reserve",
+    "release": "../share-child/release/release"
   }
 }

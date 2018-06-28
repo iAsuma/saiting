@@ -4,7 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    
   },
   data: {
     array: ['xx', 'xx1', 'xx2', 'xx3'],
