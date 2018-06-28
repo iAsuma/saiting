@@ -1,6 +1,5 @@
 <!--page/component/pages/public/public.wxml-->
 <page>
-
  <view class="form">
     <view class="item">
       <text>xxx</text>
