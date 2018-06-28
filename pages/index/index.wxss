@@ -22,6 +22,7 @@ page{
 .home-list .list-3{
   width:33%;
   float:left;
+  margin-bottom:20rpx;
 }
 .list-3 view{
   width:100rpx;

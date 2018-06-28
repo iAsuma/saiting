@@ -49,7 +49,7 @@
             <label>AM 9:90 PM 12:00</label>
           </view>
           <view class="clear"></view>
-          <button class="btn-yy-outline">立即预约</button>
+          <button class="btn-yy-outline">待付款</button>
         </view>
       </view>
     </swiper-item>

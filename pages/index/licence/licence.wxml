@@ -1,0 +1,24 @@
+<!--pages/index/licence/licence.wxml-->
+<view class="content">
+  <label class="carNum">
+    <text>车牌号</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="weui-input">{{array[index]}}</view>
+      </picker>
+    <input value="9uw99"></input>
+  </label>
+  <view class="licence-img">
+    <view class="img-box">
+      <text class="h1">请上传行驶证</text>
+      <text class="h4">未上传</text>
+    </view>
+    <text class="h4">此信息仅用于车位审核</text>
+  </view>
+  <view class="licence-img">
+    <view class="img-box">
+      <image src="/res/images/jsz.png"></image>
+    </view>
+    <text class="h4">此信息仅用于车位审核</text>
+  </view>
+  <button class="btn-red">下一步</button>
+</view>

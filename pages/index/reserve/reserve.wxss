@@ -2,6 +2,9 @@
 .list-detail{
   position: relative;
 }
+swiper{
+  height:330rpx;
+}
 .list-detail-top{
   font-family: SimHei;
   color:#000;
@@ -91,7 +94,7 @@
 }
 .list-detail-btm .line{
   border-right:1rpx solid #ccc;
-  margin:10rpx 20rpx;
+  margin:10rpx;
   float:left;
   height:18rpx;
 }

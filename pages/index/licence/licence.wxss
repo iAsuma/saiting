@@ -1,0 +1,63 @@
+/* pages/index/licence/licence.wxss */
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:100rpx;
+  height:100rpx;
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+}
+.content{
+  padding:30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  height:100%;
+}
+.carNum{
+  border-bottom:1rpx solid #eee;
+  display: block;
+  width:100%;
+  padding:30rpx 0;
+  float:left;
+}
+.carNum text{
+  float:left;
+}
+.carNum picker{
+  float:left;
+  margin-left:100rpx;
+  background:#CCE4CA;
+  width:100rpx;
+  text-align: center;
+  border-radius: 5rpx;
+}
+.carNum input{
+  float:right;
+  background:#E0F8DE;
+  text-align: center;
+  border-radius: 5rpx;
+}
+.licence-img{
+  border:1rpx solid #eee;
+  float:left;
+  width:100%;
+  margin-top:30rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  padding-bottom:30rpx;
+}
+.h1{
+  display: block;
+  font-family: SimHei;
+}
+.h4{
+  color:#999;
+  font-size: 26rpx;
+}
+.img-box{
+  padding:30rpx;
+  box-sizing: border-box;
+}
