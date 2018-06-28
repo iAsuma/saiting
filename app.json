@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/shared/shared",
-    "pages/index/release/release",
+    "pages/index/share/share",
+    "pages/index/carMesSure/carMesSure",
+    "pages/index/choose/choose",
     "pages/mine/mine"
   ],
   "window": {

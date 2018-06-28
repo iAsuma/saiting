@@ -1,0 +1,128 @@
+<view class="content">
+<radio-group bindchange="radioChange">
+  <view class="car-ul">
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view> 
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+         江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view> 
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view> 
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+    <view class="car-li">
+      <image src="/res/images/img.png"></image>
+      <view class="car-li-detail">
+        <text>苏州市创意产业园E栋303</text>
+        <view class="adr">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
+        </view>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view>
+  </view>
+  </radio-group>
+  <view class="reserve-btm">
+    <button class="btn-red">确定</button>
+    <button class="btn-black-outline">我要添加</button>
+  </view>
+ 
+</view>

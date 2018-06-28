@@ -1,0 +1,160 @@
+/* page/component/pages/public/public.wxss */
+
+.form{
+  padding-top:0;
+  border-top:20rpx solid #f8f8f8;
+}
+.item{
+  padding:0 30rpx;
+  height:100rpx;
+  line-height:100rpx;
+  border-bottom:1rpx solid #eee;
+  background: #fff;
+}
+.item text{
+  float:left;
+  width:200rpx;
+  font-size: 30rpx;
+}
+.item image{
+  float:right;
+  width:40rpx;
+  height:40rpx;
+  margin-top:-70rpx;
+}
+.weui-input{
+  color:#999;
+  font-size: 28rpx;
+}
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+}
+
+.priceIpt{
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 28rpx;
+  width:200rpx;
+}
+.item-label{
+  background:#fff;
+  padding:30rpx;
+  border-top:20rpx solid #f8f8f8;
+}
+.item-label label{
+  font-size: 28rpx;
+  margin:20rpx 0;
+  display: block;
+}
+.item-label-list text{
+  display: inline-block;
+  background:#EBEEF7;
+  padding:2rpx 20rpx;
+  margin:0 20rpx 20rpx 0;
+  border-radius: 50rpx;
+  font-size: 26rpx;
+}
+.item-label-list .active{
+  background:#E83538;
+  color:#fff;
+}
+.item-label textarea{
+  border:1px solid #F2F3F6;
+  width:100%;
+  height:200rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  padding-bottom:40rpx;
+}
+.item-upload{
+  border-radius: 10rpx;
+  background:#fff;
+  width:100%;
+  margin-top:20rpx;
+  padding:30rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: SimHei;
+}
+.item-upload image{
+  width:60rpx;
+  height:60rpx;
+  margin-bottom:-15rpx;
+}
+.txt-box{
+  position: relative;
+}
+.txt-box text{
+  color:#999;
+  font-size: 24rpx;
+  position: absolute;
+  bottom:10rpx;
+  right:20rpx;
+}
+.h1{
+  font-size: 40rpx;
+}
+.h2{
+  font-size: 30rpx;
+  display: block;
+  margin-bottom:10rpx;
+}
+.h3{
+  font-size: 24rpx;
+  display: block;
+  color:#999;
+}
+.btn-box{
+  padding:0 30rpx;
+}
+
+.img-li{
+  float:left;
+  width:20%;
+  padding:0 10rpx;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom:20rpx;
+}
+.img-li .img{
+  width:100%;
+  height:120rpx;
+}
+.img-li .remove-icon{
+  position: absolute;
+  top:-10rpx;
+  right:0rpx;
+  z-index:1;
+  width:25rpx;
+  height:25rpx;
+}
+.img-ul{
+  float:left;
+  width:100%;
+}
+.clear{
+  clear:both;
+}
+.img-li .none{
+  display: none;
+}
+.img-li text{
+  background:#000;
+  position: absolute;
+  bottom:0;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  color:#fff;
+  width:calc(100% - 20rpx);
+  left:10rpx;
+  opacity: .5;
+}

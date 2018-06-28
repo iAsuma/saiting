@@ -20,7 +20,6 @@
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
       </view>
       <label>我的车位</label>
-
     </navigator>
   </view>
   <view class="map-content">

@@ -1,18 +1,18 @@
-// pages/index/shared/shared.js
+// page/component/pages/carMesSure/carMesSure.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      tmp:1
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  
   },
 
   /**
@@ -27,14 +27,6 @@ Page({
    */
   onShow: function () {
   
-  },
-
-  switchTab: function(e){
-    console.log(e.currentTarget.dataset.tab)
-    var tab = e.currentTarget.dataset.tab
-    this.setData({
-      tmp:tab
-    })
   },
 
   /**

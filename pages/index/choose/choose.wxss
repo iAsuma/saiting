@@ -1,0 +1,94 @@
+.content{
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:100rpx;
+  height:100rpx;
+  margin:0;
+}
+.btn-black-outline{
+  color:#000;
+  background:#fff;
+  font-size: 30rpx;
+  line-height:100rpx;
+  height:100rpx;
+  margin-top:30rpx;
+}
+.clear{
+  clear:both;
+}
+.car-ul{
+  float:left;
+  width:100%;
+  padding-bottom: 300rpx;
+}
+.car-li{
+  float:left;
+  width:100%;
+  box-sizing: border-box;
+  margin-bottom:20rpx;
+  background:#fff;
+  padding:20rpx;
+  border-radius: 10rpx;
+}
+.car-li>image{
+  width:160rpx;
+  height:160rpx;
+  float: left;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.car-li-detail{
+  float:left;
+  max-width:calc(100% - 260rpx);
+  overflow: hidden;
+}
+.car-li-detail text{
+  font-family: SimHei;
+}
+.adr{
+  font-size: 26rpx;
+  color:#999;
+  line-height:50rpx;
+  margin-top:10rpx;
+}
+.adr image{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  margin-top:10rpx;
+}
+.radio{
+  float:right;
+  margin-top:50rpx;
+}
+radio .wx-radio-input{
+    margin:0;
+    height: 10rpx; 
+    width: 10rpx;
+    border-radius: 50%;
+    padding:10rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+    /* 自定义样式.... */ 
+    background-color: #e02e24; 
+    border-color:#E83539;
+    border-radius: 50%;
+    padding:10rpx;
+}
+.reserve-btm{
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 2;
+  width:100%;
+  padding:30rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  background: #f8f8f8;
+}
