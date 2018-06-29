@@ -1,0 +1,139 @@
+<view class="ceontent">
+  <view class="search">
+    <input type='text' placeholder='搜索'></input>
+    <view class="search-img">
+      <image src='/res/icons/search.png'></image>
+    </view>
+  </view>
+  <view class="status">
+    <view class="status-top">
+      <view>
+        <picker>1月30日</picker>
+        <picker>08：00</picker>
+      </view>
+      <image src="/res/icons/toggle-gray.png"></image>
+      <view>
+        <picker>2月30日</picker>
+        <picker>12：00</picker>
+      </view>
+    </view>
+    <view class="status-foot">
+      <view class="active">
+        <picker>距离</picker>
+        <image src="/res/icons/sort-red.png"></image>
+      </view>
+      <view>
+        <picker>价格</picker>
+        <image src="/res/icons/sort.png"></image>
+      </view>
+      <view>
+        <picker>评分</picker>
+        <image src="/res/icons/sort.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="car-list">
+    <navigator class="item">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
+        <view class="h4">拉克丝大减肥路上看到家饭店房间爱了空间十分浪费空间</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="price">
+          <image src="/res/icons/icon-yen.png"></image>
+          <text>15</text>
+          <text>/时</text>
+        </view>
+        <view class="dis">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <text>1.5</text>
+          <text>KM</text>
+        </view>
+      </view>
+      <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view>
+    </navigator>
+    <navigator class="item">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
+        <view class="h4">拉克丝大减肥路上看到家饭店房间爱了空间十分浪费空间</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="price">
+          <image src="/res/icons/icon-yen.png"></image>
+          <text>15</text>
+          <text>/时</text>
+        </view>
+        <view class="dis">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <text>1.5</text>
+          <text>KM</text>
+        </view>
+      </view>
+      <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view>
+    </navigator>
+    <navigator class="item">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
+        <view class="h4">拉克丝大减肥路上看到家饭店房间爱了空间十分浪费空间</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="price">
+          <image src="/res/icons/icon-yen.png"></image>
+          <text>15</text>
+          <text>/时</text>
+        </view>
+        <view class="dis">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <text>1.5</text>
+          <text>KM</text>
+        </view>
+      </view>
+      <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view>
+    </navigator>
+  </view>
+</view>

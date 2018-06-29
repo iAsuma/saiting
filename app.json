@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/index/carListDetail/carListDetail",
+    "pages/index/carList/carList",
     "pages/index/index",
     "pages/index/share/share",
     "pages/index/carMesSure/carMesSure",
