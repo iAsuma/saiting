@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/index/share/share",
-    "pages/index/carMesSure/carMesSure",
     "pages/index/choose/choose",
+    "pages/index/carMesSure/carMesSure",
     "pages/index/publish/publish",
     "pages/index/licence/licence",
     "pages/index/carListDetail/carListDetail",

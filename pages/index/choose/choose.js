@@ -20,5 +20,8 @@ Page({
     this.setData({
       items: items
     });
+  },
+  doneChoose: function(e){
+    wx.navigateBack()
   }
 })

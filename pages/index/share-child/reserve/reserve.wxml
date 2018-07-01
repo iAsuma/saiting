@@ -59,9 +59,9 @@
   <text>预定车位</text>
   <view class="reserve-top">
     <text>停车地址</text>
-    <view>苏州市</view>
+    <view>{{location.city}}</view>
     <image src="/res/icons/positioning.png"></image>
-    <view><navigator url='../map/map'>创业产业园5期</navigator></view>
+    <view><navigator url=''>{{location.address}}</navigator></view>
   </view>
   <view class="reserve-middle">
     <view class="list5">
@@ -82,11 +82,15 @@
     </view>
     <view class="list5">
       <text>结束时间</text>
-      <picker><view>{{initdate.end[1]}}</view></picker>
+      <picker mode="date" value="{{initdate.end[0]}}-{{initdate.end[1]}}" start="{{initdate.limitE[0]}}-{{initdate.limitE[1]}}" end="{{initdate.limitE[0]+1}}-{{initdate.limitE[1]}}" bindchange="bindEndDateChange">
+        <view>{{initdate.end[1]}}</view>
+      </picker>
     </view>
     <view class="list5">
       <text>{{initdate.end[2]}}</text>
-      <picker><view>{{initdate.end[3]}}</view></picker>
+      <picker mode="time" value="{{initdate.end[3]}}" bindchange="bindEndTimeChange">
+        <view>{{initdate.end[3]}}</view>
+      </picker>
     </view>
     <view class="clear"></view>
   </view>

@@ -121,7 +121,7 @@
   </view>
   </radio-group>
   <view class="reserve-btm">
-    <button class="btn-red">确定</button>
+    <button class="btn-red" bindtap="doneChoose">确定</button>
     <button class="btn-black-outline">我要添加</button>
   </view>
  

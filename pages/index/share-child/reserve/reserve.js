@@ -7,19 +7,29 @@ const minus = (s, e) => {
   var res = parseInt(e.getTime() - s.getTime()) / (60 * 60 * 1000)
   return Math.round((res * 10)) / 10
 }
+const dateForIos = date => {
+  return date.replace(/-/g, '/')
+}
+
+const app = getApp()
+var QQMapWX = require('../../../../libs/qqmap-wx-jssdk.min.js');
+var lbs = new QQMapWX({
+  key: app.globalData.QQMapKey // 必填
+});
 
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    extab: Number
   },
   /**
    * 组件的初始数据
    */
   data: {
     swiper: { dots: true, active_color: '#FF464A' },
+    location:{city:'', address: ''},
     initdate:{
       limitS: startDate,
       limitE: endDate,
@@ -28,19 +38,55 @@ Component({
       distance: minus(nowDate, someDate)
     }
   },
-  ready: function (e) {
-    console.log(nowDate)
-    console.log(util.formatTime(nowDate));
-    console.log(util.dateNeed(nowDate));
+  attached: function (e) {
+    var _this = this;
+    if (this.properties.extab != 1){
+      wx.getLocation({
+        type: 'gcj02',
+        success: function (res) {
+          var latitude = res.latitude
+          var longitude = res.longitude
+          lbs.reverseGeocoder({
+            location: {
+              latitude: latitude,
+              longitude: longitude,
+              coord_type: 5,
+            },
+            success: function (res) {
+              if (res.status == 0) {
+                _this.setData({
+                  'location.city': res.result.address_component.city,
+                  'location.address': res.result.formatted_addresses.recommend
+                })
+                wx.setStorageSync('now_where', {
+                  'city': res.result.address_component.city,
+                  'address': res.result.formatted_addresses.recommend
+                })
+              }
+            }
+          });
+        }
+      })
+    }else{
+      wx.getStorage({
+        key: 'now_where',
+        success: function (res) {
+          _this.setData({
+            'location.city': res.data.city,
+            'location.address': res.data.address
+          })
+        }
+      })
+    }
   },
   /**
    * 组件的方法列表
    */
   methods: {
     bindStartDateChange:function(e){
-      let start = new Date(e.detail.value + ' ' + this.data.initdate.start[3])
+      let start = new Date(dateForIos(e.detail.value + ' ' + this.data.initdate.start[3]))
       let end = new Date(start.getTime() + 2 * 60 * 60 * 1000)
-
+      
       this.setData({
         'initdate.start': util.dateNeed(start),
         'initdate.end': util.dateNeed(end),
@@ -48,9 +94,29 @@ Component({
       })
     },
     bindStartTimeChange:function(e){
-      let start = new Date(this.data.initdate.start[1] + ' ' + e.detail.value)
-      let end = new Date(this.data.initdate.end[1] + ' ' + this.data.initdate.end[3])
-
+      let start = new Date(dateForIos(this.data.initdate.start[0] + '-' +this.data.initdate.start[1] + ' ' + e.detail.value))
+      let end = new Date(dateForIos(this.data.initdate.end[0] + '-' +this.data.initdate.end[1] + ' ' + this.data.initdate.end[3]))
+      
+      this.setData({
+        'initdate.start': util.dateNeed(start),
+        'initdate.end': util.dateNeed(end),
+        'initdate.distance': minus(start, end)
+      })
+    },
+    bindEndDateChange: function (e) {
+      let start = new Date(dateForIos(this.data.initdate.start[0] + '-' +this.data.initdate.start[1] + ' ' + this.data.initdate.start[3]))
+      let end = new Date(dateForIos(e.detail.value + ' ' + this.data.initdate.end[3]))
+      
+      this.setData({
+        'initdate.start': util.dateNeed(start),
+        'initdate.end': util.dateNeed(end),
+        'initdate.distance': minus(start, end)
+      })
+    },
+    bindEndTimeChange: function (e) {
+      let start = new Date(dateForIos(this.data.initdate.start[0] + '-' +this.data.initdate.start[1] + ' ' + this.data.initdate.start[3]))
+      let end = new Date(dateForIos(this.data.initdate.end[0] + '-' +this.data.initdate.end[1] + ' ' + e.detail.value))
+      
       this.setData({
         'initdate.start': util.dateNeed(start),
         'initdate.end': util.dateNeed(end),

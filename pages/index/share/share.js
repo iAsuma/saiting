@@ -26,34 +26,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log(33)
+    this.setData({
+      chooosed: 'A车位'
+    })
+    console.log(this.data.chooosed)
   },
 
   switchTab: function(e){
     var tab = e.currentTarget.dataset.tab
     this.setData({
-      tmp:tab
+      tmp:tab,
+      extab: tab == 1 ? 1 : ''
     })
-  },
-
-  onMyEvent: function (e) {
-    console.log(11)
-    console.log(e)
-    e.detail // 自定义组件触发事件时提供的detail对象
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**

@@ -1,9 +1,10 @@
  <view class="form">
     <view class="item">
-      <text>xx</text>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <text>车位</text>
+      <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="weui-input">{{array[index]}}</view>
-      </picker>
+      </picker> -->
+      <view bindtap="openChoose">dddd{{heheda}}</view>
       <image src='/res/icons/right.png'></image>
     </view>
     <view class="item">
@@ -34,5 +35,5 @@
       <input class="priceIpt" placeholder='请输入单价'></input>
     </view>
     <view class="ck-price"><text class="red">15/时</text><text>（参考价）</text></view>
-    <button class="btn-red">下一步</button>
+    <button class="btn-red" bindtap="tapName">下一步</button>
 </view>
