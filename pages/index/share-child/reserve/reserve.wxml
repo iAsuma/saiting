@@ -66,23 +66,27 @@
   <view class="reserve-middle">
     <view class="list5">
       <text>开始时间</text>
-      <view>06-26</view>
+      <picker mode="date" value="{{initdate.start[0]}}-{{initdate.start[1]}}" start="{{initdate.limitS[0]}}-{{initdate.limitS[1]}}" end="{{initdate.limitS[0]+1}}-{{initdate.limitS[1]}}" bindchange="bindStartDateChange">
+        <view>{{initdate.start[1]}}</view>
+      </picker>
     </view>
     <view class="list5">
-      <text>周六</text>
-      <view>10：00</view>
+      <text>{{initdate.start[2]}}</text>
+      <picker mode="time" value="{{initdate.start[3]}}" bindchange="bindStartTimeChange">
+        <view>{{initdate.start[3]}}</view>
+      </picker>
     </view>
     <view class="list5">
-      <text class="tt">10H</text>
+      <text class="tt">{{initdate.distance}}H</text>
       <image  src="/res/icons/toggle.png"></image>
     </view>
     <view class="list5">
       <text>结束时间</text>
-      <view>06-26</view>
+      <picker><view>{{initdate.end[1]}}</view></picker>
     </view>
     <view class="list5">
-      <text>周六</text>
-      <view>20：00</view>
+      <text>{{initdate.end[2]}}</text>
+      <picker><view>{{initdate.end[3]}}</view></picker>
     </view>
     <view class="clear"></view>
   </view>

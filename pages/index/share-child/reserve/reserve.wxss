@@ -1,4 +1,3 @@
-/* page/component/pages/share/share.wxss */
 .list-detail{
   position: relative;
 }
@@ -167,6 +166,9 @@ swiper-item{
 .list5 text{
   font-size: 24rpx;
   color:#999;
+}
+.list5 picker{
+  width:100%;
 }
 .list5 view{
   font-size: 30rpx;
