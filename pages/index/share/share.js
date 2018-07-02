@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      tmp:1
+      tmp:1,
+      chooosed: '请选择车位'
   },
 
   /**
@@ -26,11 +27,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(33)
-    this.setData({
-      chooosed: 'A车位'
-    })
-    console.log(this.data.chooosed)
+    
   },
 
   switchTab: function(e){

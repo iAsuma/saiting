@@ -34,7 +34,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    QQMapKey:'QXVBZ-7FL32-TXQUW-CQDSL-XX2MJ-PXF4U'
+    userInfo: null
   }
 })

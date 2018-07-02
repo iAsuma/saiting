@@ -4,16 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    chooosed:{
+    choosed:{
       type:String,
       observer: function (newVal, oldVal, changedPath) {
         console.log(newVal)
         console.log(oldVal)
-        this.setData({
-          heheda: this.data.chooosed
-        })
-        // 属性被改变时执行的函数（可选），也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'
-        // 通常 newVal 就是新设置的数据， oldVal 是旧数据
       }
     },
     
@@ -25,11 +20,7 @@ Component({
     time: '12:01',
   },
   ready:function(){
-    console.log(this.data)
-    this.setData({
-      heheda: this.data.chooosed
-    })
-    console.log(this.data)
+    
   },
   /**
    * 组件的方法列表

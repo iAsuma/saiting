@@ -3,6 +3,7 @@ const nowDate = new Date()
 const someDate = new Date(nowDate.getTime() + 2 * 60 * 60 * 1000);
 var startDate = util.dateNeed(nowDate)
 var endDate = util.dateNeed(someDate)
+
 const minus = (s, e) => {
   var res = parseInt(e.getTime() - s.getTime()) / (60 * 60 * 1000)
   return Math.round((res * 10)) / 10
@@ -13,8 +14,9 @@ const dateForIos = date => {
 
 const app = getApp()
 var QQMapWX = require('../../../../libs/qqmap-wx-jssdk.min.js');
+var config = require('../../../../libs/config.js');
 var lbs = new QQMapWX({
-  key: app.globalData.QQMapKey // 必填
+  key: config.Config.QQMapKey // 必填
 });
 
 Component({
@@ -41,32 +43,21 @@ Component({
   attached: function (e) {
     var _this = this;
     if (this.properties.extab != 1){
-      wx.getLocation({
-        type: 'gcj02',
+      lbs.reverseGeocoder({
+        coord_type: 5,
         success: function (res) {
-          var latitude = res.latitude
-          var longitude = res.longitude
-          lbs.reverseGeocoder({
-            location: {
-              latitude: latitude,
-              longitude: longitude,
-              coord_type: 5,
-            },
-            success: function (res) {
-              if (res.status == 0) {
-                _this.setData({
-                  'location.city': res.result.address_component.city,
-                  'location.address': res.result.formatted_addresses.recommend
-                })
-                wx.setStorageSync('now_where', {
-                  'city': res.result.address_component.city,
-                  'address': res.result.formatted_addresses.recommend
-                })
-              }
-            }
-          });
+          if (res.status == 0) {
+            _this.setData({
+              'location.city': res.result.address_component.city,
+              'location.address': res.result.formatted_addresses.recommend
+            })
+            wx.setStorageSync('now_where', {
+              'city': res.result.address_component.city,
+              'address': res.result.formatted_addresses.recommend
+            })
+          }
         }
-      })
+      });
     }else{
       wx.getStorage({
         key: 'now_where',
@@ -122,6 +113,17 @@ Component({
         'initdate.end': util.dateNeed(end),
         'initdate.distance': minus(start, end)
       })
+    },
+    formSubmit: function(e){
+      var form_data = e.detail.value
+      var params = Object.keys(form_data).map(function (key) {
+        return key + "=" + form_data[key];
+      }).join("&");
+      if(params){
+        wx.navigateTo({
+          url: '../carList/carList?'+params,
+        })
+      }
     }
   }
 })

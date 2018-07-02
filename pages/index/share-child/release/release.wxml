@@ -4,7 +4,7 @@
       <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="weui-input">{{array[index]}}</view>
       </picker> -->
-      <view bindtap="openChoose">dddd{{heheda}}</view>
+      <view bindtap="openChoose">{{choosed}}</view>
       <image src='/res/icons/right.png'></image>
     </view>
     <view class="item">
