@@ -27,7 +27,7 @@ const dateNeed = date => {
   const hour = date.getHours()
   const minute = date.getMinutes()
 
-  return [year, [month, day].map(formatNumber).join('-'), formatWeek(week),[hour, minute].map(formatNumber).join(':')];
+  return [year, [month, day].map(formatNumber).join('-'), formatWeek(week),[hour, minute].map(formatNumber).join(':'), month+'月'+day+'日'];
 }
 
 module.exports = {

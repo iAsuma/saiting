@@ -1,18 +1,36 @@
-// pages/index/carList/carList.js
+const util = require('../../../utils/util.js')
+const dateForIos = date => {
+  return date.replace(/-/g, '/')
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    fatherform:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (JSON.stringify(options) != "{}"){
+      let start = new Date(dateForIos(options.sdate + ' ' + options.stime))
+      let startDate = util.dateNeed(start)
+      let end = new Date(dateForIos(options.edate + ' ' + options.etime))
+      let endDate = util.dateNeed(end)
+      options.sdate = startDate[4]
+      options.sweek = startDate[2]
+      options.edate = endDate[4]
+      options.eweek = endDate[2]
+      
+      this.setData({
+        fatherform: options
+      })
+    }
+    
   },
 
   /**

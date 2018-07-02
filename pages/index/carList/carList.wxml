@@ -8,18 +8,18 @@
   <view class="status">
     <view class="status-top">
       <view>
-        <picker>1月30日</picker>
-        <picker>08：00</picker>
+        <picker>{{fatherform.sdate}} {{fatherform.sweek}}</picker>
+        <picker>{{fatherform.stime}}</picker>
       </view>
       <image src="/res/icons/toggle-gray.png"></image>
       <view>
-        <picker>2月30日</picker>
-        <picker>12：00</picker>
+        <picker>{{fatherform.edate}} {{fatherform.eweek}}</picker>
+        <picker>{{fatherform.etime}}</picker>
       </view>
     </view>
     <view class="status-foot">
       <view class="active">
-        <picker>距离</picker>
+        <picker>附近</picker>
         <image src="/res/icons/sort-red.png"></image>
       </view>
       <view>
@@ -33,7 +33,7 @@
     </view>
   </view>
   <view class="car-list">
-    <navigator class="item">
+    <navigator class="item" url="../carListDetail/carListDetail">
       <image src='/res/images/img.png'></image>
       <view class="item-middle">
         <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
@@ -67,7 +67,7 @@
         <text>哈哈</text>
       </view>
     </navigator>
-    <navigator class="item">
+    <navigator class="item" url="../carListDetail/carListDetail">
       <image src='/res/images/img.png'></image>
       <view class="item-middle">
         <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
@@ -101,7 +101,7 @@
         <text>哈哈</text>
       </view>
     </navigator>
-    <navigator class="item">
+    <navigator class="item" url="../carListDetail/carListDetail">
       <image src='/res/images/img.png'></image>
       <view class="item-middle">
         <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>

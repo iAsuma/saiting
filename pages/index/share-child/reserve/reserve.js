@@ -119,7 +119,7 @@ Component({
       var params = Object.keys(form_data).map(function (key) {
         return key + "=" + form_data[key];
       }).join("&");
-      if(params){
+      if(params != '' && params != 'undefined'){
         wx.navigateTo({
           url: '../carList/carList?'+params,
         })
