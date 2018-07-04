@@ -8,8 +8,8 @@
     "pages/index/carMesSure/carMesSure",
     "pages/index/publish/publish",
     "pages/index/licence/licence",
-    
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/index/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",

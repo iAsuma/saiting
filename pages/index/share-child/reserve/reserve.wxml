@@ -62,7 +62,7 @@
     <text>停车地址</text>
     <view>{{location.city}}<input name="city" value='{{location.city}}' hidden/></view>
     <image src="/res/icons/positioning.png"></image>
-    <view><navigator url=''>{{location.address}}</navigator><input name="address" value='{{location.address}}' hidden/></view>
+    <view><navigator url='../map/map'>{{location.address}}</navigator><input name="address" value='{{location.address}}' hidden/></view>
   </view>
   <view class="reserve-middle">
     <view class="list5">
