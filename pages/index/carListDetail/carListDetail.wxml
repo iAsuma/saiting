@@ -77,11 +77,10 @@
   <view class="item">
     <text>使用礼仪</text>
     <view class='text-list'>
-      <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
-      <text>2.啊啊飒飒阿诗丹顿多大师大的</text>
-      <text>3.啊啊飒飒大师大的</text>
-      <text>4.啊啊飒飒大师大的</text>
-      <text>5.啊啊飒飒大师大的</text>
+      <text>1.须在开市时间内进入，结束时间内离开；</text>
+      <text>2.保持整洁、干净；</text>
+      <text>3.若取消订单，请提前10分钟取消，逾期产生相应手续费；</text>
+      <text>4.若离开时已超时，请联系车主</text>
     </view>
   </view>
   <view class="item">

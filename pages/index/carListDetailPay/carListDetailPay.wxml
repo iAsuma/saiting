@@ -1,0 +1,104 @@
+<view class="ceontent">
+  <view class="car-list">
+    <navigator class="item" url="../carListDetail/carListDetail">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
+        <view class="h4">拉克丝大减肥路上看到家饭店房间爱了空间十分浪费空间</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="price">
+          <image src="/res/icons/icon-yen.png"></image>
+          <text>15</text>
+          <text>/时</text>
+        </view>
+        <view class="dis">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <text>1.5</text>
+          <text>KM</text>
+        </view>
+      </view>
+      <!-- <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view> -->
+    </navigator>
+  </view>
+  <view class="form">
+    <view class="item-form">
+      <text>您的车牌号</text>
+      <picker class="carPicker">苏</picker>
+      <input class="carIpt" value='xxx' disabled='true'></input>
+    </view>
+    <view class="item-form">
+      <text>开始时间</text>
+      <input class="priceIpt" value='2018-08-08 6：00' disabled='true'></input>
+    </view>
+    <view class="item-form">
+      <text>结束时间</text>
+      <input class="priceIpt" value='2018-08-08 12：00' disabled='true'></input>
+    </view>
+    <view class="item-form">
+      <text>时间</text>
+      <input class="priceIpt" value='9小时' disabled='true'></input>
+    </view>
+    <view class="item-form bor-top">
+      <text>租用人</text>
+      <input class="priceIpt" placeholder='请输入联系人' disabled='true'></input>
+    </view>
+    <view class="item-form">
+      <text>手机号</text>
+      <input class="priceIpt" value='15656565656' disabled='true'></input>
+    </view>
+    <view class="item-form bor-top">
+      <text>优惠券</text>
+      <input class="priceIpt" value='无优惠券可用' disabled='false'></input>
+      <image src='/res/icons/right.png'></image>
+    </view>
+  </view>
+   
+  <view class="item-txt">
+    <text>使用礼仪</text>
+    <view class='text-list'>
+      <text>1.须在开市时间内进入，结束时间内离开；</text>
+      <text>2.保持整洁、干净；</text>
+      <text>3.若取消订单，请提前10分钟取消，逾期产生相应手续费；</text>
+      <text>4.若离开时已超时，请联系车主</text>
+    </view>
+  </view>
+  <view class="item-txt">
+    <text>使用规则</text>
+    <view class='text-list'>
+      <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
+      <text>2.啊啊飒飒阿诗丹顿多大师大的</text>
+    </view>
+  </view>
+  <view class="item-txt">
+    <text>取消规则</text>
+    <view class='text-list'>
+      <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
+      <text>2.啊啊飒飒阿诗丹顿多大师大的</text>
+    </view>
+  </view>
+  <view class="padding-btm"></view>
+  <view class="fiex-btn">
+    <view class="left">明细</view>
+    <view class="middle">
+      总计
+      <image src="/res/icons/icon-yen.png"></image>
+      <text>135</text>
+    </view>
+    <button class="btn-pay">去支付</button>
+  </view>
+</view>
