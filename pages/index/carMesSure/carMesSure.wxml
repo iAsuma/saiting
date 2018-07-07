@@ -2,36 +2,36 @@
 <page>
  <view class="form">
     <view class="item">
-      <text>xxx</text>
+      <text>车牌号</text>
       <input class="priceIpt" value='xxx' disabled='true'></input>
       <image src='/res/icons/right.png'></image>
     </view>
     <view class="item">
-      <text>xx地址</text>
-      <input class="priceIpt" value='xxxxxxxxxxx' disabled='true'></input>
+      <text>停车地址</text>
+      <input class="priceIpt" placeholder='选择停车地址' disabled='true'></input>
       <image src='/res/icons/right.png'></image>
     </view>
     <view class="item">
-      <text>xx</text>
-      <input class="priceIpt" value='c90' disabled='true'></input>
+      <text>车位</text>
+      <input class="priceIpt" placeholder='请输入车位' disabled='false'></input>
     </view>
     <view class="item">
-      <text>xxxx</text>
-      <input class="priceIpt" value='xx' disabled='true'></input>
+      <text>车位类型</text>
+      <input class="priceIpt" value='月租' disabled='true'></input>
     </view>
     <view class="item">
-      <text>有效期</text>
+      <text>有效期至</text>
       <input class="priceIpt" value='2019-02-05' disabled='true'></input>
     </view>
     <view class="item-label">
       <label>选几个标签，展示更多优势，最多选三个</label>
       <view class="item-label-list">
-        <text class="active">xxxxxxx</text>
-        <text>xxxx</text>
-        <text>xxxxxxxxxxxx</text>
+        <text class="active">宽大好停</text>
+        <text>靠近小区门口</text>
+        <text>适合女司机</text>
       </view>
       <view class="txt-box">
-        <textarea placeholder='其它想说的（优点）' maxlength='10'></textarea>
+        <textarea placeholder='其它想说的（车位优点）' maxlength='10'></textarea>
         <text>（最多10字）</text>
       </view>
     </view>

@@ -1,4 +1,8 @@
 <view class="index">
+  <view class="sys">
+    <image src="/res/icons/icon-sys.png"></image>
+    <text>扫码缴费</text>
+  </view>
   <view class="banner">
     <image src="/res/images/banner.png"></image>
   </view>
@@ -25,13 +29,31 @@
       <view>
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
       </view>
-      <label>我的车位</label>
+      <label>发布</label>
     </navigator>
     <navigator class="list-3" url="licence/licence">
       <view>
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
       </view>
-      <label>我的车位</label>
+      <label>上传</label>
+    </navigator>
+    <navigator class="list-3" url="search/search">
+      <view>
+        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
+      </view>
+      <label>搜索</label>
+    </navigator>
+    <navigator class="list-3" url="carListDetailPay/carListDetailPay">
+      <view>
+        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
+      </view>
+      <label>详情页</label>
+    </navigator>
+    <navigator class="list-3" url="../mine/mine">
+      <view>
+        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
+      </view>
+      <label>登录</label>
     </navigator>
   </view>
   <view class="map-content">
@@ -40,7 +62,7 @@
       <image src="/res/icons/icon-dw-black.png"></image>
       <label>工业园区独墅湖高教区x星湖街</label>
     </view>
-    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 150px;"></map>
+    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 150px;z-index:9"></map>
     <view class="total-maker">
       <block>可预约车位<text>14</text>个</block>
       <view class="line"></view>

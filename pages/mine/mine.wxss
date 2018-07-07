@@ -68,9 +68,11 @@ form{
 }
 button[type=primary]{
 	background:#FF171B;border:0;
+  font-size: 24rpx;
 }
 button:hover[type=primary]{
 	background:#FF171B;border:0;
+  
 }
 .res-submit{
 	margin:0 auto;

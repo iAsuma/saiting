@@ -1,0 +1,77 @@
+<view class="content">
+  <view class="search">
+    <input type='text' placeholder='搜索'></input>
+    <view class="search-img">
+      <image src='/res/icons/search.png'></image>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view>历史搜索 <view class="remove">清除</view></view>
+  <view class="history-list">
+    <view class="item">
+      <image src='/res/icons/positioning.png'></image>
+      <text class='h2 nowrap'>生物纳米园停车场</text>
+      <text class="h5 nowrap">工业园区独墅湖高教区星湖街生物纳米园</text>
+    </view>
+    <view class="item">
+      <image src='/res/icons/positioning.png'></image>
+      <text class='h2 nowrap'>生物纳米园停车场</text>
+      <text class="h5 nowrap">工业园区独墅湖高教区星湖街生物纳米园</text>
+    </view>
+    <view class="item">
+      <image src='/res/icons/positioning.png'></image>
+      <text class='h2 nowrap'>生物纳米园停车场</text>
+      <text class="h5 nowrap">工业园区独墅湖高教区星湖街生物纳米园</text>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <text>推荐共享</text>
+  <view class="list-detail">
+    <view class="list-detail-top">生物纳米园停车场-c09c车位 
+      <text>19/时</text>
+      <image src="/res/icons/icon-yen.png"></image>
+    </view>
+    <view class="list-detail-btm"> 
+      <view class="adr">
+        <image src="/res/icons/icon-dw-black.png"></image>
+        <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
+      </view>
+      <view class="time">
+        <image src="/res/icons/icon-date.png"></image>
+        <label>2018-04-23</label>
+      </view>
+      <view class="line"></view> 
+      <view class="time">
+        <image src="/res/icons/icon-time.png"></image>
+        <label>AM 9:90 PM 12:00</label>
+      </view>
+      <view class="clear"></view>
+      <button class="btn-yy">立即预约</button>
+    </view>
+  </view>
+  <view class="list-detail">
+    <view class="list-detail-top">生物纳米园停车场-c09c车位 
+      <text>19/时</text>
+      <image src="/res/icons/icon-yen.png"></image>
+    </view>
+    <view class="list-detail-btm"> 
+      <view class="adr">
+        <image src="/res/icons/icon-dw-black.png"></image>
+        <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
+      </view>
+      <view class="time">
+        <image src="/res/icons/icon-date.png"></image>
+        <label>2018-04-23</label>
+      </view>
+      <view class="line"></view> 
+      <view class="time">
+        <image src="/res/icons/icon-time.png"></image>
+        <label>AM 9:90 PM 12:00</label>
+      </view>
+      <view class="clear"></view>
+      <button class="btn-yy">立即预约</button>
+    </view>
+  </view>
+</view>

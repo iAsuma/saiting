@@ -1,0 +1,156 @@
+/* pages/index/search/search.wxss */
+.content{
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.search{
+  padding:0;
+  position: relative;
+}
+.search input{
+  background: #fff;
+  border-radius: 10rpx;
+  height:70rpx;
+  padding:0 80rpx;
+  font-size: 28rpx;
+}
+.search-img{
+  position: absolute;
+  top:15rpx;
+  left:20rpx;
+  width:40rpx;
+  height:40rpx;
+  z-index: 5;
+}
+.search-img image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.list-detail{
+  position: relative;
+  border-bottom: 1rpx solid #eee;
+  background:#fff;
+}
+.list-detail-top{
+  font-family: SimHei;
+  color:#000;
+  font-size: 32rpx;
+  padding:20rpx 0; 
+}
+.list-detail-top text{
+  color:#E83539;
+  float:right;
+  font-family: SimHei;
+}
+.list-detail-top image{
+  float:right;
+  width:30rpx;
+  height:30rpx;
+  margin-top:10rpx;
+}
+.btn-yy{
+  position: absolute;
+  right:20rpx;
+  top:100rpx;
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 28rpx;
+  line-height:60rpx;
+  height:60rpx;
+}
+.btn-yy-outline{
+  position: absolute;
+  right:0;
+  top:100rpx;
+  color:#E83539;
+  background:none;
+  border: 1rpx solid #E83538;
+  font-size: 28rpx;
+  line-height:60rpx;
+  height:60rpx;
+}
+.h1{
+  font-size: 32rpx;
+}
+.h5{
+  font-size: 28rpx;
+  color:#999;
+}
+.list{
+  background:#fff;
+  padding:20rpx;
+  box-sizing: border-box;
+  margin-bottom:20rpx;
+  float:left;
+  width:100%;
+}
+.list-detail-btm .adr image{
+  float:left;
+  width:30rpx;
+  height:30rpx;
+  margin-top:6rpx;
+}
+.list-detail-btm .adr{
+  width:70%;
+  display: block;
+  font-size: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom:20rpx;
+  color:#999;
+}
+.list-detail-btm .time{
+  margin-bottom:20rpx;
+  font-size: 26rpx;
+  float:left;
+  color:#999;
+}
+.list-detail-btm .time image{
+  float:left;
+  width:28rpx;
+  height:28rpx;
+  margin-top:6rpx;
+  margin-right: 10rpx;
+}
+.clear{
+  clear:both;
+}
+.list-detail-btm .line{
+  border-right:1rpx solid #ccc;
+  margin:10rpx 20rpx;
+  float:left;
+  height:18rpx;
+}
+.history-list{
+  float:left;
+}
+.item{
+  width:100%;
+  float:left;
+  padding:20rpx 0;
+}
+.item image{
+  width:40rpx;
+  height:40rpx;
+  float:left;
+  margin-top:30rpx;
+  margin-right:20rpx;
+}
+.item text{
+  display: block;
+  float:left;
+}
+.nowrap{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.remove{
+  float: right;
+  color:#999;
+  font-size:28rpx;
+}

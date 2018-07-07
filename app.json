@@ -1,15 +1,20 @@
 {
   "pages": [
-    "pages/index/share/share",
+    "pages/index/index",
+    "pages/mine/center/center",
+    
+    "pages/index/search/search",
+    
     "pages/index/carMesSure/carMesSure",
-    "pages/index/publish/publish",
-    "pages/index/licence/licence",
+    
     "pages/index/carListDetail/carListDetail",
+    "pages/index/licence/licence",
+    "pages/index/share/share",
+    
+    "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
-    "pages/index/index",
     "pages/index/choose/choose",
-    
     "pages/mine/mine"
   ],
   "window": {
@@ -31,13 +36,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "res/icons/tabs/tab_scan.png",
-        "selectedIconPath": "res/icons/tabs/tab_scan.png",
-        "text": "扫一扫"
-      },
-      {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/mine/center/center",
         "iconPath": "res/icons/tabs/tab_mine.png",
         "selectedIconPath": "res/icons/tabs/tab_mine_selected.png",
         "text": "我的"

@@ -7,16 +7,16 @@
   color:#fff;
   background:#E83539;
   font-size: 30rpx;
-  line-height:100rpx;
-  height:100rpx;
+  line-height:80rpx;
+  height:80rpx;
   margin:0;
 }
 .btn-black-outline{
   color:#000;
   background:#fff;
   font-size: 30rpx;
-  line-height:100rpx;
-  height:100rpx;
+  line-height:80rpx;
+  height:80rpx;
   margin-top:30rpx;
 }
 .clear{

@@ -3,6 +3,7 @@ page{
 }
 .index{
   height:100%;
+  position: relative;
 }
 .banner{
   width:100%;
@@ -191,4 +192,27 @@ page{
   display: block;
   font-size: 32rpx;
   font-weight: bold;
+}
+.sys{
+  position: fixed;
+  bottom:20rpx;
+  z-index: 9999;
+  width:250rpx;
+  height:80rpx;
+  background:#E83538;
+  border-radius: 50rpx;
+  left:50%;
+  margin-left:-125rpx;
+}
+.sys image{
+  display: block;
+  width:50rpx;
+  height:50rpx;
+  float:left;
+  margin:15rpx 20rpx 0 40rpx;
+}
+.sys text{
+  color:#fff;
+  line-height:80rpx;
+  font-size: 28rpx;
 }
