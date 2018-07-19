@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/map/map",
     "pages/mine/center/center",
     
     "pages/index/search/search",
@@ -9,7 +10,6 @@
     
     "pages/index/carListDetail/carListDetail",
     "pages/index/licence/licence",
-<<<<<<< HEAD
     "pages/index/share/share",
     
     "pages/index/publish/publish",
@@ -17,10 +17,8 @@
     "pages/index/carList/carList",
     "pages/index/choose/choose",
     "pages/mine/mine"
-=======
-    "pages/mine/mine",
-    "pages/index/map/map"
->>>>>>> cb9851f6adc50f91d5e164fccbb65c91aab9f7de
+
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

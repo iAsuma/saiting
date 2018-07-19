@@ -4,6 +4,14 @@ const app = getApp()
 
 Page({
   data: {
+    imgUrls: [
+      '/res/images/banner.png',
+      '/res/images/banner1.png'
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
