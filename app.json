@@ -9,14 +9,12 @@
     
     "pages/index/carListDetail/carListDetail",
     "pages/index/licence/licence",
-
     "pages/index/share/share",
     
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/choose/choose",
-
     "pages/mine/mine",
     "pages/index/map/map"
     

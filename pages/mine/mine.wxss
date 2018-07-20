@@ -37,10 +37,10 @@ form{
 	box-sizing: border-box;
 }
 .res-label image{
-	width:70rpx;
-	height:70rpx;
+	width:50rpx;
+	height:60rpx;
 	float:left;
-	margin-top:14rpx;
+	margin-top:24rpx;
 	margin-right:20rpx;
 }
 .res-phone{

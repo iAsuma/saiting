@@ -1,1 +1,43 @@
-<map latitude='{{latitude}}' longitude="{{longitude}}" show-location markers="{{markers}}"></map>
+<view class="content">
+  <navigator class="input-box" url="map/map">
+    <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
+    <view class="search-btn">
+      <image src='/res/icons/search.png'></image>
+    </view>
+  </navigator>
+  <map latitude='{{latitude}}' longitude="{{longitude}}" show-location markers="{{markers}}"></map>
+  <scroll-view class="ul-list" scroll-y="true">
+    <view class="li-list">
+      <image src='/res/icons/positioning.png'></image>
+      <view class="li-list-detail">
+        <view class="h1">生物纳米科技园停车场生物纳米科技园停车场</view>
+        <view class="h2 red">距离1.2KM</view>
+        <view class="h3">工业园区金鸡湖大道1355号国际科技园工业园区金鸡湖大道1355号国际科技园</view>
+      </view>
+    </view>
+    <view class="li-list">
+      <image src='/res/icons/positioning.png'></image>
+      <view class="li-list-detail">
+        <view class="h1">生物纳米科技园停车场生物纳米科技园停车场</view>
+        <view class="h2">距离1.2KM</view>
+        <view class="h3">工业园区金鸡湖大道1355号国际科技园工业园区金鸡湖大道1355号国际科技园</view>
+      </view>
+    </view>
+    <view class="li-list">
+      <image src='/res/icons/positioning.png'></image>
+      <view class="li-list-detail">
+        <view class="h1">生物纳米科技园停车场生物纳米科技园停车场</view>
+        <view class="h2">距离1.2KM</view>
+        <view class="h3">工业园区金鸡湖大道1355号国际科技园工业园区金鸡湖大道1355号国际科技园</view>
+      </view>
+    </view>
+    <view class="li-list">
+      <image src='/res/icons/positioning.png'></image>
+      <view class="li-list-detail">
+        <view class="h1">生物纳米科技园停车场生物纳米科技园停车场</view>
+        <view class="h2">距离1.2KM</view>
+        <view class="h3">工业园区金鸡湖大道1355号国际科技园工业园区金鸡湖大道1355号国际科技园</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

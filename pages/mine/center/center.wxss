@@ -25,7 +25,7 @@
 }
 .item{
   border-bottom:1rpx solid #eee;
-  padding:20rpx 80rpx;
+  padding:30rpx 80rpx;
   color:#5B5B5B;
   font-size: 30rpx;
 }

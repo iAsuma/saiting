@@ -1,33 +1,33 @@
 <!--pages/index/center/center.wxml-->
 <view class="content">
   <view class="head">
-    <image src='/res/images/head1.jpg'></image>
+    <image src='/res/images/header1.png'></image>
     <view class="h1">想个名字很难</view>
     <view class="h5">账号：188888888888</view>
   </view>
   <view class="list">
     <view class="item">
-      <image src='/res/icons/c-1.jpg'></image>
+      <image src='/res/icons/c-1.png'></image>
       <text>我的订单</text>
       <view class="point"></view>
     </view>
     <view class="item">
-      <image src='/res/icons/c-2.jpg'></image>
+      <image src='/res/icons/c-2.png'></image>
       <text>出行记录</text>
       <view class="point"></view>
     </view>
     <view class="item">
-      <image src='/res/icons/c-3.jpg'></image>
+      <image src='/res/icons/c-3.png'></image>
       <text>停车券/红包</text>
       <view class="point"></view>
     </view>
     <view class="item">
-      <image src='/res/icons/c-4.jpg'></image>
+      <image src='/res/icons/c-4.png'></image>
       <text>申请发票</text>
       <view class="point"></view>
     </view>
     <view class="item">
-      <image src='/res/icons/c-5.jpg'></image>
+      <image src='/res/icons/c-5.png'></image>
       <text>账号设置</text>
       <view class="point"></view>
     </view>
