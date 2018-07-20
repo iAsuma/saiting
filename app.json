@@ -10,24 +10,15 @@
     
     "pages/index/carListDetail/carListDetail",
     "pages/index/licence/licence",
-<<<<<<< HEAD
-=======
-
->>>>>>> 59364c83261bd8e0694fafc8e34a281b12a7793d
     "pages/index/share/share",
     
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/choose/choose",
-<<<<<<< HEAD
     "pages/mine/mine"
-
-=======
-
     "pages/mine/mine",
     "pages/index/map/map"
->>>>>>> 59364c83261bd8e0694fafc8e34a281b12a7793d
     
   ],
   "window": {
