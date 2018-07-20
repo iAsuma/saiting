@@ -1,10 +1,10 @@
 <view class="content">
-  <view class="input-box" url="map/map">
+  <navigator class="input-box" url="map/map">
     <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
     <view class="search-btn">
       <image src='/res/icons/search.png'></image>
     </view>
-  </view>
+  </navigator>
   <map latitude='{{latitude}}' longitude="{{longitude}}" show-location markers="{{markers}}"></map>
   <scroll-view class="ul-list" scroll-y="true">
     <view class="li-list">
