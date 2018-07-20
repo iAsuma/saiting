@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/map/map",
     "pages/mine/center/center",
     
     "pages/index/search/search",
@@ -16,7 +15,6 @@
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/choose/choose",
-    "pages/mine/mine"
     "pages/mine/mine",
     "pages/index/map/map"
     
