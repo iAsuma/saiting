@@ -2,6 +2,10 @@
 
 ### 拉取远程代码并且合并到本地
 	`git pull gitee master`
+```
+这里输入代码`git pull gitee master`
+```
+
 
 ### 初始化仓库 
 	`git init`
