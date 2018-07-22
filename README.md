@@ -17,5 +17,6 @@
 ### 将本地仓库代码推送到gitee的master分支 
 	git push gitee master 
 
-#### 仓库地址：https://gitee.com/iAsuma/saiting
-#### 原仓库地址：https://github.com/iAsuma/saiting
+
+仓库地址：https://gitee.com/iAsuma/saiting
+原仓库地址：https://github.com/iAsuma/saiting
