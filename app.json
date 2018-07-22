@@ -1,15 +1,15 @@
 {
   "pages": [
+    "pages/index/licence/licence",
     "pages/index/index",
     "pages/mine/center/center",
-    
+    "pages/index/share/share",
     "pages/index/search/search",
     
     "pages/index/carMesSure/carMesSure",
     
     "pages/index/carListDetail/carListDetail",
-    "pages/index/licence/licence",
-    "pages/index/share/share",
+    
     
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",

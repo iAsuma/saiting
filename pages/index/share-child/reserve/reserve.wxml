@@ -24,7 +24,6 @@
             <label>AM 9:90 PM 12:00</label>
           </view>
           <view class="clear"></view>
-          
         </view>
        </view>
     </swiper-item>

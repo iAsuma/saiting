@@ -26,6 +26,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    openChoose: function () {
+      wx.navigateTo({
+        url: '../choose/choose',
+      })
+    },
     bindPickerChange: function (e) {
       console.log('picker发送选择改变，携带值为', e.detail.value)
       this.setData({
@@ -42,10 +47,13 @@ Component({
         time: e.detail.value
       })
     },
-    openChoose:function(){
-      wx.navigateTo({
-        url: '../choose/choose',
-      })
+    limitInput: function(e){
+      var value = e.detail.value
+      var value_arr = value.split('.')
+      if (value_arr.length > 2 || (value_arr.length > 1 && value_arr[1].length > 1) ){
+        var index = value.indexOf('.')
+        return value.slice(0, index+2)
+      }
     }
   }
 })
