@@ -1,6 +1,6 @@
 # SAITING项目 GIT使用说明
 
->	将原先github的ssh公钥复制到gitee中 并将拉取和推送代码命令中的主机‘origin’改为‘gitee’
+>	将原先github的ssh公钥复制到gitee中 并将拉取和推送代码命令中的主机`origin`改为`gitee`
 
 ### 拉取远程代码并且合并到本地
 	git pull gitee master
@@ -16,3 +16,6 @@
 
 ### 将本地仓库代码推送到gitee的master分支 
 	git push gitee master 
+
+#### 仓库地址：https://gitee.com/iAsuma/saiting
+#### 原仓库地址：https://github.com/iAsuma/saiting
