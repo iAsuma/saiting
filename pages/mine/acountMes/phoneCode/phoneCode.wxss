@@ -1,0 +1,56 @@
+/* pages/mine/acountMes/changePone/changePhone.wxss */
+.btn-red{
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+  border:0;
+  background:red;
+  color:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.btn-gray{
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+  border:0;
+  background:#C8C8C8;
+  color:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.content{
+  padding:20rpx;
+}
+.change-phone input{
+  background:#fff;
+  height:100rpx;
+  line-height:100rpx;
+  margin-top:40rpx;
+  padding:0 20rpx;
+  font-size: 28rpx;
+  color:#999;
+}
+.change-phone{
+  margin-top: 60rpx;
+}
+.change-phone view{
+  color:#999;
+  font-size: 30rpx;
+  padding:0 20rpx;
+}
+.code-btn{
+  height:50rpx;
+  line-height:50rpx;
+  border-left:1rpx solid #999;
+  position: absolute;
+  top:25rpx;
+  right:20rpx;
+  z-index: 2;
+}
+.change-phone view.relative{
+  position: relative;
+  padding:0;
+}

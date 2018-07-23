@@ -26,11 +26,11 @@
       <text>申请发票</text>
       <view class="point"></view>
     </view>
-    <view class="item">
+    <navigator class="item" url='../setting/setting'>
       <image src='/res/icons/c-5.png'></image>
       <text>账号设置</text>
       <view class="point"></view>
-    </view>
+    </navigator>
   </view>
 </view>
 

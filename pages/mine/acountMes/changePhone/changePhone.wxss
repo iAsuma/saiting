@@ -1,0 +1,31 @@
+/* pages/mine/acountMes/changePone/changePhone.wxss */
+.next{
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+  border:0;
+  background:red;
+  color:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.content{
+  padding:20rpx;
+}
+.change-phone input{
+  background:#fff;
+  height:100rpx;
+  line-height:100rpx;
+  margin-top:40rpx;
+  padding:0 20rpx;
+  font-size: 28rpx;
+}
+.change-phone{
+  margin-top: 60rpx;
+}
+.change-phone view{
+  text-align: center;
+  color:#999;
+  font-size: 30rpx;
+}

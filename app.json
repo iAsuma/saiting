@@ -1,23 +1,23 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/mine/setting/setting",
+    "pages/mine/acountMes/phoneCode/phoneCode",
+    "pages/mine/acountMes/changePhone/changePhone",
+    "pages/mine/acountMes/acountMes",
     "pages/mine/center/center",
     
     "pages/index/search/search",
-    
     "pages/index/carMesSure/carMesSure",
-    
     "pages/index/carListDetail/carListDetail",
     "pages/index/licence/licence",
     "pages/index/share/share",
-    
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/choose/choose",
     "pages/mine/mine",
     "pages/index/map/map"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

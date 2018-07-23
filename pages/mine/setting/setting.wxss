@@ -1,0 +1,41 @@
+/* pages/mine/setting/setting.wxss */
+.content{
+  box-sizing: border-box;
+  padding:0 20rpx;
+  background: #fff;
+  float:left;
+  width:100%;
+  margin-top:20rpx;
+}
+.content1{
+  padding:20rpx;
+}
+.content .no-border{
+  border:0;
+}
+.set-li{
+  border-bottom:1rpx solid #eee;
+  float:left;
+  width:100%;
+  padding:30rpx 0;
+}
+.set-li view{
+  float:left;
+  font-size: 30rpx;
+}
+.set-li image{
+  float:right;
+  width:40rpx;
+  height:40rpx;
+}
+.exit-btn{
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+  border:0;
+  background:red;
+  color:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}

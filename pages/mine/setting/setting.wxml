@@ -1,0 +1,22 @@
+<!--pages/mine/setting/setting.wxml-->
+<view class="content">
+  <navigator class="set-li" url='../acountMes/acountMes'>
+    <view>账号信息</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+  <navigator class="set-li">
+    <view>车牌信息</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+  <navigator class="set-li">
+    <view>车位信息</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+  <navigator class="set-li no-border">
+    <view>诚信信息</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+</view>
+<view class="content1">
+    <button class="exit-btn">退出登录</button>
+</view>
