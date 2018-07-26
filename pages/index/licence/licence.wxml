@@ -1,11 +1,12 @@
 <!--pages/index/licence/licence.wxml-->
 <view class="content">
   <label class="carNum">
-    <text>车牌号</text>
+     <text>车牌号</text>
       <view class="carPicker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <view class="weui-input">{{array[index]}}</view>
+        <view class="weui-input">苏{{array[index]}}</view>
       </view>
-    <input value="9uw99"></input>
+      <view class="sj"></view>
+      <input value="" placeholder='请输入车牌'/>
     <plate></plate>
   </label>
   <view class="licence-img">

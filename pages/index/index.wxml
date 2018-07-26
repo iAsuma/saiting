@@ -6,12 +6,12 @@
   <view class="banner">
     <image src="/res/images/banner1.png"></image>
   </view> -->
-  <navigator class="input-box" url="map/map">
+  <!-- <navigator class="input-box" url="map/map">
     <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
     <view class="search-btn">
       <image src='/res/icons/search.png'></image>
     </view>
-  </navigator>
+  </navigator> -->
   <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">

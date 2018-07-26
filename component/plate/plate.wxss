@@ -15,24 +15,24 @@
   left:0;
   width:100%;
   background:#fff;
-  height:492rpx;
+  height:440rpx;
   z-index: 10;
 }
 .choose-detail{
-  border-top:1rpx solid #eee;
+  border-top:1rpx solid #f2f2f2;
   height:400rpx;
 }
 .choose-detail view{
   float:left;
   width:12.5%;
-  border:1rpx solid #eee;
+  border:1rpx solid #f2f2f2;
   box-sizing: border-box;
   text-align: center;
   border-right:0;
   border-top: 0;
-  height:80rpx;
-  line-height:80rpx;
-  font-size: 28rpx;
+  height:90rpx;
+  line-height:90rpx;
+  font-size: 26rpx;
 }
 .choose-detail view.active{
   background:#E83539;
@@ -42,7 +42,7 @@
   border-right:1rpx solid #eee;
 }
 .choose-btn{
-  padding:20rpx;
+  padding:15rpx 25rpx;
   width:50%;
   box-sizing: border-box;
   display: inline-block;

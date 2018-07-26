@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/licence/licence",
+   
     "pages/mine/setting/setting",
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
@@ -10,7 +12,6 @@
     "pages/index/carMesSure/carMesSure",
     "pages/index/carListDetail/carListDetail",
 
-    "pages/index/licence/licence",
     "pages/index/share/share",
 
     "pages/index/publish/publish",

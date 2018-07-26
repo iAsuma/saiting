@@ -8,26 +8,26 @@
   <view class="status">
     <view class="status-top">
       <view>
-        <picker>{{fatherform.sdate}} {{fatherform.sweek}}</picker>
+        <picker class="p60">{{fatherform.sdate}} {{fatherform.sweek}}</picker>
         <picker>{{fatherform.stime}}</picker>
       </view>
       <image src="/res/icons/toggle-gray.png"></image>
       <view>
-        <picker>{{fatherform.edate}} {{fatherform.eweek}}</picker>
+        <picker class="p60">{{fatherform.edate}} {{fatherform.eweek}}</picker>
         <picker>{{fatherform.etime}}</picker>
       </view>
     </view>
     <view class="status-foot">
       <view class="active">
-        <picker>附近</picker>
+        <view>附近</view>
         <image src="/res/icons/sort-red.png"></image>
       </view>
       <view>
-        <picker>价格</picker>
+        <view>价格</view>
         <image src="/res/icons/sort.png"></image>
       </view>
       <view>
-        <picker>评分</picker>
+        <view>评分</view>
         <image src="/res/icons/sort.png"></image>
       </view>
     </view>

@@ -33,14 +33,18 @@
 }
 .status-top view{
   float:left;
-  width:calc(50% - 50rpx);
+  width:calc(50% - 30rpx);
   text-align: center;
 }
 .status-top view picker{
-  width:50%;
+  width:40%;
   float:left;
   color:#999;
-  font-size: 28rpx;
+  font-size: 26rpx;
+  text-align: center
+}
+.status-top view picker.p60{
+  width:60%;
 }
 .status-top image{
   width:60rpx;
@@ -58,18 +62,21 @@
   text-align: center;
   font-size: 28rpx;
 }
-.status-foot .active picker{
+.status-foot view.active view{
   color:#E8373A;
 }
-.status-foot picker{
+.status-foot view view{
   display: inline-block;
   height:100%;
+  width:55%;
+  text-align: right;
   color:#999;
+  margin:0 auto;
 }
 .status-foot view image{
   width:25rpx;
   height:25rpx;
-  margin-left:10rpx;
+  margin-left:-50rpx;
 }
 .car-list{
   padding:20rpx;

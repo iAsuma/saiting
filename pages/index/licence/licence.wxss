@@ -28,8 +28,8 @@
 }
 .carPicker{
   float:left;
-  margin-left:100rpx;
-  background:#CCE4CA;
+  margin-left:200rpx;
+  background:#fff;
   width:100rpx;
   height:60rpx;
   line-height:60rpx;
@@ -38,13 +38,23 @@
 }
 .carNum input{
   float:right;
-  background:#E0F8DE;
+  background:#fff;
   border-radius: 5rpx;
-  width:calc(100% - 320rpx);
+  width:130px;
    height:60rpx;
   line-height:60rpx;
   padding-left:20rpx;
   box-sizing: border-box;
+}
+.sj{
+    width:0;
+    height:0;
+    border-width:10rpx 10rpx 0;
+    border-style:solid;
+    border-color:#999 transparent transparent;/*灰 透明 透明 */
+    margin:0 auto;
+    position:relative;
+    display: inline-block
 }
 .licence-img{
   border:1rpx solid #eee;
