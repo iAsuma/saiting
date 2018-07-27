@@ -14,7 +14,7 @@ Component({
    */
   data: {
     words: [],
-    active:[]
+    active:[],
   },
   attached:function(){
     //var words = [{n:'jing', i: 'active'}]
@@ -37,44 +37,24 @@ Component({
     this.setData({
       active: active
     })
-
-    console.log(active)
   },
   /**
    * 组件的方法列表
    */
   methods: {
     selectCurrent:function(e){
-      console.log(e)
-      
       var curr_index = e.target.dataset.idx
 
       this.setData({
         ['active[' + old_idx + ']']: ''
       })
 
-      old_idx = curr_index
-      
+      old_idx = curr_index //更新旧的index的值
+
       this.setData({
         ['active[' + curr_index + ']']: 'active'
       })
       
-      console.log(curr_index)
-
-      // for (var i = 0; i < words_len; i++) {
-      //   if (i == curr_index) {
-      //     this.setData({
-      //       ['active[' + i + ']']: 'active'
-      //     })
-      //   } else {
-      //     this.setData({
-      //       ['active[' + i + ']']: ''
-      //     })
-      //   }
-      // }
-
-      
-      console.log(this.data.active)
     }
   }
 })
