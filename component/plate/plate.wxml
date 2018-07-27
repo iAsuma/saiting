@@ -4,7 +4,6 @@
     <view class="choose-btn text-left">取消</view>
     <view class="choose-btn text-right">完成</view>
     <scroll-view class="choose-detail" scroll-y="true">
-    <view wx:for="{{words}}" wx:key="*this" bindtap="selectCurrent">{{item}}</view>
-    <view class="active">台</view>
+    <view class="{{active[index]}}" wx:for="{{words}}" wx:key="*this" bindtap="selectCurrent" data-idx="{{index}}">{{item}}</view>
     </scroll-view>
   </view>
