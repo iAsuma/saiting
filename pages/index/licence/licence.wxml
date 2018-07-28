@@ -3,11 +3,11 @@
   <label class="carNum">
      <text>车牌号</text>
       <view class="carPicker" bindtap="bindPlateSelect">
-        <view class="weui-input">苏{{array[index]}}</view>
+        <view class="weui-input">{{initPlate}}</view>
       </view>
       <view class="sj"></view>
-      <input value="" placeholder='请输入车牌'/>
-      <block wx:if="{{tmp == 1}}"><plate></plate></block> 
+      <input value="" placeholder='请输入车牌' maxlength="6" bindinput="bindListenInput"/>
+      <plate wx:if="{{show}}" init-plate="{{initPlate}}" choosed="{{nihao}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
   </label>
   <view class="licence-img">
     <view class="img-box">

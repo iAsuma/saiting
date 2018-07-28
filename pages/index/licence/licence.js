@@ -5,22 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tmp : 0
+    show: false,
+    initPlate:'苏'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSystemInfo({
-      success: function (res) {
-        console.log(res)
-      }
-    })
+
   },
   bindPlateSelect:function(){
     this.setData({
-      tmp:1
+      show:true
     })
+  },
+  donePlate: function(e){
+    this.setData({
+      show: false,
+      initPlate: e.detail.text
+    })
+  },
+  cancelPlate:function(e){
+    this.setData({
+      show: false
+    })
+  },
+  bindListenInput:function(e){
+    return e.detail.value.toUpperCase().replace(/\s+/g, '')
   }
 })

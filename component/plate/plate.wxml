@@ -1,9 +1,9 @@
 <!--弹窗  -->
   <view class="layer" style="display:block;"></view>
   <view class="choose-box" style="display:block;">
-    <view class="choose-btn text-left">取消</view>
-    <view class="choose-btn text-right">完成</view>
+    <view class="choose-btn text-left" bindtap="bindRemovePlate">取消</view>
+    <view class="choose-btn text-right" bindtap="bindDonePlate">完成</view>
     <scroll-view class="choose-detail" scroll-y="true">
-    <view class="{{active[index]}}" wx:for="{{words}}" wx:key="*this" bindtap="selectCurrent" data-idx="{{index}}">{{item}}</view>
+    <view class="{{active[index]}}" wx:for="{{words}}" wx:key="*this" bindtap="selectCurrent" data-idx="{{index}}" data-text="{{item}}">{{item}}</view>
     </scroll-view>
   </view>

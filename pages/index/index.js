@@ -56,5 +56,13 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  bindscan:function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(res)
+      }
+    })
   }
 })

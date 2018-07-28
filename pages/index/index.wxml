@@ -21,7 +21,7 @@
     </block>
   </swiper>
   <view class="new-index">
-    <button class="code-btn">扫码缴费</button>
+    <button class="code-btn" bindtap="bindscan">扫码缴费</button>
     <view class="index-list">
       <view class="li">
         <image src='/res/images/icon-index1.png'></image>
