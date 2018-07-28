@@ -28,8 +28,8 @@
 }
 .carPicker{
   float:left;
-  margin-left:100rpx;
-  background:#CCE4CA;
+  margin-left:200rpx;
+  background:#fff;
   width:100rpx;
   height:60rpx;
   line-height:60rpx;
@@ -38,13 +38,23 @@
 }
 .carNum input{
   float:right;
-  background:#E0F8DE;
+  background:#fff;
   border-radius: 5rpx;
-  width:calc(100% - 320rpx);
+  width:130px;
    height:60rpx;
   line-height:60rpx;
   padding-left:20rpx;
   box-sizing: border-box;
+}
+.sj{
+    width:0;
+    height:0;
+    border-width:10rpx 10rpx 0;
+    border-style:solid;
+    border-color:#999 transparent transparent;/*灰 透明 透明 */
+    margin:0 auto;
+    position:relative;
+    display: inline-block
 }
 .licence-img{
   border:1rpx solid #eee;
@@ -69,61 +79,4 @@
 }
 .img-box image{
   width:100%;
-}
-.layer{
-  display: none;
-  position: fixed;
-  z-index: 9;
-  background: rgba(0, 0, 0, 0.5);
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
-}
-.choose-box{
-  display: none;
-  position: fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:#fff;
-  height:492rpx;
-  z-index: 10;
-}
-.choose-detail{
-  border-top:1rpx solid #eee;
-  height:400rpx;
-}
-.choose-detail view{
-  float:left;
-  width:12.5%;
-  border:1rpx solid #eee;
-  box-sizing: border-box;
-  text-align: center;
-  border-right:0;
-  border-top: 0;
-  height:80rpx;
-  line-height:80rpx;
-  font-size: 28rpx;
-}
-.choose-detail view.active{
-  background:#E83539;
-  color:#fff;
-}
-.choose-detail view:last-child{
-  border-right:1rpx solid #eee;
-}
-.choose-btn{
-  padding:20rpx;
-  width:50%;
-  box-sizing: border-box;
-  display: inline-block;
-}
-.text-left{
-  text-align: left;
-  color:#999;
-}
-.text-right{
-  text-align: right;
-  color:#E83539;
 }

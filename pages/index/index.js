@@ -1,10 +1,16 @@
-//index.js
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    imgUrls: [
+      '/res/images/banner.png',
+      '/res/images/banner1.jpg'
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -49,6 +55,14 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  bindscan:function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(res)
+      }
     })
   }
 })

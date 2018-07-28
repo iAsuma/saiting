@@ -1,12 +1,50 @@
 <view class="index">
-  <view class="sys">
+  <!-- <view class="sys">
     <image src="/res/icons/icon-sys.png"></image>
     <text>扫码缴费</text>
   </view>
   <view class="banner">
-    <image src="/res/images/banner.png"></image>
+    <image src="/res/images/banner1.png"></image>
+  </view> -->
+  <!-- <navigator class="input-box" url="map/map">
+    <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
+    <view class="search-btn">
+      <image src='/res/icons/search.png'></image>
+    </view>
+  </navigator> -->
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="new-index">
+    <button class="code-btn" bindtap="bindscan">扫码缴费</button>
+    <view class="index-list">
+      <view class="li">
+        <image src='/res/images/icon-index1.png'></image>
+        <view class="name">车位共享</view>
+        <image class="icon-right" src='/res/icons/right.png'></image>
+        <text>附近有空闲停车位</text>
+      </view>
+      <view class="li">
+        <image src='/res/images/icon-index2.png'></image>
+        <view class="name">停车券</view>
+        <image class="icon-right" src='/res/icons/right.png'></image>
+        <text>停车优惠券，限时领取</text>
+      </view>
+      <view class="li">
+        <image src='/res/images/icon-index3.png'></image>
+        <view class="name">停车缴费</view>
+        <image class="icon-right" src='/res/icons/right.png'></image>
+        <text>xxx车位即将到期</text>
+      </view>
+    </view>
   </view>
-  <view class="home-list">
+
+   <view class="home-list">
     <navigator class="list-3" url="share/share">
       <view>
         <image class="list-3-img" src="/res/icons/icon-dw.png"></image>
@@ -56,7 +94,7 @@
       <label>登录</label>
     </navigator>
   </view>
-  <view class="map-content">
+  <!-- <view class="map-content">
     <text clas="list-title">预约车位</text>
     <view class="map-content-title">
       <image src="/res/icons/icon-dw-black.png"></image>
@@ -139,5 +177,5 @@
         <button class="btn-yy-outline">立即预约</button>
       </view>
     </view>
-  </view>
+  </view>  -->
 </view>

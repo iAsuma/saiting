@@ -1,0 +1,9 @@
+<!--pages/mine/acountMes/changePone/changePhone.wxml-->
+<view class="change-phone">
+  <view>更换手机后，下次登录可使用新手机号登录</view>
+  <view>当前手机号<text>18888888888</text></view>
+  <input placeholder='请输入手机号码'></input>
+</view>
+<navigator class="content" url='../phoneCode/phoneCode'>
+  <button class='next'>下一步</button>
+</navigator>

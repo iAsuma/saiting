@@ -44,7 +44,7 @@ Page({
           latitude: res.result.location.lat,
           longitude: res.result.location.lng,
           iconPath: '/res/icons/positioning.png',
-          width: 22,
+          width: 32,
           height: 32
         }]
         _this.setData({
