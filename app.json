@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/choose/choose",
     "pages/index/index",
     "pages/index/licence/licence",
    
@@ -18,7 +19,6 @@
     
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
-    "pages/index/choose/choose",
     "pages/mine/mine",
     "pages/index/map/map"
   ],
