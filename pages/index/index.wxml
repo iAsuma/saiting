@@ -24,8 +24,10 @@
     <button class="code-btn" bindtap="bindscan">扫码缴费</button>
     <view class="index-list">
       <view class="li">
-        <image src='/res/images/icon-index1.png'></image>
-        <view class="name">车位共享</view>
+        <navigator url="share/share">
+          <image src='/res/images/icon-index1.png'></image>
+          <view class="name">车位共享</view>
+        </navigator>        
         <image class="icon-right" src='/res/icons/right.png'></image>
         <text>附近有空闲停车位</text>
       </view>

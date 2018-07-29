@@ -87,43 +87,8 @@
   float:left;
   width:100%;
 }
-.list-detail-btm .adr image{
-  float:left;
-  width:30rpx;
-  height:30rpx;
-  margin-top:6rpx;
-}
-.list-detail-btm .adr{
-  width:70%;
-  display: block;
-  font-size: 26rpx;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom:20rpx;
-  color:#999;
-}
-.list-detail-btm .time{
-  margin-bottom:20rpx;
-  font-size: 26rpx;
-  float:left;
-  color:#999;
-}
-.list-detail-btm .time image{
-  float:left;
-  width:28rpx;
-  height:28rpx;
-  margin-top:6rpx;
-  margin-right: 10rpx;
-}
 .clear{
   clear:both;
-}
-.list-detail-btm .line{
-  border-right:1rpx solid #ccc;
-  margin:10rpx 20rpx;
-  float:left;
-  height:18rpx;
 }
 .history-list{
   float:left;
