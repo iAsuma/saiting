@@ -1,4 +1,4 @@
-// pages/index/center/center.js
+// pages/mine/mine.js
 Page({
 
   /**
@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  demodd:function(){
+    wx.switchTab({
+      url: '../mine'
+    })
   }
 })

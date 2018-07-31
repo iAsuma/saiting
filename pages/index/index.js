@@ -64,5 +64,8 @@ Page({
         console.log(res)
       }
     })
-  }
+  },
+  getPhoneNumber: function (e) {
+    console.log(e)
+  } 
 })

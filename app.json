@@ -20,7 +20,6 @@
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
     "pages/mine/acountMes/acountMes",
-    "pages/mine/center/center",
     "pages/index/search/search",
     "pages/index/carMesSure/carMesSure",
     "pages/index/carListDetail/carListDetail",
@@ -33,6 +32,7 @@
     "pages/index/carList/carList",
     
     "pages/mine/mine",
+    "pages/mine/login/login",
     "pages/index/map/map"
 
   ],
@@ -55,7 +55,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/mine/center/center",
+        "pagePath": "pages/mine/mine",
         "iconPath": "res/icons/tabs/tab_mine.png",
         "selectedIconPath": "res/icons/tabs/tab_mine_selected.png",
         "text": "我的"
