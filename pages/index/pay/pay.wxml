@@ -1,0 +1,15 @@
+
+<view class="content">
+  <navigator class="set-li" url='../acountMes/acountMes'>
+    <view>临时停车缴费</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+  <navigator class="set-li">
+    <view>固定缴费</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+  <navigator class="set-li">
+    <view>充值缴费</view>
+    <image src='/res/icons/right.png'></image>
+  </navigator>
+</view>

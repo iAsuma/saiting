@@ -1,0 +1,5 @@
+<!--pages/add/add.wxml-->
+<view class="content">
+  <image src='/res/images/none.jpg'></image>
+  <navigator class="add-btn" url='../licence/licence'>立即添加</navigator>
+</view>

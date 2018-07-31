@@ -1,0 +1,25 @@
+
+<view class="content">
+  <navigator class="set-li">
+    <view>车牌号</view>
+    <text>苏A 66666</text>
+  </navigator>
+</view>
+<view class="content">
+  <navigator class="set-li" url='../acountMes/acountMes'>
+    <view>停车场</view>
+    <text>圆融星座停车场</text>
+  </navigator>
+  <navigator class="set-li no-borde">
+    <view>车位号</view>
+    <text>a-14</text>
+  </navigator>
+  </view>
+  <view class="content">
+   <navigator class="set-li no-borde">
+    <view>费用</view>
+    <image src='/res/icons/icon-yen.png'></image>
+    <text class="red">50</text>
+  </navigator>
+</view>
+

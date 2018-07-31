@@ -1,0 +1,100 @@
+/* pages/index/pay/payGd/payGd.wxss */
+/* pages/index/pay/pay.wxss */
+.content{
+  box-sizing: border-box;
+  padding:0 20rpx;
+  background: #fff;
+  float:left;
+  width:100%;
+  margin-top:20rpx;
+}
+.content1{
+  padding:20rpx;
+}
+.content .no-border{
+  border:0;
+}
+.set-li{
+  border-bottom:1rpx solid #eee;
+  float:left;
+  width:100%;
+  padding:30rpx 0;
+}
+.set-li view{
+  float:left;
+  font-size: 30rpx;
+  width:200rpx;
+}
+
+.set-li text.red{
+  font-size: 40rpx;
+  color:#FF171B;
+  float:left;
+  margin-top:-10rpx;
+}
+.set-li image{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  margin-top:10rpx;
+}
+.exit-btn{
+  margin-top:40rpx;
+  float:left;
+  width:100%;
+  border:0;
+  background:#FF171B;
+  color:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.content .no-borde{
+  border-bottom:0;
+}
+.tishi{
+  color:#FF171B;
+  display: block;
+  text-align:center;
+  font-size: 24rpx;
+  margin-top:20rpx;
+  float:left;
+  width:100%;
+}
+.set-li .price-control{
+  width:400rpx;
+}
+.set-li .price-control view{
+  float:left;
+  font-size: 45rpx;
+  font-weight: bold;
+  width:40rpx;
+  line-height: 45rpx;
+  margin:0 10rpx;
+}
+.price-control input{
+  width:100rpx;
+  background:#F3F3F3;
+  text-align: center;
+  float:left;
+}
+.set-li .price-control .minus{
+  font-size: 60rpx;
+  margin:0;
+  line-height:35rpx;
+}
+.set-li-icon image{
+  float: right;
+}
+.set-li-icon text{
+  float:right;
+  color:#999;
+  font-size: 28rpx;
+}
+.set-li-switch text{
+  font-size: 24rpx;
+  color:#999;
+}
+.set-li-switch switch{
+  float: right;
+}

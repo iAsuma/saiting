@@ -1,4 +1,4 @@
-/* pages/mine/setting/setting.wxss */
+/* pages/index/pay/pay.wxss */
 .content{
   box-sizing: border-box;
   padding:0 20rpx;
@@ -22,11 +22,19 @@
 .set-li view{
   float:left;
   font-size: 30rpx;
+  width:200rpx;
+}
+
+.set-li text.red{
+  font-size: 50rpx;
+  color:#FF171B;
+  float:left;
+  margin-top:-20rpx;
 }
 .set-li image{
-  float:right;
   width:40rpx;
   height:40rpx;
+  float:left;
 }
 .exit-btn{
   margin-top:40rpx;
@@ -38,4 +46,14 @@
   height:80rpx;
   line-height:80rpx;
   font-size: 30rpx;
+}
+.content .no-borde{
+  border-bottom:0;
+}
+.tishi{
+  color:#FF171B;
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding:30rpx 0;
+  text-align:center;
 }

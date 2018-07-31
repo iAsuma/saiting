@@ -1,0 +1,25 @@
+
+<view class="content">
+  <navigator class="set-li no-borde">
+    <view>地区</view>
+    <picker>三级联动</picker>
+  </navigator>
+</view>
+<view class="content">
+  <navigator class="set-li" url='../acountMes/acountMes'>
+    <view>小区</view>
+    <input placeholder='小区'/>
+  </navigator>
+  <navigator class="set-li">
+    <view>楼号</view>
+    <input placeholder='楼号'/>
+  </navigator>
+   <navigator class="set-li no-borde">
+    <view>门牌</view>
+    <input placeholder='门牌'/>
+  </navigator>
+</view>
+<view class="content1">
+  <button>保存</button>
+</view>
+

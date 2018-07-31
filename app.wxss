@@ -21,3 +21,6 @@ button{
 form{
   width: 100%;
 }
+navigator:hover,navigator:active,navigator:focus{
+  background:none;
+}

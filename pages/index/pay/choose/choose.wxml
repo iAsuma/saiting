@@ -1,0 +1,29 @@
+<view class="content">
+<radio-group bindchange="radioChange">
+  <view class="car-ul">
+    <view class="car-li">
+      <view class="car-li-detail">
+        车牌号
+        <text>苏A 66666</text>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view> 
+    <view class="car-li">
+      <view class="car-li-detail">
+        车牌号
+        <text>苏A 66666</text>
+      </view>
+      <label class="radio">
+        <radio value="r1" checked="true"/>
+      </label>
+    </view> 
+  </view>
+  </radio-group>
+  <view class="reserve-btm">
+    <button class="btn-red" bindtap="doneChoose">确定</button>
+    <button class="btn-black-outline">添加车牌</button>
+  </view>
+ 
+</view>

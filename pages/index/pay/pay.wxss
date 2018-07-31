@@ -1,4 +1,4 @@
-/* pages/mine/setting/setting.wxss */
+/* pages/index/pay/pay.wxss */
 .content{
   box-sizing: border-box;
   padding:0 20rpx;
@@ -33,7 +33,7 @@
   float:left;
   width:100%;
   border:0;
-  background:#FF171B;
+  background:red;
   color:#fff;
   height:80rpx;
   line-height:80rpx;

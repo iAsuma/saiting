@@ -1,10 +1,25 @@
 {
   "pages": [
-    "pages/index/choose/choose",
+
     "pages/index/index",
+    
+    "pages/mine/adr/adr",
+
+    "pages/index/pay/choose/choose",
+    "pages/index/pay/insertMoney1/insertMoney1",
+    "pages/index/pay/insertMoney/insertMoney",
+    "pages/index/pay/payGd1/payGd1",
+    "pages/index/pay/payGd/payGd",
+    "pages/index/pay/payLs/payLs",
+    "pages/index/pay/pay",
+    "pages/mine/setting/setting",
+     
+      "pages/index/add/add",
+    "pages/index/choose/choose",
+  
     "pages/index/licence/licence",
    
-    "pages/mine/setting/setting",
+    
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
     "pages/mine/acountMes/acountMes",
