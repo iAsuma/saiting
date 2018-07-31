@@ -1,11 +1,8 @@
 {
   "pages": [
-
     "pages/index/index",
     
     "pages/mine/adr/adr",
-
-    "pages/index/pay/choose/choose",
     "pages/index/pay/insertMoney1/insertMoney1",
     "pages/index/pay/insertMoney/insertMoney",
     "pages/index/pay/payGd1/payGd1",
@@ -34,8 +31,10 @@
     
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
+    
     "pages/mine/mine",
     "pages/index/map/map"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
