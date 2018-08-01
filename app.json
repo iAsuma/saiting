@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+        "pages/mine/mine",
     
     "pages/mine/adr/adr",
     "pages/index/pay/insertMoney1/insertMoney1",
@@ -31,8 +32,9 @@
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     
-    "pages/mine/mine",
+
     "pages/mine/login/login",
+    "pages/mine/loginWx/loginWx",
     "pages/index/map/map"
 
   ],
