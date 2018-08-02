@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-        "pages/mine/mine",
+    "pages/mine/mine",
     
     "pages/mine/adr/adr",
     "pages/index/pay/insertMoney1/insertMoney1",
@@ -12,7 +12,7 @@
     "pages/index/pay/pay",
     "pages/mine/setting/setting",
      
-      "pages/index/add/add",
+    "pages/index/add/add",
     "pages/index/choose/choose",
   
     "pages/index/licence/licence",

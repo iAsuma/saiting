@@ -6,9 +6,10 @@ Page({
    */
   data: {
     show: false,
-    initPlate:'苏'
+    initPlate:'苏',
+    licenceImg:'/res/images/jsz.png',
+    isUpload:false
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -33,5 +34,18 @@ Page({
   },
   bindListenInput:function(e){
     return e.detail.value.toUpperCase().replace(/\s+/g, '')
+  },
+  uploadImage:function(e){
+    var _this = this;
+    wx.chooseImage({
+      count: 1, 
+      success: function (res) {
+        var tempFilePaths = res.tempFilePaths
+        _this.setData({
+          licenceImg: tempFilePaths[0],
+          isUpload: true
+        })
+      }
+    })
   }
 })
