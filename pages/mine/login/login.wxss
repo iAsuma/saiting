@@ -1,4 +1,6 @@
-
+.container{
+  width:100%;
+}
 form{
 	display: block;
 	width:100%;

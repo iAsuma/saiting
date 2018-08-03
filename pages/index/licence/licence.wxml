@@ -9,16 +9,17 @@
       <input value="" placeholder='请输入车牌' maxlength="6" bindinput="bindListenInput"/>
       <plate wx:if="{{show}}" init-plate="{{initPlate}}" choosed="{{nihao}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
   </label>
-  <view class="licence-img">
+  <view class="licence-img" bindtap="uploadImage">
     <view class="img-box">
+      <image src="{{licenceImg}}"></image>
+      <block wx:if="{{isUpload}}">
+      <text class="h4">已上传</text>
+      </block>
+      <block wx:else>
       <text class="h1">请上传行驶证</text>
       <text class="h4">未上传</text>
-    </view>
-    <text class="h4">此信息仅用于车位审核</text>
-  </view>
-  <view class="licence-img">
-    <view class="img-box">
-      <image src="/res/images/jsz.png"></image>
+      </block>
+     
     </view>
     <text class="h4">此信息仅用于车位审核</text>
   </view>

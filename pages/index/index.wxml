@@ -77,12 +77,6 @@
       </view>
       <label>上传</label>
     </navigator>
-    <navigator class="list-3" url="search/search">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>搜索</label>
-    </navigator>
     <navigator class="list-3" url="carListDetailPay/carListDetailPay">
       <view>
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>

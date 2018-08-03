@@ -26,9 +26,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+<<<<<<< HEAD
     // wx.redirectTo({
     //   url: 'login/login',
     // })
+=======
+   
+>>>>>>> 113eef8e22b8ab55cb7b30b9064fb7fbfdbaa36b
   },
 
   /**

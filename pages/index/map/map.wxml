@@ -1,5 +1,5 @@
 <view class="content">
-  <navigator class="input-box" url="map/map">
+  <navigator class="input-box" url="../search/search">
     <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
     <view class="search-btn">
       <image src='/res/icons/search.png'></image>

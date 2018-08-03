@@ -23,5 +23,10 @@ Page({
   },
   doneChoose: function(e){
     wx.navigateBack()
+  },
+  addPlace:function(e){
+    wx.navigateTo({
+      url: '../licence/licence',
+    })
   }
 })
