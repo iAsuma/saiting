@@ -1,4 +1,4 @@
-// pages/index/center/center.js
+// pages/mine/creditScore/creditScore.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
@@ -26,9 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // wx.redirectTo({
-    //   url: 'login/login',
-    // })
+  
   },
 
   /**

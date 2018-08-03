@@ -1,0 +1,30 @@
+page{
+  background:#fff;
+}
+.nav2{
+height:80rpx;
+background:#fff;
+line-height:80rpx;
+border-bottom:20rpx solid #F8F8F8;
+position: fixed;
+top:0;
+left:0;z-index: 5;
+width:100%;
+}
+.nav2 .nav-list{
+width:50%;
+float:left;
+text-align: center;
+color:#999;
+font-size: 28rpx;
+}
+.nav2 .active{
+  color:#000;
+}
+.nav2 .active view{
+  width:30rpx;
+  height:6rpx;
+  background:#FE4144;
+  margin:0 auto;
+  margin-top:-10rpx;
+}

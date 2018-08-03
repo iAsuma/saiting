@@ -2,8 +2,6 @@
   <view class="page-body">
     <form catchsubmit="formSubmit">
       <view class="res-title">
-        <navigator url='../login/login' class="title3">授权登录</navigator>
-        <view class="title2">|</view>
         <view class="title1">短信验证</view> 
       </view>
       <view class="res-label">

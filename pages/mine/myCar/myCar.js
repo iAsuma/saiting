@@ -1,18 +1,19 @@
-// pages/index/center/center.js
+// pages/index/shared/shared.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      tmp:1,
+      chooosed: '请选择车位'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -26,23 +27,29 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // wx.redirectTo({
-    //   url: 'login/login',
-    // })
+    
+  },
+
+  switchTab: function(e){
+    var tab = e.currentTarget.dataset.tab
+    this.setData({
+      tmp:tab,
+      extab: tab == 1 ? 1 : ''
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**

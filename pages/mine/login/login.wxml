@@ -1,16 +1,13 @@
 <view class="container">
   <view class="page-body">
-    <form catchsubmit="formSubmit">
-      <view class="res-title">
-        <view class="title1">授权登录</view>
-        <view class="title2">|</view>
-        <navigator url='../loginWx/loginWx' class="title3">短信验证</navigator>
-      </view>
-      
+    <form catchsubmit="formSubmit"> 
       <image src='/res/images/login.jpg'></image>
+      <view class="mes">您当前还未登录，登录后可查看信息</view>
       <view class="res-submit">
-        <button type="primary"  bindtap="demodd">授权登录</button>
+        <button type="primary"  bindtap="demodd">微信授权登录</button>
       </view>
+      <navigator url='../loginWx/loginWx' class="title3">输入手机号码登录 》</navigator>
+      <view class="xieyi">点击登录，即表示已阅读并同意<navigator>《赛停用户协议》</navigator></view>
     </form>
   </view>
 </view>

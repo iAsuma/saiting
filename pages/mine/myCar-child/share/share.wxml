@@ -1,0 +1,29 @@
+<view class="content">
+  <view class="car-list">
+    <navigator class="item" url="../carListDetail/carListDetail">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">卡机军军军军军军军军啦军所多绿扩军</text>
+        <view class="h4">拉克丝大减肥路上看到家饭店房间爱了空间十分浪费空间</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="button-box">
+    <navigator class="add-btn">新增共享</navigator>
+  </view>
+</view>

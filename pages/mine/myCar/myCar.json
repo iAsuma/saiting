@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "reserve": "../myCar-child/share/share",
+    "release": "../myCar-child/car/car"
+  }
+}

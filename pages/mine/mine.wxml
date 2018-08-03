@@ -2,7 +2,8 @@
 <view class="content">
   <view class="head">
     <image src='/res/images/header1.png'></image>
-    <view class="h1">想个名字很难</view>
+    <!-- <view class="h1">想个名字很难</view> -->
+    <button class="h1">想个名字很难</button>
     <view class="h5">账号：188888888888</view>
   </view>
   <view class="list">

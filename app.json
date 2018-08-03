@@ -1,8 +1,13 @@
 {
   "pages": [
+        "pages/mine/login/login",
+        "pages/mine/loginWx/loginWx",
     "pages/index/index",
-        "pages/mine/mine",
-    
+    "pages/mine/myCar/carDetail/carDetail",
+    "pages/mine/myCar/myCar",
+   
+    "pages/mine/mine",
+    "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",
     "pages/index/pay/insertMoney1/insertMoney1",
     "pages/index/pay/insertMoney/insertMoney",
@@ -31,10 +36,8 @@
     
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
-    
 
-    "pages/mine/login/login",
-    "pages/mine/loginWx/loginWx",
+
     "pages/index/map/map"
 
   ],

@@ -1,0 +1,6 @@
+<view class="nav2">
+  <view class="nav-list {{tmp == 1 ? 'active' : ''}}" data-tab="1" bindtap="switchTab">我的车位<view></view></view>
+  <view class="nav-list {{tmp == 2 ? 'active' : ''}}" data-tab="2" bindtap="switchTab">共享车位<view></view></view>
+</view>
+<block wx:if="{{tmp == 1}}"> <reserve bindmyevent="onMyEvent" extab="{{extab}}"></reserve></block>
+<block wx:else><release choosed="{{chooosed}}"></release></block>
