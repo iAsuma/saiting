@@ -22,6 +22,11 @@ Page({
     })
   },
   onLoad: function () {
+    wx.getSetting({
+      success: (res) => {
+        console.log(res)
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

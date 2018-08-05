@@ -64,8 +64,6 @@ Page({
   
   },
   demodd:function(){
-    wx.switchTab({
-      url: '../mine'
-    })
+    
   }
 })

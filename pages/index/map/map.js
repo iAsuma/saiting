@@ -25,7 +25,6 @@ Page({
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
-        console.log(res)
         var latitude = res.latitude
         var longitude = res.longitude
         _this.setData({
@@ -38,7 +37,6 @@ Page({
     lbs.reverseGeocoder({
       coord_type: 5,
       success: function (res) {
-        console.log(res.result.location.latitude)
         var marker = [{
           id: 0,
           latitude: res.result.location.lat,

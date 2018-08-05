@@ -26,13 +26,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-<<<<<<< HEAD
     // wx.redirectTo({
-    //   url: 'login/login',
+    //   url: 'loginWx/loginWx',
     // })
-=======
-   
->>>>>>> 113eef8e22b8ab55cb7b30b9064fb7fbfdbaa36b
   },
 
   /**
@@ -68,5 +64,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  loginOrReg:function(){
+    wx.navigateTo({
+      url: 'login/login',
+    })
   }
 })

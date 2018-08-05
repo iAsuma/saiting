@@ -83,7 +83,7 @@
       </view>
       <label>详情页</label>
     </navigator>
-    <navigator class="list-3" url="../mine/mine">
+    <navigator class="list-3" url="../mine/login/login">
       <view>
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
       </view>
