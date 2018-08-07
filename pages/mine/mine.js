@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    islogined: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(5555)
   },
 
   /**
@@ -67,7 +67,12 @@ Page({
   },
   loginOrReg:function(){
     wx.navigateTo({
-      url: 'login/login',
+      url: 'login/login?from_page=1',
+    })
+  },
+  changeData:function(data){
+    this.setData({
+      islogined: data.islogined
     })
   }
 })

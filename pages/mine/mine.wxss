@@ -1,5 +1,5 @@
 /* pages/index/center/center.wxss */
-.head image{
+.head image,.tmp-img{
   width:200rpx;
   height:200rpx;
   display: block;

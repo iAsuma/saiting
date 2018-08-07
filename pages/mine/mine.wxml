@@ -1,9 +1,14 @@
 <view class="content">
   <view class="head">
-    <image src='/res/images/header1.png'></image>
-    <!-- <view class="h1">想个名字很难</view> -->
-    <button class="h1" bindtap="loginOrReg">登录/注册</button>
+    <block wx:if="{{islogined}}">
+    <open-data class="tmp-img" type="userAvatarUrl"></open-data>
+    <view class="h1"><open-data type="userNickName"></open-data></view>
     <view class="h5">账号：188888888888</view>
+    </block>
+    <block wx:else>
+    <image src='/res/images/header1.png'></image>
+    <button class="h1" bindtap="loginOrReg">登录/注册</button>
+    </block>
   </view>
   <view class="list">
     <view class="item">
