@@ -22,7 +22,7 @@ Page({
     })
   },
   onLoad: function () {
-    console.log(app.globalData)
+    //console.log(app.globalData)
     wx.getSetting({
       success: (res) => {
         console.log(res)

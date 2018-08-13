@@ -12,63 +12,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(5555)
+    
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // wx.redirectTo({
-    //   url: 'loginWx/loginWx',
-    // })
+    console.log(wx.canIUse('button.open-type.openSetting'))
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-  loginOrReg:function(){
+  loginOrReg:function(e){
+    console.log(1)
+    console.log(e)
     wx.navigateTo({
       url: 'login/login?from_page=1',
     })
+  },
+  onGotUserInfo:function(e){
+    console.log(2)
+    console.log(e)
+    if (e.detail.errMsg == 'getUserInfo:ok'){
+      wx.setStorageSync('userAllData', { userInfo: e.detail.userInfo, enStr: { encryptedData: e.detail.userInfo,iv:e.detail.iv}})
+    }
   },
   changeData:function(data){
     this.setData({

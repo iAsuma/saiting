@@ -1,10 +1,10 @@
 {
   "pages": [
-    
+    "pages/mine/mine",
     "pages/index/index",
     "pages/mine/login/login",
     
-    "pages/mine/mine",    
+    
     "pages/mine/loginWx/loginWx",
     
 

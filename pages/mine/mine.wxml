@@ -7,7 +7,7 @@
     </block>
     <block wx:else>
     <image src='/res/images/header1.png'></image>
-    <button class="h1" bindtap="loginOrReg">登录/注册</button>
+    <button class="h1" open-type="getUserInfo" lang="zh_CN" bindtap="loginOrReg">登录/注册</button>
     </block>
   </view>
   <view class="list">
