@@ -4,7 +4,7 @@
       <view class="mes">您当前还未登录，登录后可查看信息</view>
       <view class="res-submit">
         <button wx:if="{{canIUse}}" type="primary" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>微信授权登录</button>
-        <button wx:else type="default" open-type="openSetting" bindopensetting='openSetting'>请升级微信或使用手机号登录</button>
+        <button wx:else type="default">请升级微信或使用手机号登录</button>
       </view>
       <navigator open-type='redirect' url='../loginWx/loginWx' class="title3">
         输入手机号码登录 >>

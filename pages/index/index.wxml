@@ -83,12 +83,6 @@
       </view>
       <label>详情页</label>
     </navigator>
-    <navigator class="list-3" url="../mine/login/login">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>登录</label>
-    </navigator>
   </view>
   <!-- <view class="map-content">
     <text clas="list-title">预约车位</text>
