@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+const loginUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/phoneLogin';
 Page({
 
   /**
@@ -7,63 +7,56 @@ Page({
   data: {
   
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-  demodd:function(){
-    
+  loginByPhone:function(e){
+    console.log(e.detail.value)
+    console.log(e.detail.value.phone)
+    wx.getStorage({
+      key: 'userAllData',
+      success: function (sg) {
+        wx.login({
+          success: function (lg) {
+            if (lg.code) {
+              wx.request({
+                data: { code: lg.code, phone: e.detail.value.phone, validCode: e.detail.value.code },
+                method: 'POST',
+                url: loginUrl,
+                success: function (res) {
+                  if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
+                    app.globalData.userPhone = e.detail.value.phone
+                    app.globalData.sessionID = res.data.session_id
+                    wx.setStorageSync('sessionId', res.data.session_id)
+                    wx.setStorageSync('userPhone', res.data.phone)
+                    if (from_page == 1) {
+                      var pages = getCurrentPages();
+                      var prePage = pages[pages.length - 2]
+                      prePage.changeData({ islogined: true })
+                    }
+                    wx.navigateBack()
+                  } else {
+                    wx.showToast({
+                      title: '登录失败，请稍后重试',
+                      icon: 'none',
+                      duration: 2000
+                    })
+                  }
+                }
+              });
+            }
+          }
+        })
+      }
+    })
   }
 })

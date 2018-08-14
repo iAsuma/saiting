@@ -1,4 +1,4 @@
-const loginUrl = 'http://192.168.31.237/tp50/public/index/index/firstlogin';
+const loginUrl = 'http://192.168.31.237/tp50/public/index/index/firstlogin';//https://test.icarcom.cn/miniPrograms/mini/user/authLogin
 var app = getApp()
 var from_page 
 Page({
@@ -19,12 +19,6 @@ Page({
    */
   onShow: function () {
     
-  },
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
   },
   getPhoneNumber: function(e){
     if (e.detail.errMsg == 'getPhoneNumber:ok'){
@@ -47,6 +41,12 @@ Page({
                       prePage.changeData({ islogined: true })
                     }
                     wx.navigateBack()
+                  }else{
+                    wx.showToast({
+                      title: '登录失败，请稍后重试',
+                      icon: 'none',
+                      duration: 2000
+                    })
                   }
                 }
               });
@@ -71,6 +71,12 @@ Page({
                             prePage.changeData({ islogined: true })
                           }
                           wx.navigateBack()
+                        }else{
+                          wx.showToast({
+                            title: '登录失败，请稍后重试',
+                            icon: 'none',
+                            duration: 2000
+                          })
                         }
                       }
                     });
