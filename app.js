@@ -2,9 +2,9 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    //var logs = wx.getStorageSync('logs') || []
+    //logs.unshift(Date.now())
+    //wx.setStorageSync('logs', logs)
     //console.log(this.globalData)
     //console.log(wx.getStorageSync('sessionId'))
 
@@ -37,6 +37,7 @@ App({
   globalData: {
     userInfo: null,
     userPhone:'',
-    sessionID: ''
+    sessionID: '',
+    apiToken:'U9D3sCl99g92s9410lq3g15l43QbjJce74U9D3sClv9jKiuVjY1IyUR08'
   }
 })

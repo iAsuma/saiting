@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mine/mine",
     "pages/index/index",
     "pages/index/share/share",
     "pages/index/publish/publish",
@@ -22,7 +23,7 @@
     "pages/index/choose/choose",
     "pages/index/licence/licence",
 
-    "pages/mine/mine",
+    
     "pages/mine/login/login",
     "pages/mine/loginWx/loginWx",
     

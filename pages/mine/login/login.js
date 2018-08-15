@@ -1,6 +1,14 @@
-const loginUrl = 'http://192.168.31.237/tp50/public/index/index/firstlogin';//https://test.icarcom.cn/miniPrograms/mini/user/authLogin
+const loginUrl = 'http://icarcomhzp.tunnel.echomod.cn/mini/user/authLogin';
 var app = getApp()
 var from_page 
+function tips(msg){
+  wx.showToast({
+    title: msg,
+    icon: 'none',
+    duration: 2000
+  })
+}
+
 Page({
   /**
    * 页面的初始数据
@@ -21,6 +29,7 @@ Page({
     
   },
   getPhoneNumber: function(e){
+    console.log(e)
     if (e.detail.errMsg == 'getPhoneNumber:ok'){
       wx.getStorage({
         key: 'userAllData',
@@ -28,8 +37,12 @@ Page({
           wx.checkSession({
             success: function () {
               wx.request({
-                data: { sessionId: app.globalData.sessionID, encryptedPhone: e.detail.encryptedData, encryptedUser: sg.data.enStr.encryptedData, iv: sg.data.enStr.iv,mark:0},
+                data: { sessionId: app.globalData.sessionID, encryptedPhone: e.detail.encryptedData, ivPhone: e.detail.iv, encryptedUser: sg.data.enStr.encryptedData, ivUser: sg.data.enStr.iv,mark:0},
                 method: 'POST',
+                header: {
+                  'content-type': 'application/json',
+                  'token': app.globalData.apiToken
+                },
                 url: loginUrl,
                 success: function (res) {
                   if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
@@ -42,11 +55,7 @@ Page({
                     }
                     wx.navigateBack()
                   }else{
-                    wx.showToast({
-                      title: '登录失败，请稍后重试',
-                      icon: 'none',
-                      duration: 2000
-                    })
+                    tips('登录失败，请稍后重试')
                   }
                 }
               });
@@ -56,8 +65,12 @@ Page({
                 success: function (lg) {
                   if (lg.code) {
                     wx.request({
-                      data: { code: lg.code, encryptedPhone: e.detail.encryptedData, encryptedUser: sg.data.enStr.encryptedData, iv: sg.data.enStr.iv, mark: 1},
+                      data: { code: lg.code, encryptedPhone: e.detail.encryptedData, ivPhone: e.detail.iv, encryptedUser: sg.data.enStr.encryptedData, ivUser: sg.data.enStr.iv, mark: 1},
                       method: 'POST',
+                      header: {
+                        'content-type': 'application/json',
+                        'token': app.globalData.apiToken
+                      },
                       url: loginUrl,
                       success: function (res) {
                         if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
@@ -72,11 +85,7 @@ Page({
                           }
                           wx.navigateBack()
                         }else{
-                          wx.showToast({
-                            title: '登录失败，请稍后重试',
-                            icon: 'none',
-                            duration: 2000
-                          })
+                          tips('登录失败，请稍后重试')
                         }
                       }
                     });

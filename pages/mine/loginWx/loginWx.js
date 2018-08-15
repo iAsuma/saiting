@@ -1,4 +1,12 @@
-const loginUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/phoneLogin';
+const loginUrl = 'http://icarcomhzp.tunnel.echomod.cn/mini/user/phoneLogin';
+function tips(msg) {
+  wx.showToast({
+    title: msg,
+    icon: 'none',
+    duration: 2000
+  })
+}
+
 Page({
 
   /**
