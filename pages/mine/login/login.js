@@ -1,4 +1,4 @@
-const loginUrl = 'http://icarcomhzp.tunnel.echomod.cn/mini/user/authLogin';
+const loginUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/authLogin';
 var app = getApp()
 var from_page 
 function tips(msg){
@@ -29,7 +29,6 @@ Page({
     
   },
   getPhoneNumber: function(e){
-    console.log(e)
     if (e.detail.errMsg == 'getPhoneNumber:ok'){
       wx.getStorage({
         key: 'userAllData',
@@ -47,6 +46,8 @@ Page({
                 success: function (res) {
                   if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
                     app.globalData.userPhone = res.data.phone
+                    app.globalData.sessionID = res.data.result
+                    wx.setStorageSync('sessionId', res.data.result)
                     wx.setStorageSync('userPhone', res.data.phone)
                     if (from_page == 1) {
                       var pages = getCurrentPages();
@@ -75,8 +76,8 @@ Page({
                       success: function (res) {
                         if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
                           app.globalData.userPhone = res.data.phone
-                          app.globalData.sessionID = res.data.session_id
-                          wx.setStorageSync('sessionId', res.data.session_id)
+                          app.globalData.sessionID = res.data.result
+                          wx.setStorageSync('sessionId', res.data.result)
                           wx.setStorageSync('userPhone', res.data.phone)
                           if (from_page == 1) {
                             var pages = getCurrentPages();

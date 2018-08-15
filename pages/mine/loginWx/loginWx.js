@@ -30,6 +30,15 @@ Page({
   loginByPhone:function(e){
     console.log(e.detail.value)
     console.log(e.detail.value.phone)
+    if (e.detail.value.phone == ''){
+      tips('请输入手机号');
+      return false;
+    }
+    if (e.detail.value.code == '') {
+      tips('请输入验证码');
+      return false;
+    }
+
     wx.getStorage({
       key: 'userAllData',
       success: function (sg) {

@@ -65,14 +65,20 @@ form{
 	font-size:30rpx;
 	line-height:64rpx;
 	border-radius: 50rpx;
+  border:0;
+  color: #ffffff;
 }
-button[type=primary]{
-	background:#FF171B;border:0;
-  font-size: 24rpx;
+.can-get{
+	background:#FF171B;
 }
-button:hover[type=primary]{
-	background:#FF171B;border:0;
-  
+.can-get-hover{
+	background:#c70f0f;
+}
+.no-can-get{
+	background:#DEDEDE;
+}
+.no-can-get-hover{
+	background:#DEDEDE;
 }
 .res-submit{
 	margin:0 auto;
@@ -80,11 +86,19 @@ button:hover[type=primary]{
 	width:calc(100% - 50rpx);
   display:block;
 }
-.res-submit button{
+.login-btn{
+  color: #ffffff;
 	height:90rpx;
 	line-height:90rpx;
 	border-radius: 50rpx;
 	border:0;
 	font-size: 40rpx;
+  background:#FF171B;
 	box-shadow: 0 15rpx 20rpx #FF7C7E;
+}
+.login-btn-hover{
+	background:#c70f0f;
+}
+button::after{
+  border: none;
 }

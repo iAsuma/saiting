@@ -6,19 +6,19 @@
       </view>
       <view class="res-label">
         <image src="/res/icons/login/icon1.png"></image> 
-        <input class="res-phone" name="phone" placeholder="请输入手机号" />
+        <input class="res-phone" type="number" name="phone" placeholder="请输入手机号" maxlength="11"/>
       </view>
           
       <view class="res-label">
         <image src="/res/icons/login/icon2.png"></image> 
-        <input class="res-code" name="code" placeholder="请输入验证码" />
+        <input class="res-code" type="number" name="code" placeholder="请输入验证码" maxlength="6"/>
         <view class="res-code-label">
-          <button type="primary" formType="submit">获取验证码</button>
+          <button class="no-can-get" hover-class="no-can-get-hover">获取验证码</button>
         </view>
       </view>
 
       <view class="res-submit">
-        <button type="primary" form-type='submit'>登录</button>
+        <button class="login-btn" hover-class="login-btn-hover" form-type='submit'>登录</button>
       </view>
     </form>
   </view>
