@@ -90,7 +90,7 @@ button:hover[type=primary]{
 .page-body image{
   display: block;
   width:400rpx;
-  height:300rpx;
+  height:244rpx;
   margin:0 auto;
 }
 .mes{
