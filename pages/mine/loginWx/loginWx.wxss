@@ -62,7 +62,7 @@ form{
 }
 .res-code-label button{
 	height:60rpx;
-	font-size:24rpx;
+	font-size:28rpx;
 	line-height:64rpx;
   
 	border-radius: 50rpx;

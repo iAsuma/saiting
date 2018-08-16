@@ -1,4 +1,4 @@
-const loginUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/authLogin';
+const loginUrl = 'http://icarcomhzp.tunnel.echomod.cn/mini/user/authLogin';
 var app = getApp()
 var from_page 
 function tips(msg){
@@ -36,7 +36,7 @@ Page({
           wx.checkSession({
             success: function () {
               wx.request({
-                data: { sessionId: app.globalData.sessionID, encryptedPhone: e.detail.encryptedData, ivPhone: e.detail.iv, encryptedUser: sg.data.enStr.encryptedData, ivUser: sg.data.enStr.iv,mark:0},
+                data: { sessionid: app.globalData.sessionID, encryptedPhone: e.detail.encryptedData, ivPhone: e.detail.iv, encryptedUser: sg.data.enStr.encryptedData, ivUser: sg.data.enStr.iv,mark:0},
                 method: 'POST',
                 header: {
                   'content-type': 'application/json',
@@ -56,7 +56,7 @@ Page({
                     }
                     wx.navigateBack()
                   }else{
-                    tips('登录失败，请稍后重试')
+                    tips('登录失败')
                   }
                 }
               });
@@ -86,7 +86,7 @@ Page({
                           }
                           wx.navigateBack()
                         }else{
-                          tips('登录失败，请稍后重试')
+                          tips('登录失败')
                         }
                       }
                     });
@@ -95,11 +95,20 @@ Page({
               })
             }
           })
+        },
+        fail:function(){
+          tips('请打开设置授权用户信息')
         }
       })
     }else{
+      let jumpUrl = ''
+      if (from_page){
+        jumpUrl = '../loginWx/loginWx?from_page=' + from_page
+      }else{
+        jumpUrl = '../loginWx/loginWx'
+      }
       wx.redirectTo({
-        url: '../loginWx/loginWx',
+        url: jumpUrl,
       })
     }
   }
