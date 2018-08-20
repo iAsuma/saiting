@@ -5,8 +5,6 @@ App({
     //var logs = wx.getStorageSync('logs') || []
     //logs.unshift(Date.now())
     //wx.setStorageSync('logs', logs)
-    //console.log(this.globalData)
-    //console.log(wx.getStorageSync('sessionId'))
 
     //从本地缓存中读取session和用户手机号
     this.globalData.sessionID = wx.getStorageSync('sessionId') || ''
@@ -38,6 +36,7 @@ App({
     userInfo: null,
     userPhone:'',
     sessionID: '',
+    apiPre: 'https://test.icarcom.cn/miniPrograms',
     apiToken:'U9D3sCl99g92s9410lq3g15l43QbjJce74U9D3sClv9jKiuVjY1IyUR08'
   }
 })

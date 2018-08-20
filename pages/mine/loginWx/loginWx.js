@@ -1,8 +1,9 @@
-const loginUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/phoneLogin';
-const codeUrl = 'https://test.icarcom.cn/miniPrograms/mini/user/getValidCode';
+var app = getApp();
+const loginUrl = app.globalData.apiPre+'/mini/user/phoneLogin';
+const codeUrl = app.globalData.apiPre +'/mini/user/getValidCode';
 var from_page ;
 var isCountdown = 0;
-var app = getApp();
+
 function tips(msg) {
   wx.showToast({
     title: msg,

@@ -1,5 +1,5 @@
-const loginUrl = 'http://icarcomhzp.tunnel.echomod.cn/mini/user/authLogin';
 var app = getApp()
+const loginUrl = app.globalData.apiPre +'/mini/user/authLogin';
 var from_page 
 function tips(msg){
   wx.showToast({
@@ -52,7 +52,7 @@ Page({
                     if (from_page == 1) {
                       var pages = getCurrentPages();
                       var prePage = pages[pages.length - 2]
-                      prePage.changeData({ islogined: true })
+                      prePage._changeData({ islogined: true })
                     }
                     wx.navigateBack()
                   }else{
@@ -82,7 +82,7 @@ Page({
                           if (from_page == 1) {
                             var pages = getCurrentPages();
                             var prePage = pages[pages.length - 2]
-                            prePage.changeData({ islogined: true })
+                            prePage._changeData({ islogined: true })
                           }
                           wx.navigateBack()
                         }else{
