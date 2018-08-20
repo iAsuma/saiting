@@ -1,22 +1,26 @@
 <!--pages/index/publish/publish.wxml-->
 <view class="content">
-  <view class="form">
-    <view>
-     <text>取消规则</text>
-     <textarea placeholder='定制规则，租客临时取消，该如何处理？“车位主”临时不租用，该如何处理？' maxlength='200'></textarea>
-    </view>
-   <view>
-     <text>超时规则</text>
-     <textarea placeholder='定制规则，若租客订单超时，该如何处理？'  maxlength='200'></textarea>
-    </view>
-    <view>
-     <text>注意点什么</text>
-     <textarea placeholder='停车期间需注意点什么？非必填' maxlength='200'></textarea>
-    </view>
-  </view>
-  <view class="reserve-btm">
-    <button class="btn-red">发布xx</button>
-    <button class="btn-black-outline">跳过 直接发布</button>
-  </view>
+<view class="form">
+<view>
+<text>取消规则</text>
+<view class="form-box">在租用开始时间前 <input type='number' class="green"/> 分钟取消，可以不用赔付。</view>
+<view class="form-box">在租用开始时间前 <input type='number' class="red" focus="true"/> 分钟取消，需赔付<input type='number' class="red"/>元。</view>
 </view>
-  
+<view>
+<text>超时规则</text>
+<view class="form-box">
+在租用结束时间后 <input type='number' class="green"/>分钟未离开，可以不用赔付。
+</view>
+<view class="form-box">在租用结束时间后<input type='number' class="red"/>分钟未离开，需赔付<input type='number' class="red"/>元。 
+</view>
+</view>
+<view>
+<text>注意点什么</text>
+<textarea placeholder='停车期间需注意点什么？非必填' maxlength='200'></textarea>
+</view>
+</view>
+<view class="reserve-btm">
+<button class="btn-red">发布xx</button>
+<button class="btn-black-outline">跳过 直接发布</button>
+</view>
+</view>
