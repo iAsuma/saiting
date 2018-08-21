@@ -16,10 +16,10 @@ Page({
   onLoad: function (options) {
     if (app.globalData.userPhone.length >= 11){
       if (app.globalData.userInfo) {
-        this._changeData({ islogined: true })
+        this._changeData({ islogined: true})
       } else if (this.data.canIUse) {
         app.userInfoReadyCallback = res => {
-          this._changeData({ islogined: true })
+          this._changeData({ islogined: true})
         }
       } else {
         wx.getUserInfo({
@@ -51,7 +51,7 @@ Page({
   _changeData:function(data){
     this.setData({
       islogined: data.islogined,
-      userInfo: { img: app.globalData.userInfo.avatarUrl, name: app.globalData.userInfo.nickName, phone:data.phone}
+      userInfo: { img: app.globalData.userInfo.avatarUrl, name: app.globalData.userInfo.nickName, phone: app.globalData.userPhone}
     })
   }
 })

@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/index/share/share",
     "pages/index/publish/publish",
@@ -29,7 +30,6 @@
 
     "pages/mine/myCar/carDetail/carDetail",
     "pages/mine/myCar/myCar",
-   
     
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",

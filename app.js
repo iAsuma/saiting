@@ -36,7 +36,7 @@ App({
     userInfo: null,
     userPhone:'',
     sessionID: '',
-    apiPre: 'https://test.icarcom.cn/miniPrograms',
+    apiPre: 'http://icarcomhzp.tunnel.echomod.cn', //https://test.icarcom.cn/miniPrograms
     apiToken:'U9D3sCl99g92s9410lq3g15l43QbjJce74U9D3sClv9jKiuVjY1IyUR08'
   }
 })

@@ -3,7 +3,7 @@
     <block wx:if="{{islogined}}">
     <image src="{{userInfo.img}}"></image>
     <view class="h1">{{userInfo.name}}</view>
-    <view class="h5">账号：188888888888</view>
+    <view class="h5">账号：{{userInfo.phone}}</view>
     </block>
     <block wx:else>
     <image src='/res/images/header1.png'></image>

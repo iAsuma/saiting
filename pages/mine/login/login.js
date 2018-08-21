@@ -57,6 +57,9 @@ Page({
                     wx.navigateBack()
                   }else{
                     tips('登录失败')
+                    wx.redirectTo({
+                      url: '../loginWx/loginWx?from_page=' + from_page,
+                    })
                   }
                 }
               });
@@ -87,6 +90,9 @@ Page({
                           wx.navigateBack()
                         }else{
                           tips('登录失败')
+                          wx.redirectTo({
+                            url: '../loginWx/loginWx?from_page=' + from_page,
+                          })
                         }
                       }
                     });

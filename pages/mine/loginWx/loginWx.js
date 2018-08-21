@@ -146,7 +146,7 @@ Page({
                     if (from_page == 1) {
                       var pages = getCurrentPages();
                       var prePage = pages[pages.length - 2]
-                      prePage.changeData({ islogined: true })
+                      prePage._changeData({ islogined: true })
                     }
                     wx.navigateBack()
                   } else if (res.data.code == '0107'){
