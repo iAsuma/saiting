@@ -1,20 +1,7 @@
 <view class="index">
-  <!-- <view class="sys">
-    <image src="/res/icons/icon-sys.png"></image>
-    <text>扫码缴费</text>
-  </view>
-  <view class="banner">
-    <image src="/res/images/banner1.png"></image>
-  </view> -->
-  <!-- <navigator class="input-box" url="map/map">
-    <input placeholder-class="phcolor" placeholder='你想停哪儿' disabled="false"></input>
-    <view class="search-btn">
-      <image src='/res/icons/search.png'></image>
-    </view>
-  </navigator> -->
   <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
       <swiper-item>
         <image src="{{item}}" class="slide-image"/>
       </swiper-item>
@@ -59,23 +46,11 @@
       </view>
       <label>车位缴费</label>
     </navigator>
-    <navigator class="list-3" url="choose/choose">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>我的车位</label>
-    </navigator>
     <navigator class="list-3" url="publish/publish">
       <view>
         <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
       </view>
       <label>发布</label>
-    </navigator>
-    <navigator class="list-3" url="add/add">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>上传</label>
     </navigator>
     <navigator class="list-3" url="carListDetailPay/carListDetailPay">
       <view>
@@ -84,88 +59,4 @@
       <label>详情页</label>
     </navigator>
   </view>
-  <!-- <view class="map-content">
-    <text clas="list-title">预约车位</text>
-    <view class="map-content-title">
-      <image src="/res/icons/icon-dw-black.png"></image>
-      <label>工业园区独墅湖高教区x星湖街</label>
-    </view>
-    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 150px;z-index:9"></map>
-    <view class="total-maker">
-      <block>可预约车位<text>14</text>个</block>
-      <view class="line"></view>
-    </view>
-    <view class="list-detail">
-      <view class="list-detail-top">生物纳米园停车场-c09c车位 
-        <text>19/时</text>
-        <image src="/res/icons/icon-yen.png"></image>
-      </view>
-      <view class="list-detail-btm"> 
-        <view class="adr">
-         <image src="/res/icons/icon-dw-black.png"></image>
-         <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
-        </view>
-        <view class="time">
-          <image src="/res/icons/icon-date.png"></image>
-          <label>2018-04-23</label>
-        </view>
-        <view class="line"></view> 
-        <view class="time">
-          <image src="/res/icons/icon-time.png"></image>
-          <label>AM 9:90 PM 12:00</label>
-        </view>
-        <view class="clear"></view>
-        <button class="btn-yy">立即预约</button>
-      </view>
-      <view class="btn-none">查看全部车位</view>
-    </view>
-    <text class="list-title">我的共享</text>
-    <view class="list-detail">
-      <view class="list-detail-top">生物纳米园停车场-c09c车位 
-        <text>19/时</text>
-        <image src="/res/icons/icon-yen.png"></image>
-      </view>
-      <view class="list-detail-btm"> 
-        <view class="adr">
-         <image src="/res/icons/icon-dw-black.png"></image>
-         <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
-        </view>
-        <view class="time">
-          <image src="/res/icons/icon-date.png"></image>
-          <label>2018-04-23</label>
-        </view>
-        <view class="line"></view> 
-        <view class="time">
-          <image src="/res/icons/icon-time.png"></image>
-          <label>AM 9:90 PM 12:00</label>
-        </view>
-        <view class="clear"></view>
-        <button class="btn-yy-outline">立即预约</button>
-      </view>
-    </view>
-    <text class="list-title">优惠共享</text>
-    <view class="list-detail">
-      <view class="list-detail-top">生物纳米园停车场-c09c车位 
-        <text>19/时</text>
-        <image src="/res/icons/icon-yen.png"></image>
-      </view>
-      <view class="list-detail-btm"> 
-        <view class="adr">
-         <image src="/res/icons/icon-dw-black.png"></image>
-         <label>工业园区独墅湖高教区x星湖街218号生物纳米园</label>
-        </view>
-        <view class="time">
-          <image src="/res/icons/icon-date.png"></image>
-          <label>2018-04-23</label>
-        </view>
-        <view class="line"></view> 
-        <view class="time">
-          <image src="/res/icons/icon-time.png"></image>
-          <label>AM 9:90 PM 12:00</label>
-        </view>
-        <view class="clear"></view>
-        <button class="btn-yy-outline">立即预约</button>
-      </view>
-    </view>
-  </view>  -->
 </view>

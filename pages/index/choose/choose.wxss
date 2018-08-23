@@ -97,3 +97,27 @@ radio .wx-radio-input.wx-radio-input-checked::before{
   padding-bottom: 0;
   background: #f8f8f8;
 }
+
+/* none carPlace */
+.content2 image{
+  display: block;
+  width:100%;
+}
+.content2{
+  position: relative;
+  height: 100%;
+  width:100%;
+}
+.add-btn{
+  position: absolute;
+  z-index: 9;
+  width:calc(100% - 40rpx);
+  height:80rpx;
+  line-height:80rpx;
+  color:#fff;
+  text-align: center;
+  border-radius:10rpx;
+  left:20rpx;
+  bottom:20rpx;
+  background: #E63437;
+}

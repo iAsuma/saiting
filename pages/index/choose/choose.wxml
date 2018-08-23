@@ -1,128 +1,31 @@
-<view class="content">
-<radio-group bindchange="radioChange">
-  <view class="car-ul">
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view> 
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-         江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view> 
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view> 
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
-    <view class="car-li">
-      <image src="/res/images/img.png"></image>
-      <view class="car-li-detail">
-        <text>苏州市创意产业园E栋303</text>
-        <view class="adr">
-          <image src="/res/icons/icon-dw-black.png"></image>
-          江苏省苏州市吴中区金猫路150号财经学院产业园E栋303
-        </view>
-      </view>
-      <label class="radio">
-        <radio value="r1" checked="true"/>
-      </label>
-    </view>
+<block wx:if="{{none}}">
+  <view class="content2">
+    <image src='/res/images/none.jpg'></image>
+    <navigator class="add-btn" url='../licence/licence'>立即添加</navigator>
   </view>
-  </radio-group>
-  <view class="reserve-btm">
-    <button class="btn-red" bindtap="doneChoose">确定</button>
-    <button class="btn-black-outline" bindtap="addPlace">我要添加</button>
+</block>
+<block wx:else>
+  <view class="content">
+    <radio-group bindchange="radioChange">
+      <view class="car-ul">
+        <view class="car-li" wx:for="{{lists}}" wx:key="*this">
+          <image src="{{item.pic[0]}}"></image>
+          <view class="car-li-detail">
+            <text>{{item.plName}}-{{item.psNumber}}</text>
+            <view class="adr">
+              <image src="/res/icons/icon-dw-black.png"></image>
+              {{item.plAddress}}
+            </view>
+          </view>
+          <label class="radio">
+            <radio value="r1" />
+          </label>
+        </view>
+      </view>
+    </radio-group>
+    <view class="reserve-btm">
+      <button class="btn-red" bindtap="doneChoose">确定</button>
+      <button class="btn-black-outline" bindtap="addPlace">我要添加</button>
+    </view> 
   </view>
- 
-</view>
+</block>

@@ -2,6 +2,7 @@ const app = getApp()
 const parkUrl = app.globalData.apiPre + '/mini/parkSpace/my';
 Page({
   data: {
+    none: false,
     lists: []
   },
   onLoad:function(){
@@ -11,7 +12,7 @@ Page({
       })
       return false;
     }
-
+    var _this = this;
     wx.request({
       data: {},
       method: 'POST',
@@ -20,11 +21,20 @@ Page({
       },
       url: parkUrl,
       success: function (res) {
-        console.log(res)
-        if (res.statusCode == 200 && typeof (res.data.phone) != 'undefined') {
-          
+        let listArr = res.data.result
+        let list_len = listArr.length
+        if (res.statusCode == 200 && Array.isArray(listArr) && list_len > 0) {
+          for(var i = 0;i < list_len; i++){
+            listArr[i].pic = listArr[i].pic.split('|');
+          }
+          _this.setData({
+            none: false,
+            lists: res.data.result
+          })
         } else {
-          //tips('登录失败')
+          _this.setData({
+            none:true
+          })
         }
       }
     });
