@@ -1,0 +1,109 @@
+/* pages/index/licence/licence.wxss */
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+  width:calc(100% - 40rpx);
+  position: fixed;
+  bottom:0;
+  left:20rpx;
+  z-index: 4;
+}
+.content{
+  padding:30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  height:100%;
+}
+.carNum{
+  float:left;
+  width:85rpx;
+}
+.carNum text{
+  float:left;
+}
+.carPicker{
+  background:#fff;
+  width:70rpx;
+  height:70rpx;
+  line-height: 70rpx;
+  border:1rpx solid #ccc;
+  border-radius:10rpx;
+  display:inline-block;
+  font-size:38rpx;
+  color:#000;
+  text-align:center;
+}
+.carNum input{
+  float:right;
+  background:#fff;
+  border-radius: 5rpx;
+  width:130px;
+   height:60rpx;
+  line-height:60rpx;
+  padding-left:20rpx;
+  box-sizing: border-box;
+}
+.sj{
+    width:0;
+    height:0;
+    border-width:10rpx 10rpx 0;
+    border-style:solid;
+    border-color:#999 transparent transparent;/*灰 透明 透明 */
+    margin:0 auto;
+    position:relative;
+    display: inline-block
+}
+.licence-img{
+  border:1rpx solid #eee;
+  float:left;
+  width:100%;
+  margin-top:30rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  padding-bottom:30rpx;
+}
+.title{
+  font-size: 50rpx;
+  color:#000;
+  text-align: center;
+  margin:50rpx 0 100rpx 0;
+}
+.h1{
+  display: block;
+  font-family: SimHei;
+  margin:100rpx 0 20rpx 0;
+}
+.h4{
+  color:#999;
+  font-size: 26rpx;
+  display: block;
+}
+.img-box{
+  padding:30rpx;
+  box-sizing: border-box;
+}
+.img-box image{
+  width:100%;
+}
+.num-list input{
+  width:70rpx;
+  height:70rpx;
+  border:1rpx solid #ccc;
+  border-radius: 10rpx;
+  display: inline-block;
+  margin:0 7rpx;
+  font-size: 38rpx;
+  color:#000;
+  text-align: center;
+}
+.xny{
+  font-size: 18rpx;
+}
+.num-list input.xny-dotted{
+  border:1rpx dotted #999;
+}

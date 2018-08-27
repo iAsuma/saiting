@@ -1,0 +1,23 @@
+<!--pages/index/licence/licence.wxml-->
+<view class="content">
+  <view class="title">输入车牌</view>
+  <label class="carNum">
+      <view class="carPicker" bindtap="bindPlateSelect">
+        <view class="weui-input">{{initPlate}}</view>
+      </view>
+      <plate wx:if="{{show}}" init-plate="{{initPlate}}" choosed="{{nihao}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
+  </label>
+  <view class="num-list">
+    <input placeholder='9' maxlength="1"/>
+    <input placeholder='9' maxlength="1"/>
+    <input placeholder='7' maxlength="1"/>
+    <input placeholder='8' maxlength="1"/>
+    <input placeholder='8' maxlength="1"/>
+    <input placeholder='8' maxlength="1"/>
+    <input placeholder-class="xny" class="xny-dotted" placeholder='新能源' maxlength="1"/>
+  </view>
+  <text class="h1">温馨提示：</text>
+  <text class="h4">1、请输入正确的出门车牌，确保能正常支付。</text>
+  <text class="h4">2、支付成功后请在15分钟内离场，未及时离场，超出的费用请在出门时补交。</text>
+  <button class="btn-red">下一步</button>
+</view>

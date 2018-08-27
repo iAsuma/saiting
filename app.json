@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/index/share/share",
     "pages/index/publish/publish",
@@ -21,7 +20,8 @@
     
     "pages/index/choose/choose",
     "pages/index/licence/licence",
-
+    "pages/index/carNumber/carNumber",
+    
     "pages/mine/mine",
     "pages/mine/login/login",
     "pages/mine/loginWx/loginWx",

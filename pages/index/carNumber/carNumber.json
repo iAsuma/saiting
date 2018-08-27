@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "plate": "../../../component/plate/plate"
+  }
+}
