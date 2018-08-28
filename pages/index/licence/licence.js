@@ -38,9 +38,26 @@ Page({
   uploadImage:function(e){
     var _this = this;
     wx.chooseImage({
-      count: 1, 
+      count: 2, 
       success: function (res) {
+        console.log(res)
         var tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'http://192.168.31.237/tp50/public/index/index/upd', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'user': 'test'
+          },
+          fail:function(res){
+            console.log(res)
+          },
+          success: function (res) {
+            console.log(res)
+            var data = res.data
+            //do something
+          }
+        })
         _this.setData({
           licenceImg: tempFilePaths[0],
           isUpload: true
