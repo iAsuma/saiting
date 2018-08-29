@@ -5,20 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    buttonBorder: {
-      type: String,
-      value: "1px solid #ccc"
-    },
-    backgroundColor: {
-      type: String,
-      value: "#fff"
-    },
     keyNumber: '1234567890',
     keyEnInput1: 'QWERTYUIOP',
     keyEnInput2: 'ASDFGHJKL',
     keyEnInput3: 'ZXCVBNM'
   },
-
+  vehicleTap:function(e){
+    console.log(e)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

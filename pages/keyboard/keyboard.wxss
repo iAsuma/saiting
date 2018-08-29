@@ -1,15 +1,13 @@
-
-:host {
-  width: 100%;
-}
 .vehicle-panel {
   width: 100%;
+  height:430rpx; 
   position: fixed;
   bottom: 0;
   display:flex;
   flex-direction:column;
   justify-content:center;
   z-index: 1000;
+  background-color: #fff
 }
 .vehicle-panel-row {
   display: flex;
@@ -22,6 +20,7 @@
   align-items: center;
 }
 .vehicle-panel-row-button {
+  border:1px solid #ccc;
   background-color: #fff;
   margin: 5rpx;
   padding: 5rpx;
@@ -35,9 +34,9 @@
   background-color: #eee;
 }
 .vehicle-panel-row-button-last {
-  width: 90rpx;
-  height: 90rpx;
-  line-height: 90rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
 }
 .vehicle-hover {
   background-color: #ccc;
@@ -48,12 +47,15 @@
   align-items: center;
 }
 .vehicle-en-button-delete {
-  width: 55rpx;
-  height: 85rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 .vehicle-panel-ok {
-  background-color: #0F4BA1;
+  background-color: #FF2F34;
   color: #fff;
   width: 150rpx;
   height: 80rpx;
+}
+.vehicle-hover-ok {
+  background-color: rgb(209, 40, 43);
 }

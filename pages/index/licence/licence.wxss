@@ -41,11 +41,43 @@
   background:#fff;
   border-radius: 5rpx;
   width:130px;
-   height:60rpx;
+  height:60rpx;
   line-height:60rpx;
   padding-left:20rpx;
   box-sizing: border-box;
 }
+.inputCarNum{
+  float:right;
+  width:130px;
+  height:60rpx;
+  line-height:60rpx;
+  padding-left:20rpx;
+  box-sizing: border-box;
+}
+.input-text{
+  float: left;
+}
+.cursor-blink::after {
+    content:'';
+    float: left;
+    width:4rpx;
+    height:44rpx;
+    margin: 8rpx 0 8rpx 0;
+    animation: blink 1s infinite steps(1, start)
+  }
+@keyframes blink {
+ 0%{
+   background-color: white;
+ }
+ 50% {
+   background-color: #E83539;
+ }
+ 100% {
+   background-color: white;
+ }}
+ .placeholder-text{
+   color: #999
+ }
 .sj{
     width:0;
     height:0;

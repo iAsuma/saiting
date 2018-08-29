@@ -6,7 +6,8 @@
         <view class="weui-input">{{initPlate}}</view>
       </view>
       <view class="sj"></view>
-      <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
+      <view class='inputCarNum'><view class="input-text"></view><view class="cursor-blink"></view><text class="placeholder-text">请输入车牌</text></view>
+      <!-- <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/> -->
       <plate wx:if="{{plateShow}}" init-plate="{{initPlate}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
   </label>
   <label class="xsNum">

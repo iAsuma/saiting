@@ -1,9 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    
-    "pages/keyboard/keyboard",
     "pages/index/licence/licence",
+    "pages/keyboard/keyboard",
     
     "pages/index/share/share",
     "pages/index/publish/publish",
