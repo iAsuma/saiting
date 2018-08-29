@@ -1,43 +1,38 @@
 {
   "pages": [
     "pages/index/index",
+    
+    "pages/keyboard/keyboard",
+    "pages/index/licence/licence",
+    
     "pages/index/share/share",
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/map/map",
-
     "pages/index/search/search",
     "pages/index/carMesSure/carMesSure",
     "pages/index/carListDetail/carListDetail",
-
     "pages/index/pay/insertMoney1/insertMoney1",
     "pages/index/pay/insertMoney/insertMoney",
     "pages/index/pay/payGd1/payGd1",
     "pages/index/pay/payGd/payGd",
     "pages/index/pay/payLs/payLs",
     "pages/index/pay/pay",
-    
     "pages/index/choose/choose",
-    "pages/index/licence/licence",
     "pages/index/carNumber/carNumber",
-    
     "pages/mine/mine",
     "pages/mine/login/login",
     "pages/mine/loginWx/loginWx",
-    
-
     "pages/mine/myCar/carDetail/carDetail",
     "pages/mine/myCar/myCar",
-    
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",
     "pages/mine/setting/setting",
-    
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
     "pages/mine/acountMes/acountMes"
-
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

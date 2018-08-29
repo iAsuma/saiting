@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: false,
-    initPlate:'苏',
-    licenceImg:'/res/images/jsz.png',
-    isUpload:false
+    plateShow: false,
+    initPlate: '苏',
+    licenceImg: '/res/images/jsz.png',
+    isUpload: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -16,29 +16,29 @@ Page({
   onLoad: function (options) {
 
   },
-  bindPlateSelect:function(){
+  bindPlateSelect: function () {
     this.setData({
-      show:true
+      plateShow: true
     })
   },
-  donePlate: function(e){
+  donePlate: function (e) {
     this.setData({
-      show: false,
+      plateShow: false,
       initPlate: e.detail.text
     })
   },
-  cancelPlate:function(e){
+  cancelPlate: function (e) {
     this.setData({
-      show: false
+      plateShow: false
     })
   },
-  bindListenInput:function(e){
+  bindListenInput: function (e) {
     return e.detail.value.toUpperCase().replace(/\s+/g, '')
   },
-  uploadImage:function(e){
+  uploadImage: function (e) {
     var _this = this;
     wx.chooseImage({
-      count: 2, 
+      count: 2,
       success: function (res) {
         console.log(res)
         var tempFilePaths = res.tempFilePaths
@@ -49,7 +49,7 @@ Page({
           formData: {
             'user': 'test'
           },
-          fail:function(res){
+          fail: function (res) {
             console.log(res)
           },
           success: function (res) {

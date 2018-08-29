@@ -66,17 +66,51 @@
   padding-bottom:30rpx;
 }
 .h1{
-  display: block;
   font-family: SimHei;
+  float:right;
+  width:calc(100% - 400rpx);
+  margin-top:100rpx;
 }
 .h4{
   color:#999;
   font-size: 26rpx;
+  float:right;
+  width:calc(100% - 400rpx);
 }
 .img-box{
   padding:30rpx;
   box-sizing: border-box;
+  position: relative;
 }
-.img-box image{
+.img-box>image{
+  width:420rpx;
+  height:320rpx;
+  float:left;
+  border-radius: 10rpx;
+  position: absolute;
+  top:30rpx;
+  left:30rpx;
+  z-index: 2;
+}
+.shade{
+  width:400rpx;
+  height:300rpx;
+  float:left;
+  background:rgba(0, 0, 0, .8);
+  border-radius: 10rpx;
+}
+.shade image{
+  width:100rpx;
+  height:100rpx;
+  margin:100rpx 150rpx;
+}
+.xsNum{
+  border-bottom:1rpx solid #eee;
+  display:block;
   width:100%;
+  padding:30rpx 0;
+  float:left;
+}
+.xsNum input{
+  float:right;
 }

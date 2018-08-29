@@ -1,7 +1,7 @@
 // component/plate/plate.js
 var words_len = 0
 var old_idx = 0
-var curr_value = {}
+var curr_value = { 'text': '苏'}
 Component({
   /**
    * 组件的属性列表
@@ -10,13 +10,6 @@ Component({
     initPlate:{
       type:String,
       value:'苏',
-    },
-    choosed: {
-      type: String,
-      value: '111',
-      observer: function (newVal, oldVal, changedPath) {
-
-      }
     }
   },
 

@@ -7,21 +7,47 @@
       </view>
       <view class="sj"></view>
       <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
-      <plate wx:if="{{show}}" init-plate="{{initPlate}}" choosed="{{nihao}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
+      <plate wx:if="{{plateShow}}" init-plate="{{initPlate}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
+  </label>
+  <label class="xsNum">
+    <text>行驶码</text>
+    <input placeholder='请输入行驶码'/>
   </label>
   <view class="licence-img" bindtap="uploadImage">
     <view class="img-box">
-      <image src="{{licenceImg}}"></image>
+      <image src=""></image>
+      <view  class="shade" style="background-image: url('/res/images/banner.png');background-size:cover">
+        <view style="background:rgba(0, 0, 0, .8);">
+          <image src='/res/icons/cammer.png'></image>
+        </view>
+      </view>
       <block wx:if="{{isUpload}}">
+      <text class="h1">行驶证</text>
       <text class="h4">已上传</text>
       </block>
       <block wx:else>
-      <text class="h1">请上传行驶证</text>
+      <text class="h1">行驶证</text>
       <text class="h4">未上传</text>
       </block>
-     
     </view>
-    <text class="h4">此信息仅用于车位审核</text>
+  </view>
+  <view class="licence-img" bindtap="uploadImage">
+    <view class="img-box">
+      <image src="{{licenceImg}}"></image>
+      <view  class="shade" style="background-image: url('/res/images/banner.png');background-size:cover">
+        <view style="background:rgba(0, 0, 0, .8);">
+          <image src='/res/icons/cammer.png'></image>
+        </view>
+      </view>
+      <block wx:if="{{isUpload}}">
+      <text class="h1">行驶证</text>
+      <text class="h4">已上传</text>
+      </block>
+      <block wx:else>
+      <text class="h1">行驶证</text>
+      <text class="h4">未上传</text>
+      </block>
+    </view>
   </view>
   <button class="btn-red">下一步</button>
 </view>
