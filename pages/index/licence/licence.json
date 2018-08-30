@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "plate": "../../../component/plate/plate"
+    "plate": "../../../component/plate/plate",
+    "keyboard": "../../../component/keyboard/keyboard"
   }
 }
