@@ -6,14 +6,15 @@
         <view class="weui-input">{{initPlate}}</view>
       </view>
       <view class="sj"></view>
-      <view class='inputCarNum'><view class="input-text"></view><view class="cursor-blink"></view><text class="placeholder-text">请输入车牌</text></view>
-      <!-- <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/> -->
+      <!-- <view class='inputCarNum'><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view> -->
+      <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
       <plate wx:if="{{plateShow}}" init-plate="{{initPlate}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
-      <keyboard></keyboard>
+      <keyboard wx:if="{{keyboardShow}}" bindlisteninput="bindKeyInput" bindlistendelete="bindDeleteInput" bindlistendone="bindDoneInput" bindblankclick="hideKeyboard"></keyboard>
   </label>
   <label class="xsNum">
-    <text>行驶码</text>
-    <input placeholder='请输入行驶码'/>
+    <text>识别码</text>
+    <view class='inputCodeNum' bindtap="openInput"><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view>
+    <!-- <input placeholder='请输入车辆识别码'/> -->
   </label>
   <view class="licence-img" bindtap="uploadImage">
     <view class="img-box">

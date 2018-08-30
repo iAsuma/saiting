@@ -1,18 +1,20 @@
+<view class="panel-box" bindtap="blankClick">
+</view>
 <view class="vehicle-panel">
 <view class="vehicle-panel-row">
-      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number' bindtap='inputCurrent' data-value="{{item}}" wx:for="{{keyNumber}}" wx:for-index="idx" wx:key="item">{{item}}</view>
+      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number' bindtap='inputCurrent' data-value="{{item}}" wx:for="{{keyNumber}}" wx:key="*this">{{item}}</view>
     </view>
     <view class="vehicle-panel-row">
-      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button' wx:for="{{keyEnInput1}}" bindtap='inputCurrent' data-value="{{item}}" wx:for-index="idx"  wx:key="idx">{{item}}</view>
+      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button' wx:for="{{keyEnInput1}}" bindtap='inputCurrent' data-value="{{item}}" wx:key="*this">{{item}}</view>
     </view>
     <view class="vehicle-panel-row">
-      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button' wx:for="{{keyEnInput2}}" bindtap='inputCurrent' data-value="{{item}}" wx:for-index="idx" wx:key="idx">{{item}}</view>
+      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button' wx:for="{{keyEnInput2}}" bindtap='inputCurrent' data-value="{{item}}" wx:key="*this">{{item}}</view>
       <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-img'>
-        <image src='../../res/icons/delete.png' class='vehicle-en-button-delete' bindtap='inputDelete' data-value="delete">删除</image>
+        <image src='../../res/icons/delete.png' class='vehicle-en-button-delete' bindtap='inputDelete'>删除</image>
       </view>
     </view>
     <view class="vehicle-panel-row-last">
-      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-last' bindtap='inputCurrent' data-value="{{item}}" wx:for="{{keyEnInput3}}" wx:for-index="idx" wx:key="idx">{{item}}</view>
+      <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-last' bindtap='inputCurrent' data-value="{{item}}" wx:for="{{keyEnInput3}}" wx:key="*this">{{item}}</view>
       <view hover-class="vehicle-hover-ok" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-ok' bindtap='inputDone' data-value="ok">确定</view>
     </view>
 </view>

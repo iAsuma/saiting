@@ -21,6 +21,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    blankClick:function(){
+      this.triggerEvent('blankclick',{})
+    },
+    inputCurrent:function(e){
+      var value = e.target.dataset.value
+      this.triggerEvent('listeninput', { value: value})
+    },
+    inputDelete:function(){
+      this.triggerEvent('listendelete')
+    },
+    inputDone:function(){
+      this.triggerEvent('listendone')
+    }
   }
 })
