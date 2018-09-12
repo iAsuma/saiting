@@ -32,7 +32,7 @@
     </view>
     <view class="item">
       <text>单价</text>
-      <input type='digit' class="priceIpt" placeholder='请输入单价' bindinput='limitInput'/>
+      <input type='digit' class="priceIpt" placeholder='请输入单价' bindinput='limitInput' maxlength='5'/>
     </view>
     <view class="ck-price"><text class="red">15/时</text><text>（参考价）</text></view>
     <button class="btn-red" bindtap="tapName">下一步</button>

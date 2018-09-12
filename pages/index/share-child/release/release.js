@@ -45,7 +45,7 @@ Component({
     limitInput: function(e){
       var value = e.detail.value
       var value_arr = value.split('.')
-      if (value_arr.length > 2 || (value_arr.length > 1 && value_arr[1].length > 1) ){
+      if (value_arr.length > 2 || (value_arr.length > 1 && value_arr[1].length > 2) ){
         var index = value.indexOf('.')
         return value.slice(0, index+2)
       }

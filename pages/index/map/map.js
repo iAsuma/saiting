@@ -25,32 +25,44 @@ Page({
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        _this.setData({
-          latitude: latitude,
-          longitude: longitude
-        })
-      }
-    })
-
-    lbs.reverseGeocoder({
-      coord_type: 5,
-      success: function (res) {
         var marker = [{
           id: 0,
-          latitude: res.result.location.lat,
-          longitude: res.result.location.lng,
+          latitude: res.latitude,
+          longitude: res.longitude,
           iconPath: '/res/icons/positioning.png',
           width: 32,
           height: 32
         }]
+
+        var latitude = res.latitude
+        var longitude = res.longitude
         _this.setData({
+          latitude: latitude,
+          longitude: longitude,
           markers: marker
-        });
-        console.log(res)
+        })
       }
-    });
+    })
+
+    // lbs.reverseGeocoder({
+    //   coord_type: 5,
+    //   success: function (res) {
+    //     var marker = [{
+    //       id: 0,
+    //       latitude: res.result.location.lat,
+    //       longitude: res.result.location.lng,
+    //       iconPath: '/res/icons/positioning.png',
+    //       width: 32,
+    //       height: 32
+    //     }]
+    //     _this.setData({
+    //       latitude: res.result.location.lat,
+    //       longitude: res.result.location.lng,
+    //       markers: marker
+    //     });
+    //     console.log(res)
+    //   }
+    // });
   },
 
   /**
