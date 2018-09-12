@@ -1,5 +1,6 @@
 <!--pages/index/licence/licence.wxml-->
 <view class="content">
+<form bindsubmit="toNextSubmit">
   <label class="carNum">
      <text>车牌号</text>
       <view class="carPicker" bindtap="bindPlateSelect">
@@ -7,14 +8,14 @@
       </view>
       <view class="sj"></view>
       <!-- <view class='inputCarNum'><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view> -->
-      <input value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
+      <input name="licence" value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
       <plate wx:if="{{plateShow}}" init-plate="{{initPlate}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
-      <keyboard wx:if="{{keyboardShow}}" bindlisteninput="bindKeyInput" bindlistendelete="bindDeleteInput" bindlistendone="bindDoneInput" bindblankclick="hideKeyboard"></keyboard>
+      <!-- <keyboard wx:if="{{keyboardShow}}" bindlisteninput="bindKeyInput" bindlistendelete="bindDeleteInput" bindlistendone="bindDoneInput" bindblankclick="hideKeyboard"></keyboard> -->
   </label>
   <label class="xsNum">
     <text>识别码</text>
-    <view class='inputCodeNum' bindtap="openInput"><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view>
-    <!-- <input placeholder='请输入车辆识别码'/> -->
+    <!-- <view class='inputCodeNum' bindtap="openInput"><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view> -->
+    <input name="carcode" placeholder='请输入车辆识别码' value=''/>
   </label>
   <view class="licence-img" bindtap="uploadImage">
     <view class="img-box">
@@ -52,5 +53,6 @@
       </block>
     </view>
   </view>
-  <button class="btn-red">下一步</button>
+  <button class="btn-red" form-type="submit">下一步</button>
+</form>
 </view>

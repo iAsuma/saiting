@@ -5,13 +5,8 @@ Component({
    */
   properties: {
     choosed:{
-      type:String,
-      observer: function (newVal, oldVal, changedPath) {
-        console.log(newVal)
-        console.log(oldVal)
-      }
+      type:String
     },
-    
   },
   data: {
     array: ['xx', 'xx1', 'xx2', 'xx3'],

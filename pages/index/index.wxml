@@ -13,7 +13,7 @@
       <view class="li">
         <navigator url="share/share">
           <image src='/res/images/icon-index1.png'></image>
-          <view class="name">车位共享</view>
+          <view class="name">共享停车</view>
         </navigator>        
         <image class="icon-right" src='/res/icons/right.png'></image>
         <text>附近有空闲停车位</text>
@@ -26,7 +26,7 @@
       </view>
       <view class="li">
         <image src='/res/images/icon-index3.png'></image>
-        <view class="name">停车缴费</view>
+        <view class="name">车位缴费</view>
         <image class="icon-right" src='/res/icons/right.png'></image>
         <text>xxx车位即将到期</text>
       </view>

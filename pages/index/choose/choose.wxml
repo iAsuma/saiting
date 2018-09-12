@@ -6,7 +6,7 @@
 </block>
 <block wx:else>
   <view class="content">
-    <radio-group bindchange="radioChange">
+    <radio-group>
       <view class="car-ul">
         <view class="car-li" wx:for="{{lists}}" wx:key="*this">
           <image src="{{item.pic[0]}}"></image>
@@ -18,7 +18,7 @@
             </view>
           </view>
           <label class="radio">
-            <radio value="r1" />
+            <radio value="{{item}}" bindchange="radioChange" data-psId="{{item.psId}}" data-plId/>
           </label>
         </view>
       </view>

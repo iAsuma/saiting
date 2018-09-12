@@ -108,9 +108,9 @@ Page({
         console.log(res)
         var tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: 'http://192.168.31.237/tp50/public/index/index/upd', //仅为示例，非真实的接口地址
+          url: 'http://192.168.1.132/tp50/public/index/index/upd', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
-          name: 'file',
+          name: 'demo',
           formData: {
             'user': 'test'
           },
@@ -128,6 +128,12 @@ Page({
           isUpload: true
         })
       }
+    })
+  },
+  toNextSubmit:function(e){
+    console.log('form发生了submit事件，携带数据为：', e.detail)
+    wx.redirectTo({
+      url: '../carMesSure/carMesSure',
     })
   }
 })

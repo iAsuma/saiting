@@ -21,6 +21,7 @@ Page({
       },
       url: parkUrl,
       success: function (res) {
+        console.log(res.data)
         let listArr = res.data.result
         let list_len = listArr.length
         if (res.statusCode == 200 && Array.isArray(listArr) && list_len > 0) {
@@ -40,7 +41,7 @@ Page({
     });
   },
   radioChange: function (e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    console.log('radio发生change事件，携带value值为：', e.detail.value.plName)
 
     // var items = this.data.items;
     // for (var i = 0, len = items.length; i < len; ++i) {
@@ -52,6 +53,7 @@ Page({
     // });
   },
   doneChoose: function(e){
+
     wx.navigateBack()
   },
   addPlace:function(e){
