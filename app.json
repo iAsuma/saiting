@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/index/share/share",
     "pages/index/index",
     "pages/index/licence/licence",
     "pages/keyboard/keyboard",
     
-    "pages/index/share/share",
+    
     "pages/index/publish/publish",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",

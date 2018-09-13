@@ -4,7 +4,7 @@
       <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="weui-input">{{array[index]}}</view>
       </picker> -->
-      <view bindtap="openChoose">{{choosed}}</view>
+      <view class="weui-input" bindtap="openChoose">{{choosed.fullname}}</view>
       <image src='/res/icons/right.png'></image>
     </view>
     <view class="item">
@@ -17,16 +17,16 @@
 
     <view class="item">
       <text>开始时间</text>
-      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-        <view class="weui-input">{{time}}</view>
+      <picker mode="time" value="{{stime}}" start="09:01" end="21:01" bindchange="bindsTimeChange">
+        <view class="weui-input">{{stime}}</view>
       </picker>
       <image src='/res/icons/right.png'></image>
     </view>
 
     <view class="item">
       <text>结束时间</text>
-      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-        <view class="weui-input">{{time}}</view>
+      <picker mode="time" value="{{etime}}" start="09:01" end="21:01" bindchange="bindeTimeChange">
+        <view class="weui-input">{{etime}}</view>
       </picker>
       <image src='/res/icons/right.png'></image>
     </view>
@@ -35,5 +35,5 @@
       <input type='digit' class="priceIpt" placeholder='请输入单价' bindinput='limitInput' maxlength='5'/>
     </view>
     <view class="ck-price"><text class="red">15/时</text><text>（参考价）</text></view>
-    <button class="btn-red" bindtap="tapName">下一步</button>
+    <button class="btn-red" bindtap="nextOpt">下一步</button>
 </view>

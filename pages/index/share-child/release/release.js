@@ -1,21 +1,28 @@
-// pages/index/sh.js
+const util = require('../../../../utils/util.js')
+
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
     choosed:{
-      type:String
+      type: Object
     },
   },
   data: {
-    array: ['xx', 'xx1', 'xx2', 'xx3'],
     index: 0,
-    date: '2016-09-01',
-    time: '12:01',
+    date: '',
+    stime: '',
+    etime: '',
+    price: ''
   },
   ready:function(){
-    
+    var nowtime = util.dateNeed(new Date());
+    this.setData({
+      date: nowtime[0] + '-' +nowtime[1],
+      stime: nowtime[3],
+      etime: '请选择离开时间'
+    })
   },
   /**
    * 组件的方法列表
@@ -37,9 +44,9 @@ Component({
         date: e.detail.value
       })
     },
-    bindTimeChange: function (e) {
+    bindsTimeChange: function (e) {
       this.setData({
-        time: e.detail.value
+        stime: e.detail.value
       })
     },
     limitInput: function(e){
@@ -49,6 +56,26 @@ Component({
         var index = value.indexOf('.')
         return value.slice(0, index+2)
       }
+    },
+    nextOpt:function(){
+      console.log(this.data)
+      let needForm = {}
+      needForm.psid = this.data.choosed.psid
+      needForm.plid = this.data.choosed.plid
+      needForm.startdate = this.data.date
+      needForm.starttime = this.data.stime
+      needForm.endtime = this.data.etime
+      
+      console.log(needForm.psid)
+      if (typeof (needForm.psid) == 'undefined'){
+        return;
+      }
+
+      let firstform = JSON.stringify(needForm)
+      
+      wx.navigateTo({
+        url: '../publish/publish?fistform='+firstform,
+      })
     }
   }
 })

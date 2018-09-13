@@ -8,7 +8,7 @@
   <view class="content">
     <radio-group>
       <view class="car-ul">
-        <view class="car-li" wx:for="{{lists}}" wx:key="*this">
+        <view class="car-li" wx:for="{{lists}}" wx:key="*this" bindtap="radioChange" data-name="{{item.plName}}" data-num="{{item.psNumber}}" data-psId="{{item.psId}}" data-plId="{{item.plId}}">
           <image src="{{item.pic[0]}}"></image>
           <view class="car-li-detail">
             <text>{{item.plName}}-{{item.psNumber}}</text>
@@ -18,7 +18,7 @@
             </view>
           </view>
           <label class="radio">
-            <radio value="{{item}}" bindchange="radioChange" data-psId="{{item.psId}}" data-plId/>
+            <radio value="{{item}}" />
           </label>
         </view>
       </view>

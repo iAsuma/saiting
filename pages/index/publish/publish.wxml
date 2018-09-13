@@ -1,26 +1,34 @@
 <!--pages/index/publish/publish.wxml-->
 <view class="content">
+<form bindsubmit="releaseSubmit">
 <view class="form">
 <view>
 <text>取消规则</text>
-<view class="form-box">在租用开始时间前 <input type='number' class="green"/> 分钟取消，可以不用赔付。</view>
-<view class="form-box">在租用开始时间前 <input type='number' class="red" focus="true"/> 分钟取消，需赔付<input type='number' class="red"/>元。</view>
+<view class="form-box">在租用开始时间前 <input type='number' name="clFreeSec" class="green" maxlength='3' focus="true"/> 分钟取消，可以不用赔付。</view>
+<view class="form-box">在租用开始时间前 <input type='number' name="clSec" class="red" maxlength='3'/> 分钟取消，需赔付<input type='digit' name="clCost" class="red" maxlength='5'/>元。</view>
 </view>
 <view>
 <text>超时规则</text>
 <view class="form-box">
-在租用结束时间后 <input type='number' class="green"/>分钟未离开，可以不用赔付。
+在租用结束时间后 <input type='number' name="orFreeSec" class="green" maxlength='3'/>分钟未离开，可以不用赔付。
 </view>
-<view class="form-box">在租用结束时间后<input type='number' class="red"/>分钟未离开，需赔付<input type='number' class="red"/>元。 
+<view class="form-box">在租用结束时间后<input type='number' name="orSec" class="red" maxlength='3'/>分钟未离开，需赔付<input type='digit' name="orCost" class="red" maxlength='5'/>元。 
 </view>
 </view>
 <view>
 <text>注意点什么</text>
-<textarea placeholder='停车期间需注意点什么？非必填' maxlength='200'></textarea>
+<textarea placeholder='停车期间需注意点什么？非必填' name="attention" maxlength='200'></textarea>
 </view>
 </view>
+<input name="psid" value="{{collect.psid}}" hidden="{{Hidden}}"></input>
+<input name="plid" value="{{collect.plid}}" hidden="{{Hidden}}"></input>
+<input name="sdate" value="{{collect.startdate}}" hidden="{{Hidden}}"></input>
+<input name="stime" value="{{collect.starttime}}" hidden="{{Hidden}}"></input>
+<input name="etime" value="{{collect.endtime}}" hidden="{{Hidden}}"></input>
+<input name="uprice" value="{{collect.unitPrice}}" hidden="{{Hidden}}"></input>
 <view class="reserve-btm">
-<button class="btn-red">发布xx</button>
-<button class="btn-black-outline">跳过 直接发布</button>
+<button class="btn-red" formType="submit">发布车位</button>
+<!-- <button class="btn-black-outline">跳过 直接发布</button> -->
 </view>
+</form>
 </view>

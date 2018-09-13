@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      tmp:1,
-    choosed: { name:'请选择车位'}
+    tmp:1,
+    choosed: { fullname:'请选择车位'}
   },
 
   /**
@@ -38,6 +38,7 @@ Page({
     })
   },
   selectCarPlace:function(res){
+    res.fullname = res.name + '-' + res.num
     this.setData({
       choosed:res
     })

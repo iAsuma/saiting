@@ -3,7 +3,8 @@ const parkUrl = app.globalData.apiPre + '/mini/parkSpace/my';
 Page({
   data: {
     none: false,
-    lists: []
+    lists: [],
+    placeInfo:{}
   },
   onLoad:function(){
     if (app.globalData.sessionID == ''){
@@ -41,7 +42,12 @@ Page({
     });
   },
   radioChange: function (e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value.plName)
+    if (e.currentTarget.dataset){
+      this.setData({
+        placeInfo: e.currentTarget.dataset
+      })
+    }
+    //console.log(e.currentTarget.dataset)
 
     // var items = this.data.items;
     // for (var i = 0, len = items.length; i < len; ++i) {
@@ -53,6 +59,11 @@ Page({
     // });
   },
   doneChoose: function(e){
+    var pages = getCurrentPages();
+    var prePage = pages[pages.length - 2]
+    if (prePage) {
+      prePage.selectCarPlace(this.data.placeInfo)
+    }
 
     wx.navigateBack()
   },
