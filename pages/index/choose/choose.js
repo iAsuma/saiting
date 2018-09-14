@@ -22,7 +22,6 @@ Page({
       },
       url: parkUrl,
       success: function (res) {
-        console.log(res.data)
         let listArr = res.data.result
         let list_len = listArr.length
         if (res.statusCode == 200 && Array.isArray(listArr) && list_len > 0) {

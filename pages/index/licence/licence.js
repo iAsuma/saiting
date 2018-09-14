@@ -11,7 +11,8 @@ Page({
     keyboardShow:false,
     cursor:'',
     hidePlaceholder:false,
-    licenceImg: '/res/images/jsz.png',
+    licenceImg1: '/res/images/jsz.png',
+    licenceImg2: '/res/images/xsz.png',
     isUpload: false
   },
   /**
