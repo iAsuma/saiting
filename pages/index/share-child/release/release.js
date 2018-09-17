@@ -109,7 +109,7 @@ Component({
       let firstform = JSON.stringify(needForm)
       
       wx.navigateTo({
-        url: '../publish/publish?fistform='+firstform,
+        url: '../placeShareRule/placeShareRule?fistform='+firstform,
       })
     }
   }

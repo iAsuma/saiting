@@ -2,23 +2,6 @@
   padding:20rpx;
   box-sizing: border-box;
 }
-.btn-red{
-  border:0;
-  color:#fff;
-  background:#E83539;
-  font-size: 30rpx;
-  line-height:80rpx;
-  height:80rpx;
-  margin:0;
-}
-.btn-black-outline{
-  color:#000;
-  background:#fff;
-  font-size: 30rpx;
-  line-height:80rpx;
-  height:80rpx;
-  margin-top:30rpx;
-}
 .clear{
   clear:both;
 }
@@ -94,8 +77,25 @@ radio .wx-radio-input.wx-radio-input-checked::before{
   width:100%;
   padding:30rpx;
   box-sizing: border-box;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
   background: #f8f8f8;
+}
+.btn-red{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin:0;
+}
+.btn-black-outline{
+  color:#000;
+  background:#fff;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:30rpx;
 }
 
 /* none carPlace */
@@ -104,10 +104,14 @@ radio .wx-radio-input.wx-radio-input-checked::before{
   width:100%;
 }
 .content2{
-  position: relative;
+  display: flex;
   height: 100%;
   width:100%;
+  margin-top: 200rpx;
+  /* align-items: center; */
+  justify-content: center;  
 }
+
 .add-btn{
   position: absolute;
   z-index: 9;

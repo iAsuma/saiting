@@ -1,4 +1,7 @@
 // pages/index/licence/licence.js
+const app = getApp()
+const upLicenceUrl = app.globalData.apiPre + '/mini/upload/car/permit';
+const upCarPicUrl = app.globalData.apiPre + '/mini/upload/car/pic'
 Page({
 
   /**
@@ -7,13 +10,18 @@ Page({
   data: {
     plateShow: false,
     initPlate: '苏',
-    letterNum:'',
-    keyboardShow:false,
-    cursor:'',
-    hidePlaceholder:false,
-    licenceImg1: '/res/images/jsz.png',
-    licenceImg2: '/res/images/xsz.png',
-    isUpload: false
+    // letterNum:'',
+    // keyboardShow:false,
+    // cursor:'',
+    // hidePlaceholder:false,
+    numInput: '',
+    codeInput: '',
+    licenceBg1: '/res/images/xsz.png',
+    licenceBg2: '/res/images/chepai.png',
+    isUpload1: false,
+    isUpload2: false,
+    licenceImg1: '',
+    licenceImg2: ''
   },
   /**
    * 生命周期函数--监听页面加载
@@ -49,8 +57,26 @@ Page({
   /**
    * 监听input输入
    */
-  bindListenInput:function(e){
-    return e.detail.value.toUpperCase().replace(/\s+/g, '')
+  bindListenNumInput:function(e){
+    let value = e.detail.value.toUpperCase().replace(/\s+/g, '')
+    
+    this.setData({
+      numInput: value
+    })
+    
+    return value
+  },
+  /**
+   * 监听input输入
+   */
+  bindListenCodeInput: function (e) {
+    let value = e.detail.value.toUpperCase().replace(/\s+/g, '')
+
+    this.setData({
+      codeInput: value
+    })
+
+    return value
   },
   /**
    * 唤起键盘
@@ -101,40 +127,98 @@ Page({
       cursor: ''
     })
   },
-  uploadImage: function (e) {
+  uploadLicence: function (e) {
     var _this = this;
+    if(_this.data.numInput == '' || _this.data.numInput.length < 6){
+      tips('请输入正确的车牌号')
+      return;
+    }
+
+    if (_this.data.codeInput == '' || _this.data.codeInput.length != 17) {
+      tips('请输入正确的车辆识别号')
+      return;
+    }
+    
     wx.chooseImage({
-      count: 2,
+      count: 1,
       success: function (res) {
-        console.log(res)
         var tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: 'http://192.168.1.132/tp50/public/index/index/upd', //仅为示例，非真实的接口地址
+          url: upLicenceUrl, //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
-          name: 'demo',
-          formData: {
-            'user': 'test'
+          name: 'carPermitPic',
+          header:{
+            'sessionid': app.globalData.sessionID
           },
-          fail: function (res) {
-            console.log(res)
+          formData: {
+            'licensePlate': _this.data.initPlate + _this.data.numInput,
+            'carIdentifier': _this.data.codeInput
           },
           success: function (res) {
-            console.log(res)
-            var data = res.data
-            //do something
+            let resObj = JSON.parse(res.data)
+            if (res.statusCode == 200 && resObj.code == 100){
+              _this.setData({
+                licenceImg1: tempFilePaths[0],
+                isUpload1: true
+              })
+            }else{
+              tips(resObj.msg)
+            }
           }
         })
-        _this.setData({
-          licenceImg: tempFilePaths[0],
-          isUpload: true
+        
+      }
+    })
+  },
+  uploadImage: function (e) {
+    var _this = this;
+    if (_this.data.numInput == '' || _this.data.numInput.length < 6) {
+      tips('请输入正确的车牌号')
+      return;
+    }
+
+    wx.chooseImage({
+      count: 1,
+      success: function (res) {
+        var tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: upCarPicUrl, //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'carPic',
+          header: {
+            'sessionid': app.globalData.sessionID
+          },
+          formData: {
+            'licensePlate': _this.data.initPlate + _this.data.numInput
+          },
+          success: function (res) {
+            let resObj = JSON.parse(res.data)
+            if (res.statusCode == 200 && resObj.code == 100) {
+              _this.setData({
+                licenceImg2: tempFilePaths[0],
+                isUpload2: true
+              })
+            } else {
+              tips(resObj.msg)
+            }
+          }
         })
+
       }
     })
   },
   toNextSubmit:function(e){
     console.log('form发生了submit事件，携带数据为：', e.detail)
     wx.redirectTo({
-      url: '../carMesSure/carMesSure',
+      url: '../choose/choose',
     })
   }
 })
+
+function tips(msg) {
+  wx.showToast({
+    title: msg,
+    icon: 'none',
+    duration: 2000
+  })
+}

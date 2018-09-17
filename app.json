@@ -1,18 +1,20 @@
 {
   "pages": [
     "pages/index/share/share",
+    "pages/index/sharePlaceDetail/sharePlaceDetail",
+    
     "pages/index/index",
     "pages/index/licence/licence",
     "pages/keyboard/keyboard",
     
     
-    "pages/index/publish/publish",
+    "pages/index/placeShareRule/placeShareRule",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/carList/carList",
     "pages/index/map/map",
     "pages/index/search/search",
     "pages/index/carMesSure/carMesSure",
-    "pages/index/carListDetail/carListDetail",
+    
     "pages/index/pay/insertMoney1/insertMoney1",
     "pages/index/pay/insertMoney/insertMoney",
     "pages/index/pay/payGd1/payGd1",
@@ -24,7 +26,7 @@
     "pages/mine/mine",
     "pages/mine/login/login",
     "pages/mine/loginWx/loginWx",
-    "pages/mine/myCar/carDetail/carDetail",
+    
     "pages/mine/myCar/myCar",
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",

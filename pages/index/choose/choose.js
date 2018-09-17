@@ -46,16 +46,6 @@ Page({
         placeInfo: e.currentTarget.dataset
       })
     }
-    //console.log(e.currentTarget.dataset)
-
-    // var items = this.data.items;
-    // for (var i = 0, len = items.length; i < len; ++i) {
-    //   items[i].checked = items[i].value == e.detail.value
-    // }
-
-    // this.setData({
-    //   items: items
-    // });
   },
   doneChoose: function(e){
     var pages = getCurrentPages();

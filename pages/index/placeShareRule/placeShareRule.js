@@ -15,7 +15,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.fistform)
     this.setData({
       collect: JSON.parse(options.fistform)
     })
@@ -46,7 +45,7 @@ Page({
       cost: formdata.uprice,
       remark:formdata.attention
     }
-console.log(postdata)
+
     wx.request({
       data: postdata,
       method: 'POST',
@@ -55,14 +54,12 @@ console.log(postdata)
       },
       url: shareSureUrl,
       success: function (res) {
-        console.log(res)
-        if (res.statusCode == 200 && res.data.result == 'SUCCESS' ) {
+        if (res.statusCode == 200 && res.data.code == 100 ) {
           tips('发布成功',function(){
-            console.log(333)
+            wx.redirectTo({
+              url: '../sharePlaceDetail/sharePlaceDetail?from_page=1&shareId=' + res.data.result,
+            })
           })
-          // wx.redirectTo({
-          //   url: '../loginWx/loginWx?from_page=' + from_page,
-          // })
         } else {
           tips(res.data.result)
         }

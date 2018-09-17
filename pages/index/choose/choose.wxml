@@ -1,7 +1,7 @@
 <block wx:if="{{none}}">
   <view class="content2">
-    <image src='/res/images/none.jpg'></image>
-    <navigator class="add-btn" url='../licence/licence'>立即添加</navigator>
+    <image src='/res/images/none.png' style="width:240px;height:220px;" mode="aspectFit"></image>
+    <!-- <navigator class="add-btn" url='../licence/licence'>立即添加</navigator> -->
   </view>
 </block>
 <block wx:else>
@@ -25,7 +25,7 @@
     </radio-group>
     <view class="reserve-btm">
       <button class="btn-red" bindtap="doneChoose">确定</button>
-      <button class="btn-black-outline" bindtap="addPlace">我要添加</button>
+      <!-- <button class="btn-black-outline" bindtap="addPlace">我要添加</button> -->
     </view> 
   </view>
 </block>

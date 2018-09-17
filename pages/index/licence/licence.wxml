@@ -8,47 +8,47 @@
       </view>
       <view class="sj"></view>
       <!-- <view class='inputCarNum'><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view> -->
-      <input name="licence" value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenInput"/>
+      <input name="licence" value="" placeholder='请输入车牌' maxlength="7" bindinput="bindListenNumInput"/>
       <plate wx:if="{{plateShow}}" init-plate="{{initPlate}}" binddoneplate="donePlate" bindcancelplate="cancelPlate"></plate>
       <!-- <keyboard wx:if="{{keyboardShow}}" bindlisteninput="bindKeyInput" bindlistendelete="bindDeleteInput" bindlistendone="bindDoneInput" bindblankclick="hideKeyboard"></keyboard> -->
   </label>
   <label class="xsNum">
     <text>识别码</text>
     <!-- <view class='inputCodeNum' bindtap="openInput"><view class="input-text">{{letterNum}}</view><view class="{{cursor}}"></view><text class="placeholder-text" hidden="{{hidePlaceholder}}">请输入车牌</text></view> -->
-    <input name="carcode" placeholder='请输入车辆识别码' value=''/>
+    <input name="carcode" placeholder='请输入车辆识别码' maxlength="17" bindinput="bindListenCodeInput" value=''/>
   </label>
-  <view class="licence-img" bindtap="uploadImage">
+  <view class="licence-img" bindtap="uploadLicence">
     <view class="img-box">
-      <image src=""></image>
-      <view  class="shade" style="background-image: url('{{licenceImg1}}');background-size:cover">
+      <image src="{{licenceImg1}}"></image>
+      <view  class="shade" style="background-image: url('{{licenceBg1}}');background-size:contain">
         <view style="background:rgba(0, 0, 0, .8);">
           <image src='/res/icons/cammer.png'></image>
         </view>
       </view>
-      <block wx:if="{{isUpload}}">
-      <text class="h1">驾驶证</text>
+      <block wx:if="{{isUpload1}}">
+      <text class="h1">行驶证</text>
       <text class="h4">已上传</text>
       </block>
       <block wx:else>
-      <text class="h1">驾驶证</text>
+      <text class="h1">行驶证</text>
       <text class="h4">未上传</text>
       </block>
     </view>
   </view>
   <view class="licence-img" bindtap="uploadImage">
     <view class="img-box">
-      <image src=""></image>
-      <view  class="shade" style="background-image: url('{{licenceImg2}}');background-size:cover">
+      <image src="{{licenceImg2}}"></image>
+      <view  class="shade" style="background-image: url('{{licenceBg2}}');background-size:contain">
         <view style="background:rgba(0, 0, 0, .8);">
           <image src='/res/icons/cammer.png'></image>
         </view>
       </view>
-      <block wx:if="{{isUpload}}">
-      <text class="h1">行驶证</text>
+      <block wx:if="{{isUpload2}}">
+      <text class="h1">车牌照片</text>
       <text class="h4">已上传</text>
       </block>
       <block wx:else>
-      <text class="h1">行驶证</text>
+      <text class="h1">车牌照片</text>
       <text class="h4">未上传</text>
       </block>
     </view>
