@@ -157,12 +157,6 @@ swiper-item{
   text-align: center;
   position: relative;
 }
-.list5 image{
-  width:60%;
-  height:30rpx;
-  display: block;
-  margin:0 auto;
-}
 .list5 text{
   font-size: 24rpx;
   color:#999;

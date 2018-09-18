@@ -22,15 +22,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    options.shareId = '63136b985bea4f31b06f305b0b8bb118'
+    options.from_page = 1
+    var _this = this;
     if (options.from_page == 1){
-      console.log(2)
-      this.setData({
+      _this.setData({
         fromSelf:true
       })
     }
-
-    var _this = this;
 
     if (options.shareId){
       wx.request({
@@ -39,33 +38,17 @@ Page({
         header: {
           'sessionid': app.globalData.sessionID,
         },
-        url: parkUrl,
+        url: detailUrl,
         success: function (res) {
-          let listArr = res.data.result
-          let list_len = listArr.length
-          if (res.statusCode == 200 && Array.isArray(listArr) && list_len > 0) {
-            for (var i = 0; i < list_len; i++) {
-              listArr[i].pic = listArr[i].pic.split('|');
-            }
+          console.log(res)
+          if (res.statusCode == 200 && res.data.code == 100){
             _this.setData({
-              none: false,
-              lists: res.data.result
-            })
-          } else {
-            _this.setData({
-              none: true
+              detail:res.data.result
             })
           }
         }
       });
     }
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
   },
 
   /**
@@ -76,30 +59,9 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
   
   },
 

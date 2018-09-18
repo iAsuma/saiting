@@ -78,7 +78,7 @@
     </view>
     <view class="list5">
       <text class="tt">{{initdate.distance}}H</text>
-      <image  src="/res/icons/toggle.png"></image>
+      <image src="/res/icons/toggle.png" style="width:40rpx;height:24rpx;" mode="aspectFit"></image>
     </view>
     <view class="list5">
       <text>结束时间</text>

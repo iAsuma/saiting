@@ -177,15 +177,16 @@ swiper{
   color:#fff;
   background:#E83539;
   font-size: 30rpx;
-  line-height:80rpx;
-  height:80rpx;
+  line-height:60rpx;
+  height:60rpx;
   float:right;
 }
 .btn-red-mini image{
   width:50rpx;
   height:50rpx;
   float:left;
-  margin:15rpx;
+  /* margin:15rpx; */
+  margin-top: 6rpx;
 }
 .btn-red{
   border:0;
