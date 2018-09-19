@@ -1,9 +1,9 @@
 <view class="content">  
   <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="*this">
+    <block wx:for="{{detailInfo.pics}}" wx:key="*this">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFit"/>
       </swiper-item>
     </block>
   </swiper>
@@ -11,9 +11,15 @@
     <view class="box-left">
       <text class="h1 nowrap">{{detail.plName}}-{{detail.psNum}}</text>
       <view class='star'>
+        <block wx:if="{{detail.score == 0}}">
         <image src='/res/icons/star4.png'></image>
-        <text>4.6</text>
+        <text>未评分</text>
+        </block>
+        <block wx:else>
+        <image src='/res/icons/star4.png'></image>
+        <text>{{detail.score}}</text>
         <text>分</text>
+        </block>
       </view>
     </view>
     <view class="box-right">
@@ -24,17 +30,17 @@
       </view>
       <view class="count">
         <text>共享</text>
-        <text>125</text>
+        <text>{{detailInfo.shareTimes}}</text>
         <text>次</text>
       </view>
     </view>
   </view>
   <view class="adr">
-    <navigator>
+    <view bindtap="openMap" data-name="{{detail.plName}}" data-addr="{{detail.address}}" data-lat="{{detail.latitude}}" data-lon="{{detail.longitude}}">
       <image src='/res/icons/icon-dw-black.png'></image>
-      <text class="nowrap">{{detail.address}}</text>
+      <text class="nowrap">{{detail.plName}}</text>
       <image src='/res/icons/right.png'></image>
-    </navigator>
+    </view>
   </view>
   <view class="time-detail">
     <view class="reserve-middle">
@@ -65,40 +71,37 @@
   <view class="item">
     <text>这是您的车位主</text>
     <view class="contact">
-      <image src='/res/images/head.png'></image>
+      <image src='{{detail.avatarUrl}}'></image>
       <view class="car-mes">
-        <text class="h2 nowrap">一只小小鸟</text>
-        <text class="h3 nowrap">苏xxxxx</text>
+        <text class="h2 nowrap"><text>{{detail.nickName}}</text></text>
+        <text class="h3 nowrap">{{detail.holderPhone}}</text>
       </view>
-      <button class="btn-red-mini"><image src='/res/icons/phone.png'></image> 联系我</button>
+      <button class="btn-red-mini" bindtap="openPhone" data-phone="{{detail.holderPhone}}"><image src='/res/icons/phone.png'></image> 联系我</button>
     </view>
   </view>
   <view class="item">
     <text>使用礼仪</text>
     <view class='text-list'>
-      <text>1.须在开市时间内进入，结束时间内离开；</text>
+      <text>{{detailInfo.remark}}</text>
+      <!-- <text>1.须在开市时间内进入，结束时间内离开；</text>
       <text>2.保持整洁、干净；</text>
       <text>3.若取消订单，请提前10分钟取消，逾期产生相应手续费；</text>
-      <text>4.若离开时已超时，请联系车主</text>
+      <text>4.若离开时已超时，请联系车主</text> -->
     </view>
   </view>
   <view class="item">
     <text>使用规则</text>
     <view class='text-list'>
-      <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
-      <text>2.啊啊飒飒阿诗丹顿多大师大的</text>
-    </view>
-  </view>
-  <view class="item">
-    <text>取消规则</text>
-    <view class='text-list'>
-      <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
-      <text>2.啊啊飒飒阿诗丹顿多大师大的</text>
+      <text wx:for="{{detail.punish}}" wx:key="*this">{{item}}</text>
+      <!-- <text>{{detail.punish}}</text> -->
+      <!-- <text>1.啊是的顶顶顶顶顶的多多啊啊飒飒大师大的</text>
+      <text>2.啊啊飒飒阿诗丹顿多大师大的</text> -->
     </view>
   </view>
    <view class="item">
     <text>评价</text>
     <view class='pro-list'>
+      <text wx:for="{{detailInfo.evaluation}}">{{item[0]}}{{item[1]}}</text>
       <text>宽宽宽</text>
       <text>赞赞赞</text>
       <text>大大大</text>

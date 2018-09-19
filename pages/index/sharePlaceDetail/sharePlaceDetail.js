@@ -17,7 +17,8 @@ Page({
     interval: 5000,
     duration: 1000,
     fromSelf:false,
-    detail:{}
+    detail:{},
+    detailInfo:{}
   },
   /**
    * 生命周期函数--监听页面加载
@@ -33,6 +34,9 @@ Page({
     }
 
     if (options.shareId){
+      wx.showLoading({
+        title:'加载中...'
+      })
       wx.request({
         data: { shareId:options.shareId},
         method: 'POST',
@@ -43,6 +47,14 @@ Page({
         success: function (res) {
           console.log(res)
           if (res.statusCode == 200 && res.data.code == 100){
+            res.data.result.punish = res.data.result.punish.split(/[;；]{1}/)
+            let punishLen = res.data.result.punish.length
+            for (var i = 0; i < punishLen;i++){
+              if (i < punishLen-1){
+                res.data.result.punish[i] += '；'
+              }
+            }
+
             _this.setData({
               detail:res.data.result
             })
@@ -56,6 +68,27 @@ Page({
               url: placeDetialUrl,
               success: function(rq){
                 console.log(rq)
+                if (rq.statusCode == 200 && rq.data.code == 100) {
+                  let detailInfo = {
+                    shareTimes: rq.data.result.shareTimes,
+                    evaluation: rq.data.result.evaluation
+                  }
+
+                  detailInfo.remark = rq.data.result.remark.split(/[;；]{1}/)
+                  let remarkLen = detailInfo.remark.length
+                  for (var i = 0; i < remarkLen; i++) {
+                    if (i < remarkLen - 1) {
+                      detailInfo.remark[i] += '；'
+                    }
+                  }
+
+                  detailInfo.pics = rq.data.result.pic.split('|')
+
+                  _this.setData({
+                    detailInfo: detailInfo
+                  })
+                  wx.hideLoading()
+                }                
               }
             })
           }
@@ -70,7 +103,21 @@ Page({
   onShow: function () {
   
   },
-
+  openMap:function(e){
+    wx.openLocation({
+      latitude: e.currentTarget.dataset.lat,
+      longitude: e.currentTarget.dataset.lon,
+      scale: 28,
+      name: e.currentTarget.dataset.name,
+      address: e.currentTarget.dataset.addr,
+    })
+  },
+  openPhone:function(e){
+    console.log(e)
+    wx.makePhoneCall({
+      phoneNumber:e.currentTarget.dataset.phone
+    })
+  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
