@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/index/sharePlaceDetail/sharePlaceDetail",
     "pages/index/index",
     "pages/index/share/share",
-    "pages/index/sharePlaceDetail/sharePlaceDetail",
+    
     
     "pages/index/licence/licence",
     "pages/keyboard/keyboard",

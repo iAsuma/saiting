@@ -1,5 +1,6 @@
 const app = getApp()
 const detailUrl = app.globalData.apiPre + '/mini/share/show';
+const placeDetialUrl = app.globalData.apiPre + '/mini/parkSpace/detail';
 const shareId = '63136b98-5bea-4f31-b06f-305b0b8bb118'
 Page({
   /**
@@ -44,6 +45,18 @@ Page({
           if (res.statusCode == 200 && res.data.code == 100){
             _this.setData({
               detail:res.data.result
+            })
+
+            wx.request({
+              data: { psId: res.data.result.psId },
+              method: 'POST',
+              header: {
+                'sessionid': app.globalData.sessionID,
+              },
+              url: placeDetialUrl,
+              success: function(rq){
+                console.log(rq)
+              }
             })
           }
         }
