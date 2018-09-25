@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/sharePlaceDetail/sharePlaceDetail",
     "pages/index/index",
+    "pages/index/sharePlaceDetail/sharePlaceDetail",
+    
     
     
     "pages/index/share/share",

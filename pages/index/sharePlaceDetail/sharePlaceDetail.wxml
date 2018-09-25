@@ -46,27 +46,28 @@
     <view class="reserve-middle">
       <view class="list5">
         <text>开始时间</text>
-        <view>06-26</view>
+        <view>{{detail.beginTimeStr[1]}}</view>
       </view>
       <view class="list5">
         <text>周六</text>
-        <view>10：00</view>
+        <view>{{detail.beginTimeStr[3]}}</view>
       </view>
       <view class="list5">
-        <text class="tt">10H</text>
+        <text class="tt">{{detail.minus}}H</text>
         <image src="/res/icons/toggle.png" mode="aspectFit"></image>
       </view>
       <view class="list5">
         <text>结束时间</text>
-        <view>06-26</view>
+        <view>{{detail.endTimeStr[1]}}</view>
       </view>
       <view class="list5">
         <text>周六</text>
-        <view>20：00</view>
+        <view>{{detail.endTimeStr[3]}}</view>
       </view>
     </view>
-    <text class="red">当前时间可预约</text>
-    <!-- <text class="gray">当前时间不可预约</text> -->
+    
+    <text class="red" wx:if="{{detail.useState == 0}}">当前时间可预约</text>
+    <text class="gray" wx:else>当前车位不可预约</text>
   </view>
   <view class="item">
     <text>这是您的车位主</text>
@@ -101,15 +102,16 @@
    <view class="item">
     <text>评价</text>
     <view class='pro-list'>
+      <block wx:if="{{detailInfo.evaluation}}">
       <text wx:for="{{detailInfo.evaluation}}">{{item[0]}}{{item[1]}}</text>
-      <text>宽宽宽</text>
-      <text>赞赞赞</text>
-      <text>大大大</text>
+      </block>
+      <block>
+      <view>还没有收到评价</view>
+      </block>
     </view>
   </view>
-  <block wx:if="{{!fromSelf}}">
   <view class="btn-box">
-    <button class='btn-red'>立即预定</button>
+    <button class='btn-red' wx:if="{{!fromSelf}}">立即预定</button>
+    <button class='btn-red' wx:else bindtap='backLast'>确定</button>
   </view>
-  </block>
 </view>

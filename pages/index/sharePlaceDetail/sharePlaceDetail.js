@@ -1,4 +1,5 @@
 const app = getApp()
+const util = require('../../../utils/util.js')
 const detailUrl = app.globalData.apiPre + '/mini/share/show';
 const placeDetialUrl = app.globalData.apiPre + '/mini/parkSpace/detail';
 const shareId = '63136b98-5bea-4f31-b06f-305b0b8bb118'
@@ -54,6 +55,12 @@ Page({
                 res.data.result.punish[i] += '；'
               }
             }
+
+            let start = new Date(res.data.result.beginTimeStr)
+            let end = new Date(res.data.result.endTimeStr)
+            res.data.result.beginTimeStr = util.dateNeed(start)
+            res.data.result.endTimeStr = util.dateNeed(end)
+            res.data.result.minus = util.minus(start, end)
 
             _this.setData({
               detail:res.data.result
@@ -117,6 +124,9 @@ Page({
     wx.makePhoneCall({
       phoneNumber:e.currentTarget.dataset.phone
     })
+  },
+  backLast:function(){
+    wx.navigateBack()
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作

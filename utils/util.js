@@ -19,6 +19,11 @@ const formatWeek = n => {
   return weeks[n];
 }
 
+const minus = (s, e) => {
+  var res = parseInt(e.getTime() - s.getTime()) / (60 * 60 * 1000)
+  return Math.round((res * 10)) / 10
+}
+
 const dateNeed = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -32,5 +37,6 @@ const dateNeed = date => {
 
 module.exports = {
   formatTime: formatTime,
-  dateNeed: dateNeed
+  dateNeed: dateNeed,
+  minus: minus
 }
