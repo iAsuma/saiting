@@ -1,33 +1,33 @@
  <swiper indicator-dots="{{swiper.dots}}" indicator-active-color="{{swiper.active_color}}" >
-  <block>
-    <swiper-item>
+    <swiper-item wx:for="{{recList}}">
       <text class='demo'>推荐共享</text>
-      <view class="list-detail">
+      <view class="list-detail" bindtap="todetail" data-shareid="{{item.shareId}}">
         <image class="list-left-img" src="/res/images/img.png"></image>
         <view class="list-detail-top">
-          <label>生物纳米园停车场-C09车位</label> 
-          <text>19/时</text>
+          <label>{{item.address}}</label> 
+          <text>{{item.charge}}/时</text>
           <image src="/res/icons/icon-yen.png"></image>
         </view>
         <view class="list-detail-btm"> 
           <view class="adr">
           <image src="/res/icons/icon-dw-black.png"></image>
-          <label>工业园区独墅湖高教区星湖街218号生物纳米园</label>
+          <label>{{item.address}}</label>
           </view>
           <view class="time">
             <image src="/res/icons/icon-date.png"></image>
-            <label>2018-04-23</label>
+            <label>{{item.stime[4]}} {{item.stime[3]}}-{{item.etime[4]}} {{item.etime[3]}}</label>
           </view>
-          <view class="line"></view> 
+          <!-- <view class="line"></view> 
           <view class="time">
             <image src="/res/icons/icon-time.png"></image>
             <label>AM 9:90 PM 12:00</label>
-          </view>
+          </view> -->
           <view class="clear"></view>
         </view>
        </view>
     </swiper-item>
-    <swiper-item>
+  
+    <!-- <swiper-item>
       <text>我的订单</text>
       <view class="list-detail">
         <view class="list-detail-top">生物纳米园停车场-c09c车位 
@@ -51,8 +51,7 @@
           <button class="btn-yy-outline">待付款</button>
         </view>
       </view>
-    </swiper-item>
-  </block>
+    </swiper-item> -->
 </swiper>
 <form bindsubmit="formSubmit">
 <view class="reserve-detail">
@@ -96,7 +95,7 @@
   </view>
   <view class="reserve-btm">
     <button class="btn-red" form-type='submit'>预定车位</button>
-    <button class="btn-black-outline">我有车位，我要共享</button>
+    <button class="btn-black-outline" bindtap='changeFatherTap'>我有车位，我要共享</button>
   </view>
 </view>
 </form>

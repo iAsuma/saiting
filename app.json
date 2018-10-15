@@ -2,15 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/index/sharePlaceDetail/sharePlaceDetail",
-    
-    
-    
-    "pages/index/share/share",
-    
+    "pages/index/share/share",   
     
     "pages/index/licence/licence",
     "pages/keyboard/keyboard",
-    
     
     "pages/index/placeShareRule/placeShareRule",
     "pages/index/carListDetailPay/carListDetailPay",

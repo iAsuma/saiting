@@ -1,4 +1,5 @@
 // pages/index/shared/shared.js
+const app = getApp()
 Page({
 
   /**
@@ -6,7 +7,8 @@ Page({
    */
   data: {
     tmp:1,
-    choosed: { fullname:'请选择车位'}
+    choosed: { fullname:'请选择车位'},
+    wxApp: app.globalData
   },
 
   /**
@@ -29,11 +31,17 @@ Page({
   onShow: function () {
     
   },
-
   switchTab: function(e){
     var tab = e.currentTarget.dataset.tab
     this.setData({
       tmp:tab,
+      extab: tab == 1 ? 1 : ''
+    })
+  },
+  buttonChangeTab:function(e){
+    var tab = e.detail.tab
+    this.setData({
+      tmp: tab,
       extab: tab == 1 ? 1 : ''
     })
   },

@@ -24,13 +24,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    extab: Number
+    extab: Number,
+    wxapp: Object
   },
   /**
    * 组件的初始数据
    */
   data: {
     swiper: { dots: true, active_color: '#FF464A' },
+    recList:[],
     location:{city:'', address: ''},
     initdate:{
       limitS: startDate,
@@ -42,6 +44,27 @@ Component({
   },
   attached: function (e) {
     var _this = this;
+    wx.request({
+      data: {},
+      method: 'POST',
+      header: {
+        'sessionid': app.globalData.sessionID
+      },
+      url: _this.data.wxapp.apiPre + '/mini/share/all/optimal',
+      success: function (res) {        
+        if (res.statusCode == 200 && res.data.code == '100' && res.data.result.length > 0){
+          for(var i in res.data.result){
+            res.data.result[i].stime = util.dateNeed(new Date(dateForIos(res.data.result[i].beginTime)))
+            res.data.result[i].etime = util.dateNeed(new Date(dateForIos(res.data.result[i].endTime)))
+          }
+          
+          _this.setData({
+            recList: res.data.result
+          })
+        }
+      }
+    });
+
     if (this.properties.extab != 1){
       lbs.reverseGeocoder({
         coord_type: 5,
@@ -74,10 +97,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    todetail:function(e){
+      wx.navigateTo({
+        url: '../sharePlaceDetail/sharePlaceDetail?shareId=' + e.currentTarget.dataset.shareid,
+      })
+    },
     bindStartDateChange:function(e){
       let start = new Date(dateForIos(e.detail.value + ' ' + this.data.initdate.start[3]))
       let end = new Date(start.getTime() + 2 * 60 * 60 * 1000)
-      
+
       this.setData({
         'initdate.start': util.dateNeed(start),
         'initdate.end': util.dateNeed(end),
@@ -124,6 +152,9 @@ Component({
           url: '../carList/carList?'+params,
         })
       }
+    },
+    changeFatherTap:function(){
+      this.triggerEvent('changetab', {tab:2})
     }
   }
 })

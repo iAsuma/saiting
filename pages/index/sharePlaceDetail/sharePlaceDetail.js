@@ -25,8 +25,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    options.shareId = '63136b985bea4f31b06f305b0b8bb118'
-    options.from_page = 1
+    //options.shareId = '63136b985bea4f31b06f305b0b8bb118'
+    //options.from_page = 1
     var _this = this;
     if (options.from_page == 1){
       _this.setData({
