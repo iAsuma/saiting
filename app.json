@@ -1,15 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/share/share",
     "pages/index/sharePlaceDetail/sharePlaceDetail",
-    "pages/index/share/share",   
-    
     "pages/index/licence/licence",
-    "pages/keyboard/keyboard",
-    
     "pages/index/placeShareRule/placeShareRule",
     "pages/index/carListDetailPay/carListDetailPay",
-    "pages/index/carList/carList",
+    "pages/index/sharePlaceList/sharePlaceList",
     "pages/index/map/map",
     "pages/index/search/search",
     "pages/index/carMesSure/carMesSure",
@@ -22,18 +19,19 @@
     "pages/index/pay/pay",
     "pages/index/choose/choose",
     "pages/index/carNumber/carNumber",
+
     "pages/mine/mine",
     "pages/mine/login/login",
     "pages/mine/loginWx/loginWx",
-    
     "pages/mine/myCar/myCar",
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",
     "pages/mine/setting/setting",
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
-    "pages/mine/acountMes/acountMes"
-    
+    "pages/mine/acountMes/acountMes",
+
+    "pages/keyboard/keyboard"
   ],
   "window": {
     "backgroundTextStyle": "light",

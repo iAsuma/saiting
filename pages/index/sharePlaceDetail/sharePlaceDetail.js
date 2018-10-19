@@ -1,7 +1,7 @@
 const app = getApp()
 const util = require('../../../utils/util.js')
 const detailUrl = app.globalData.apiPre + '/mini/share/show';
-const placeDetialUrl = app.globalData.apiPre + '/mini/parkSpace/detail';
+const placeDetailUrl = app.globalData.apiPre + '/mini/parkSpace/detail';
 const shareId = '63136b98-5bea-4f31-b06f-305b0b8bb118'
 Page({
   /**
@@ -25,7 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //options.shareId = '63136b985bea4f31b06f305b0b8bb118'
+    options.shareId = '63136b985bea4f31b06f305b0b8bb118'
     //options.from_page = 1
     var _this = this;
     if (options.from_page == 1){
@@ -72,7 +72,7 @@ Page({
               header: {
                 'sessionid': app.globalData.sessionID,
               },
-              url: placeDetialUrl,
+              url: placeDetailUrl,
               success: function(rq){
                 console.log(rq)
                 if (rq.statusCode == 200 && rq.data.code == 100) {

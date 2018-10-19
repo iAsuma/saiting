@@ -1,9 +1,5 @@
-// pages/index/map/map.js
-var QQMapWX = require('../../../libs/qqmap-wx-jssdk.min.js');
-var config = require('../../../libs/config.js');
-var lbs = new QQMapWX({
-  key: config.Config.QQMapKey // 必填
-});
+const app = getApp()
+const listUrl = app.globalData.apiPre + '/mini/share/find/byLngLat';
 
 Page({
 
@@ -25,92 +21,48 @@ Page({
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
-        var marker = [{
-          id: 0,
-          latitude: res.latitude,
-          longitude: res.longitude,
-          iconPath: '/res/icons/positioning.png',
-          width: 32,
-          height: 32
-        }]
-
         var latitude = res.latitude
         var longitude = res.longitude
         _this.setData({
           latitude: latitude,
-          longitude: longitude,
-          markers: marker
+          longitude: longitude
         })
+
+        wx.request({
+          data: {
+            lng: latitude,
+            lat: longitude,
+            page: 0,
+            distance: 10
+          },
+          method: 'POST',
+          header: {
+            'sessionid': app.globalData.sessionID
+          },
+          url: listUrl,
+          success: function (res) {
+            console.log(res)
+            if (res.statusCode == 200 && res.data.code == '100' && res.data.result.totalPages > 0) {
+              var marker = []
+              let points = res.data.result.rows
+              for (var i = 0; i < points.length;i++){
+                marker[i] = {
+                  id: i,
+                  latitude: points[i].latitude,
+                  longitude: points[i].longitude,
+                  iconPath: '/res/icons/positioning.png',
+                  width: 32,
+                  height: 32
+                }
+              }
+
+              _this.setData({
+                markers: marker
+              })
+            }
+          }
+        });
       }
     })
-
-    // lbs.reverseGeocoder({
-    //   coord_type: 5,
-    //   success: function (res) {
-    //     var marker = [{
-    //       id: 0,
-    //       latitude: res.result.location.lat,
-    //       longitude: res.result.location.lng,
-    //       iconPath: '/res/icons/positioning.png',
-    //       width: 32,
-    //       height: 32
-    //     }]
-    //     _this.setData({
-    //       latitude: res.result.location.lat,
-    //       longitude: res.result.location.lng,
-    //       markers: marker
-    //     });
-    //     console.log(res)
-    //   }
-    // });
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
   }
 })

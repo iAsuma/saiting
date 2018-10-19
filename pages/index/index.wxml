@@ -16,7 +16,7 @@
           <view class="name">共享停车</view>
         </navigator>        
         <image class="icon-right" src='/res/icons/right.png'></image>
-        <text>附近有空闲停车位</text>
+        <navigator url="share/share?shareId={{shareId}}" hidden="{{ishidden}}"><text>附近有空闲停车位</text></navigator>
       </view>
       <view class="li">
         <image src='/res/images/icon-index2.png'></image>
@@ -34,23 +34,11 @@
   </view>
 
    <view class="home-list">
-    <navigator class="list-3" url="share/share">
-      <view>
-        <image class="list-3-img" src="/res/icons/icon-dw.png"></image>
-      </view>
-      <label>车位共享</label>
-    </navigator>
     <navigator class="list-3" url="carMesSure/carMesSure">
       <view>
         <image class="list-3-img"  src="/res/icons/icon-qb.png"></image>
       </view>
       <label>车位缴费</label>
-    </navigator>
-    <navigator class="list-3" url="publish/publish">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>发布</label>
     </navigator>
     <navigator class="list-3" url="carListDetailPay/carListDetailPay">
       <view>

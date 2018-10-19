@@ -1,0 +1,72 @@
+<view class="ceontent">
+  <view class="search">
+    <input type='text' placeholder='搜索'></input>
+    <view class="search-img">
+      <image src='/res/icons/search.png'></image>
+    </view>
+  </view>
+  <view class="status">
+    <view class="status-top">
+      <view>
+        <picker class="p60">{{fatherform.sdate_new}} {{fatherform.sweek}}</picker>
+        <picker>{{fatherform.stime}}</picker>
+      </view>
+      <image src="/res/icons/toggle-gray.png"></image>
+      <view>
+        <picker class="p60">{{fatherform.edate_new}} {{fatherform.eweek}}</picker>
+        <picker>{{fatherform.etime}}</picker>
+      </view>
+    </view>
+    <view class="status-foot">
+      <view class="active">
+        <view>附近</view>
+        <image src="/res/icons/sort-red.png"></image>
+      </view>
+      <view>
+        <view>价格</view>
+        <image src="/res/icons/sort.png"></image>
+      </view>
+      <view>
+        <view>评分</view>
+        <image src="/res/icons/sort.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="car-list">
+    <text hidden="{{hidenone}}">暂无数据</text>
+    <navigator class="item" wx:for="{{list}}" url="../sharePlaceDetail/sharePlaceDetail?shareId={{item.spscId}}">
+      <image src='/res/images/img.png'></image>
+      <view class="item-middle">
+        <text class="h1 nowrap">{{item.plName}}-{{item.psNum}}</text>
+        <view class="h4">{{item.address}}</view>
+        <view class="star">
+          <image src="/res/icons/star4.png"></image>
+          <text>4.6</text>
+          <text>分</text>
+        </view>
+        <view class="count">
+          <text>共享</text>
+          <text>125</text>
+          <text>次</text>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="price">
+          <image src="/res/icons/icon-yen.png"></image>
+          <text>{{item.charge}}</text>
+          <text>/时</text>
+        </view>
+        <view class="dis">
+          <image src="/res/icons/icon-dw-black.png"></image>
+          <text>{{item.dis}}</text>
+          <text>KM</text>
+        </view>
+      </view>
+      <view class="item-foot">
+        <text>哈哈</text>
+        <text>哈哈哈</text>
+        <text>哈哈</text>
+      </view>
+    </navigator>
+  </view>
+</view>

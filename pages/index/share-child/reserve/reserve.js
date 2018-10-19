@@ -33,7 +33,7 @@ Component({
   data: {
     swiper: { dots: true, active_color: '#FF464A' },
     recList:[],
-    location:{city:'', address: ''},
+    location: { city: '', address: '', lat: '',lng: ''},
     initdate:{
       limitS: startDate,
       limitE: endDate,
@@ -72,11 +72,15 @@ Component({
           if (res.status == 0) {
             _this.setData({
               'location.city': res.result.address_component.city,
-              'location.address': res.result.formatted_addresses.recommend
+              'location.address': res.result.formatted_addresses.recommend,
+              'location.lat': res.result.location.lat,
+              'location.lng': res.result.location.lng
             })
             wx.setStorageSync('now_where', {
               'city': res.result.address_component.city,
-              'address': res.result.formatted_addresses.recommend
+              'address': res.result.formatted_addresses.recommend,
+              'lat': res.result.location.lat,
+              'lng': res.result.location.lng
             })
           }
         }
@@ -87,7 +91,9 @@ Component({
         success: function (res) {
           _this.setData({
             'location.city': res.data.city,
-            'location.address': res.data.address
+            'location.address': res.data.address,
+            'location.lat': res.data.lat,
+            'location.lng': res.data.lng
           })
         }
       })
@@ -147,9 +153,10 @@ Component({
       var params = Object.keys(form_data).map(function (key) {
         return key + "=" + form_data[key];
       }).join("&");
+      console.log(params)
       if(params != '' && params != 'undefined'){
         wx.navigateTo({
-          url: '../carList/carList?'+params,
+          url: '../sharePlaceList/sharePlaceList?'+params,
         })
       }
     },

@@ -58,9 +58,9 @@
   <text>预定车位</text>
   <view class="reserve-top">
     <text>停车地址</text>
-    <view>{{location.city}}<input name="city" value='{{location.city}}' hidden/></view>
+    <view>{{location.city}}<!--<input name="city" value='{{location.city}}' hidden/>--></view>
     <image src="/res/icons/positioning.png"></image>
-    <view><navigator url='../map/map'>{{location.address}}</navigator><input name="address" value='{{location.address}}' hidden/></view>
+    <view><navigator url='../map/map'>{{location.address}}</navigator><input name="lat" value='{{location.lat}}' hidden/><input name="lng" value='{{location.lng}}' hidden/></view>
   </view>
   <view class="reserve-middle">
     <view class="list5">
