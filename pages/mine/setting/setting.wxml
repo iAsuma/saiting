@@ -1,6 +1,6 @@
 <!--pages/mine/setting/setting.wxml-->
 <view class="content">
-  <navigator class="set-li" url='../acountMes/acountMes'>
+  <navigator class="set-li" url='../accountSet/accountSet'>
     <view>账号信息</view>
     <image src='/res/icons/right.png'></image>
   </navigator>

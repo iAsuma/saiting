@@ -58,7 +58,7 @@ Page({
                   }else{
                     tips('登录失败')
                     wx.redirectTo({
-                      url: '../loginWx/loginWx?from_page=' + from_page,
+                      url: '../loginPhone/loginPhone?from_page=' + from_page,
                     })
                   }
                 }
@@ -91,7 +91,7 @@ Page({
                         }else{
                           tips('登录失败')
                           wx.redirectTo({
-                            url: '../loginWx/loginWx?from_page=' + from_page,
+                            url: '../loginPhone/loginPhone?from_page=' + from_page,
                           })
                         }
                       }
@@ -109,9 +109,9 @@ Page({
     }else{
       let jumpUrl = ''
       if (from_page){
-        jumpUrl = '../loginWx/loginWx?from_page=' + from_page
+        jumpUrl = '../loginPhone/loginPhone?from_page=' + from_page
       }else{
-        jumpUrl = '../loginWx/loginWx'
+        jumpUrl = '../loginPhone/loginPhone'
       }
       wx.redirectTo({
         url: jumpUrl,

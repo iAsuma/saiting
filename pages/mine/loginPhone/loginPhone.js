@@ -52,7 +52,10 @@ Page({
       })
     }
   },
-  getValidCode: function(){
+  getValidCode: function(e){
+    if(e.currentTarget.dataset.can != 1){
+      return false;
+    }
     var phoneFormat = /^(((13[0-9]{1})|(14[567]{1})|(15[0-9]{1})|(16[568]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[89]{1})){1}\d{8})$/;
     if (!phoneFormat.test(this.data.inputPhone)) {
       tips('请输入正确的11位手机号');

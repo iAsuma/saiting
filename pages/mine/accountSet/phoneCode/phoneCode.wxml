@@ -1,7 +1,7 @@
 <!--pages/mine/acountMes/changePone/changePhone.wxml-->
 <view class="change-phone">
-  <view>输入发送至<text>18888888888</text>的验证码</view>
-  <input value='18888888888' disabled='true'></input>
+  <view>输入发送至<text>{{phone}}</text>的验证码</view>
+  <input value='{{phone}}' disabled='true'></input>
   <view class="relative">
     <input placeholder='请输入验证码'></input>
     <view class="code-btn"><text>60</text>s后重新发送</view>

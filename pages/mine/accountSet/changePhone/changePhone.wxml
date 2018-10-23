@@ -1,0 +1,9 @@
+<!--pages/mine/acountMes/changePone/changePhone.wxml-->
+<view class="change-phone">
+  <view>更换手机后，下次登录可使用新手机号登录。</view>
+  <view>当前手机号：<text>{{phone}}</text></view>
+  <input type="number" placeholder='请输入手机号码' maxlength='11' bindinput='getInputPhone'/>
+</view>
+<view class="content" url='../phoneCode/phoneCode'>
+  <button class='next {{btnClass}}' bindtap="nextGetCode" data-can="{{can}}">下一步</button>
+</view>

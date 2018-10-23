@@ -1,0 +1,23 @@
+<!--pages/mine/setting/setting.wxml-->
+<view class="content">
+  <view class="set-li">
+    <view>头像</view>
+    <image class='header' src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="set-li">
+    <view>昵称</view>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <navigator class="set-li" url='changePhone/changePhone?phone={{userInfo.phone}}'>
+    <view>手机号</view>
+    <image src='/res/icons/right.png'></image>
+    <text>{{userInfo.phone}}</text>
+  </navigator>
+  <navigator class="set-li no-border">
+    <view>地址</view>
+    <image src='/res/icons/right.png'></image>
+    <text wx:if="{{userInfo.address}}">{{userInfo.address}}</text>
+    <text wx:else>未填写</text>
+  </navigator>
+</view>
+

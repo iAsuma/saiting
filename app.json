@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/mine/acountMes/acountMes",
     "pages/index/index",
+    
     "pages/index/share/share",
     "pages/index/sharePlaceDetail/sharePlaceDetail",
     "pages/index/licence/licence",
@@ -24,14 +24,14 @@
 
     "pages/mine/mine",
     "pages/mine/login/login",
-    "pages/mine/loginWx/loginWx",
+    "pages/mine/loginPhone/loginPhone",
     "pages/mine/myCar/myCar",
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",
     "pages/mine/setting/setting",
-    "pages/mine/acountMes/phoneCode/phoneCode",
-    "pages/mine/acountMes/changePhone/changePhone",
-    
+    "pages/mine/accountSet/accountSet",
+    "pages/mine/accountSet/changePhone/changePhone",
+    "pages/mine/accountSet/phoneCode/phoneCode",
 
     "pages/keyboard/keyboard"
   ],

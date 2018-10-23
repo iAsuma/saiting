@@ -4,11 +4,16 @@
   float:left;
   width:100%;
   border:0;
-  background:red;
   color:#fff;
   height:80rpx;
   line-height:80rpx;
   font-size: 30rpx;
+}
+.can-get{
+  background:red;
+}
+.no-can-get{
+  background:#DEDEDE;
 }
 .content{
   padding:20rpx;
