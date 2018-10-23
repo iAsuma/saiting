@@ -9,8 +9,8 @@ Page({
   data: {
     latitude:'',
     longitude:'',
-    markers:[]
-
+    markers:[],
+    nears:[]
   },
 
   /**
@@ -18,51 +18,86 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
-    wx.getLocation({
-      type: 'gcj02',
+    var location = wx.getStorageSync('now_where');
+    if(location){
+      _this.setData({
+        latitude: location.lat,
+        longitude: location.lng
+      })
+      this._getAllPoints({ latitude: location.lat, longitude: location.lng})
+    }else{
+      wx.getLocation({
+        type: 'gcj02',
+        success: function (res) {
+          var latitude = res.latitude
+          var longitude = res.longitude
+          _this.setData({
+            latitude: latitude,
+            longitude: longitude
+          })
+          this._getAllPoints({ latitude: latitude, longitude: longitude })
+        }
+      })
+    }
+  },
+  onReady:function(){
+    var _this = this
+    console.log(this.data.latitude)
+    wx.request({
+      data: {
+        lng: _this.data.latitude,
+        lat: _this.data.longitude,
+        page: 1,
+        distance: 10
+      },
+      method: 'POST',
+      header: {
+        'sessionid': app.globalData.sessionID
+      },
+      url: listUrl,
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        _this.setData({
-          latitude: latitude,
-          longitude: longitude
-        })
-
-        wx.request({
-          data: {
-            lng: latitude,
-            lat: longitude,
-            page: 0,
-            distance: 10
-          },
-          method: 'POST',
-          header: {
-            'sessionid': app.globalData.sessionID
-          },
-          url: listUrl,
-          success: function (res) {
-            console.log(res)
-            if (res.statusCode == 200 && res.data.code == '100' && res.data.result.totalPages > 0) {
-              var marker = []
-              let points = res.data.result.rows
-              for (var i = 0; i < points.length;i++){
-                marker[i] = {
-                  id: i,
-                  latitude: points[i].latitude,
-                  longitude: points[i].longitude,
-                  iconPath: '/res/icons/positioning.png',
-                  width: 32,
-                  height: 32
-                }
-              }
-
-              _this.setData({
-                markers: marker
-              })
+        if (res.statusCode == 200 && res.data.code == '100' && res.data.result.totalPages > 0) {
+          
+          
+        }
+      }
+    });
+  },
+  _getAllPoints:function(location){
+    console.log(location)
+    wx.request({
+      data: {
+        lng: location.latitude,
+        lat: location.longitude,
+        page: 0,
+        distance: 10
+      },
+      method: 'POST',
+      header: {
+        'sessionid': app.globalData.sessionID
+      },
+      url: listUrl,
+      success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200 && res.data.code == '100' && res.data.result.totalPages > 0) {
+          var marker = []
+          let points = res.data.result.rows
+          for (var i = 0; i < points.length; i++) {
+            marker[i] = {
+              id: i,
+              latitude: points[i].latitude,
+              longitude: points[i].longitude,
+              iconPath: '/res/icons/positioning.png',
+              width: 32,
+              height: 32
             }
           }
-        });
+
+          _this.setData({
+            markers: marker
+          })
+        }
       }
-    })
+    });
   }
 })

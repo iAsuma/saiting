@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mine/acountMes/acountMes",
     "pages/index/index",
     "pages/index/share/share",
     "pages/index/sharePlaceDetail/sharePlaceDetail",
@@ -8,6 +9,7 @@
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/sharePlaceList/sharePlaceList",
     "pages/index/map/map",
+    
     "pages/index/search/search",
     "pages/index/carMesSure/carMesSure",
     
@@ -29,7 +31,7 @@
     "pages/mine/setting/setting",
     "pages/mine/acountMes/phoneCode/phoneCode",
     "pages/mine/acountMes/changePhone/changePhone",
-    "pages/mine/acountMes/acountMes",
+    
 
     "pages/keyboard/keyboard"
   ],
