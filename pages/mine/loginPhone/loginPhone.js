@@ -90,7 +90,7 @@ Page({
   _getValidCodeFromApi:function(){
     var _this = this
     wx.request({
-      data: { phone: _this.data.inputPhone, msg:'【赛停(小程序)】'},
+      data: { phone: _this.data.inputPhone, msg:'赛停（小程序)注册/登录'},
       method: 'POST',
       header: {
         'token': app.globalData.apiToken
