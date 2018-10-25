@@ -1,4 +1,4 @@
-<view class="ceontent">
+<view class="content">
   <view class="car-list">
     <navigator class="item" url="../carListDetail/carListDetail">
       <image src='/res/images/img.png'></image>

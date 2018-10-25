@@ -113,6 +113,8 @@ Page({
     });
   },
   loginByPhone:function(e){
+    var page = getCurrentPages();
+    console.log(page)
     if (e.detail.value.phone == ''){
       tips('请输入手机号');
       return false;
@@ -146,11 +148,12 @@ Page({
                     wx.setStorageSync('sessionId', res.data.result)
                     wx.setStorageSync('userPhone', res.data.phone)
                     wx.removeStorageSync('vcode')//移除缓存中的验证码
-                    if (from_page == 1) {
-                      var pages = getCurrentPages();
-                      var prePage = pages[pages.length - 2]
+                    
+                    var prePage = getCurrentPages()[0];
+                    if (typeof prePage._changeData == 'function') {
                       prePage._changeData({ islogined: true })
                     }
+                    
                     wx.navigateBack()
                   } else if (res.data.code == '0107'){
                     tips('验证码错误，请重新获取')

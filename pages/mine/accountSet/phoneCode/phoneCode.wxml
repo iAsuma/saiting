@@ -11,6 +11,6 @@
   </view>
 </view>
 <view class="content">
-  <button class='{{doneClass}}' bindtap="doneBtn" data-can="candone" >完成</button>
+  <button class='{{doneClass}}' bindtap="doneBtn" data-can="{{candone}}" >完成</button>
   <!-- <button class='btn-red'>完成</button> -->
 </view>

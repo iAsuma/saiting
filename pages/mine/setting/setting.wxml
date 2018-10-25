@@ -4,15 +4,15 @@
     <view>账号信息</view>
     <image src='/res/icons/right.png'></image>
   </navigator>
-  <navigator class="set-li">
+  <navigator class="set-li" url='../userCarNum/userCarNum'>
     <view>车牌信息</view>
     <image src='/res/icons/right.png'></image>
   </navigator>
-  <navigator class="set-li">
+  <navigator class="set-li" url='../myCarPlace/myCarPlace'>
     <view>车位信息</view>
     <image src='/res/icons/right.png'></image>
   </navigator>
-  <navigator class="set-li no-border">
+  <navigator class="set-li no-border" url='../creditScoreRule/creditScoreRule'>
     <view>诚信信息</view>
     <image src='/res/icons/right.png'></image>
   </navigator>

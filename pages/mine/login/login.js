@@ -29,6 +29,8 @@ Page({
     
   },
   getPhoneNumber: function(e){
+    var pages = getCurrentPages();
+    console.log(pages)
     if (e.detail.errMsg == 'getPhoneNumber:ok'){
       wx.getStorage({
         key: 'userAllData',
@@ -49,11 +51,12 @@ Page({
                     app.globalData.sessionID = res.data.result
                     wx.setStorageSync('sessionId', res.data.result)
                     wx.setStorageSync('userPhone', res.data.phone)
-                    if (from_page == 1) {
-                      var pages = getCurrentPages();
-                      var prePage = pages[pages.length - 2]
+                    
+                    var prePage = getCurrentPages()[0];
+                    if (typeof prePage._changeData == 'function'){
                       prePage._changeData({ islogined: true })
                     }
+                    
                     wx.navigateBack()
                   }else{
                     tips('登录失败')
@@ -82,11 +85,12 @@ Page({
                           app.globalData.sessionID = res.data.result
                           wx.setStorageSync('sessionId', res.data.result)
                           wx.setStorageSync('userPhone', res.data.phone)
-                          if (from_page == 1) {
-                            var pages = getCurrentPages();
-                            var prePage = pages[pages.length - 2]
+
+                          var prePage = getCurrentPages()[0];
+                          if (typeof prePage._changeData == 'function') {
                             prePage._changeData({ islogined: true })
                           }
+
                           wx.navigateBack()
                         }else{
                           tips('登录失败')

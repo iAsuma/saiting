@@ -1,6 +1,5 @@
 {
   "pages": [
-  
     "pages/index/index",
     
     "pages/index/share/share",
@@ -20,24 +19,29 @@
     "pages/index/pay/payGd/payGd",
     "pages/index/pay/payLs/payLs",
     "pages/index/pay/pay",
+    "pages/index/pay/choose/choose",
     "pages/index/choose/choose",
+    
     "pages/index/carNumber/carNumber",
 
     "pages/mine/mine",
     "pages/mine/login/login",
     "pages/mine/loginPhone/loginPhone",
-    "pages/mine/myCar/myCar",
+    
       "pages/mine/addForm/addForm",
       "pages/mine/carListDetail/carListDetail",
-      "pages/mine/chooseCarNum/chooseCarNum",
       "pages/mine/order/order",
-    "pages/mine/creditScore/creditScore",
-    "pages/mine/adr/adr",
+    
+    
     "pages/mine/setting/setting",
     "pages/mine/accountSet/accountSet",
     "pages/mine/accountSet/changePhone/changePhone",
     "pages/mine/accountSet/phoneCode/phoneCode",
-
+    "pages/mine/accountSet/address/address",
+    "pages/mine/userCarNum/userCarNum",
+    "pages/mine/myCarPlace/myCarPlace",
+    "pages/mine/creditScoreRule/creditScoreRule",
+    
     "pages/keyboard/keyboard"
   ],
   "window": {

@@ -25,26 +25,13 @@
         <text>停车优惠券，限时领取</text>
       </view>
       <view class="li">
+        <navigator url="pay/pay">
         <image src='/res/images/icon-index3.png'></image>
         <view class="name">车位缴费</view>
+        </navigator>
         <image class="icon-right" src='/res/icons/right.png'></image>
         <text>xxx车位即将到期</text>
       </view>
     </view>
-  </view>
-
-   <view class="home-list">
-    <navigator class="list-3" url="carMesSure/carMesSure">
-      <view>
-        <image class="list-3-img"  src="/res/icons/icon-qb.png"></image>
-      </view>
-      <label>车位缴费</label>
-    </navigator>
-    <navigator class="list-3" url="carListDetailPay/carListDetailPay">
-      <view>
-        <image class="list-3-img " src="/res/icons/icon-tc.png"></image>
-      </view>
-      <label>详情页</label>
-    </navigator>
   </view>
 </view>

@@ -1,6 +1,7 @@
 // pages/mine/acountMes/poneCode/poneCode.js
 const app = getApp()
 const codeUrl = app.globalData.apiPre + '/mini/user/getValidCode';
+const changePhoneUrl = app.globalData.apiPre + '/mini/user/change/phone';
 var isCountdown = 0;
 Page({
 
@@ -13,6 +14,7 @@ Page({
     timing:false,
     currentTime:60,
     clickStr:'获取验证码',
+    candone:0,
     doneClass:'btn-gray'
   },
 
@@ -37,16 +39,19 @@ Page({
     if (e.detail.value.length != 0) {
       this.setData({
         inputCode: e.detail.value,
-        doneClass: 'btn-red'
+        doneClass: 'btn-red',
+        candone:1
       })
     } else {
       this.setData({
-        doneClass: 'btn-gray'
+        inputCode: '',
+        doneClass: 'btn-gray',
+        candone: 0
       })
     }
   },
   getValidCode: function (e) {
-    if (e.currentTarget.dataset.canget != 1) {
+    if (e.currentTarget.dataset.can != 1) {
       return false;
     }
 
@@ -100,13 +105,58 @@ Page({
         }
       }
     });
+  },
+  doneBtn:function(e){
+    if(e.currentTarget.dataset.can != 1){
+      return false;
+    }
+    
+    var _this = this
+    var vcode = wx.getStorageSync('vcode')
+    if (vcode != _this.data.inputCode) {
+      tips('验证码不正确');
+      return false;
+    }
+    
+    wx.request({
+      data: { oldPhone: _this.data.phone, newPhone: _this.data.phone, validCode: vcode},
+      method: 'POST',
+      header: {
+        'sessionid': app.globalData.sessionID
+      },
+      url: changePhoneUrl,
+      success: function (res) {
+        if (res.statusCode == 200 && res.data.code == 100) {
+          app.globalData.userPhone = res.data.result
+          wx.setStorageSync('userPhone', res.data.phone)
+          wx.removeStorageSync('vcode')//移除缓存中的验证码
+
+          var prePage = getCurrentPages()[0];
+          if (typeof prePage._changeData == 'function') {
+            prePage._changeData({ islogined: true })
+          }
+          
+          tips('修改成功',function(){
+            wx.switchTab({
+              url: '../../../mine/mine',
+            })
+          })
+        } else {
+          tips('修改失败')
+          return false;
+        }
+      }
+    });
   }
 })
 
-function tips(msg) {
+function tips(msg, cb) {
   wx.showToast({
     title: msg,
     icon: 'none',
-    duration: 2000
+    duration: 2000,
+    success:function(){
+      if(typeof cb == 'function') cb();
+    }
   })
 }

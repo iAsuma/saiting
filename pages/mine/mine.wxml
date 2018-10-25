@@ -12,16 +12,6 @@
     </block>
   </view>
   <view class="list">
-    <navigator class="item" url='../mine/myCar/myCar'>
-      <image src='/res/icons/c-1.png'></image>
-      <text>我的车位</text>
-      <view class="point"></view>
-    </navigator>
-    <navigator class="item" url='../mine/creditScore/creditScore'>
-      <image src='/res/icons/c-1.png'></image>
-      <text>个人信息</text>
-      <view class="point"></view>
-    </navigator>
     <navigator class="item" url=''>
       <image src='/res/icons/c-1.png'></image>
       <text>我的订单</text>

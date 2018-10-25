@@ -5,7 +5,7 @@ Page({
   data: {
     imgUrls: [
       '/res/images/banner.png',
-      '/res/images/banner1.jpg'
+      '/res/images/head.png'
     ],
     indicatorDots: false,
     autoplay: false,

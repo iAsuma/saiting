@@ -8,12 +8,13 @@
     <view>昵称</view>
     <text>{{userInfo.nickName}}</text>
   </view>
+  <!-- 如要可以修改手机号，将view改为navigator -->
   <navigator class="set-li" url='changePhone/changePhone?phone={{userInfo.phone}}'>
     <view>手机号</view>
     <image src='/res/icons/right.png'></image>
     <text>{{userInfo.phone}}</text>
   </navigator>
-  <navigator class="set-li no-border">
+  <navigator class="set-li no-border" url='address/address'>
     <view>地址</view>
     <image src='/res/icons/right.png'></image>
     <text wx:if="{{userInfo.address}}">{{userInfo.address}}</text>

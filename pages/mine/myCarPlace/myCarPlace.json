@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "我的车位",
   "usingComponents": {
     "reserve": "../myCar-child/share/share",
     "release": "../myCar-child/car/car"
