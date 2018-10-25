@@ -1,0 +1,17 @@
+<!--page/component/pages/public/public.wxml-->
+<page>
+ <view class="form">
+    <view class="item">
+      <text>车牌号</text>
+      <input class="priceIpt" value='xxx' disabled='true'></input>
+    </view>
+    <view class="item">
+      <text>车牌号</text>
+      <input class="priceIpt" value='xxx' disabled='true'></input>
+    </view>
+    <view class="clear"></view>
+    <view class="btn-box">
+      <navigator class="btn-red" url='../../index/carNumber/carNumber'>添加车牌</navigator>
+    </view>
+</view>
+</page>

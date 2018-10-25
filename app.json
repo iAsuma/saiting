@@ -1,5 +1,6 @@
 {
   "pages": [
+  
     "pages/index/index",
     
     "pages/index/share/share",
@@ -26,6 +27,10 @@
     "pages/mine/login/login",
     "pages/mine/loginPhone/loginPhone",
     "pages/mine/myCar/myCar",
+      "pages/mine/addForm/addForm",
+      "pages/mine/carListDetail/carListDetail",
+      "pages/mine/chooseCarNum/chooseCarNum",
+      "pages/mine/order/order",
     "pages/mine/creditScore/creditScore",
     "pages/mine/adr/adr",
     "pages/mine/setting/setting",

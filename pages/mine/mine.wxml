@@ -12,17 +12,27 @@
     </block>
   </view>
   <view class="list">
-    <view class="item">
+    <navigator class="item" url='../mine/myCar/myCar'>
+      <image src='/res/icons/c-1.png'></image>
+      <text>我的车位</text>
+      <view class="point"></view>
+    </navigator>
+    <navigator class="item" url='../mine/creditScore/creditScore'>
+      <image src='/res/icons/c-1.png'></image>
+      <text>个人信息</text>
+      <view class="point"></view>
+    </navigator>
+    <navigator class="item" url=''>
       <image src='/res/icons/c-1.png'></image>
       <text>我的订单</text>
       <view class="point"></view>
-    </view>
+    </navigator>
     <view class="item">
       <image src='/res/icons/c-2.png'></image>
       <text>出行记录</text>
       <view class="point"></view>
     </view>
-    <view class="item">
+    <!-- <view class="item">
       <image src='/res/icons/c-3.png'></image>
       <text>停车券/红包</text>
       <view class="point"></view>
@@ -31,7 +41,7 @@
       <image src='/res/icons/c-4.png'></image>
       <text>申请发票</text>
       <view class="point"></view>
-    </view>
+    </view> -->
     <navigator class="item" url='../mine/setting/setting'>
       <image src='/res/icons/c-5.png'></image>
       <text>账号设置</text>

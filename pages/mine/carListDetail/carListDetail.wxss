@@ -1,0 +1,237 @@
+/* pages/index/carListDetail/carListDetail.wxss */
+swiper{
+  height:400rpx;
+}
+.slide-image{
+  width:100%;
+  height:100%;
+}
+.box{
+  background:#fff;
+}
+.h1{
+  font-size: 32rpx;
+  font-family: simHei;
+}
+.h4{
+  font-size: 24rpx;
+  color:#999;
+  margin-bottom: 10rpx;
+}
+.nowrap{
+  display: inline-block;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box{
+  background:#fff;
+  padding:30rpx;
+  float:left;
+  border-bottom: 1rpx solid #eee; 
+}
+.price image{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  margin-top:10rpx;
+}
+.price{
+  color:#E8373A;
+  font-size: 32rpx;
+}
+.star{
+  width:50%;
+  float:left;
+  font-size: 26rpx;
+  color:#ff9900;
+}
+.star image{
+  width:150rpx;
+  height:25rpx;
+  float:left;
+  margin-top:10rpx;
+  margin-right: 20rpx;
+}
+.count{
+  width:100%;
+  float:left;
+  font-size: 26rpx;
+  color:#999;
+}
+.box-left{
+  width:calc(100% - 150rpx);
+  float:left;
+}
+.box-right{
+  width:150rpx;
+  float:right;
+}
+.adr{
+  background:#fff;
+  float:left;
+  width:100%;
+  padding:30rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.adr image{
+  width:30rpx;
+  height:30rpx;
+  float:left;
+  margin-top: 10rpx;
+  margin-right:10rpx;
+}
+.adr .nowrap{
+  width:calc(100% - 80rpx);
+  float:left;
+  font-size: 28rpx;
+  color:#999;
+}
+.time-detail{
+  width:100%;
+  padding:15rpx 0;
+  background:#fff;
+  float:left;
+}
+.reserve-middle{
+  width:100%;
+  border-bottom: 1rpx solid #eee;
+  float:left;
+}
+.list5{
+  width:20%;
+  float:left;
+  text-align: center;
+  position: relative;
+}
+.list5 image{
+  width:60%;
+  height:30rpx;
+  display: block;
+  margin:0 auto;
+}
+.list5 text{
+  font-size: 24rpx;
+  color:#999;
+}
+.list5 view{
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+.list5 .tt{
+  color:#E9383B;
+  margin-top:20rpx;
+  display: block;
+}
+.red{
+  color:#E83539;
+  font-size: 28rpx;
+  display: block;
+  padding:20rpx 20rpx 0 20rpx;
+  float:left;
+}
+.gray{
+  color:#999;
+  font-size: 28rpx;
+  display: block; 
+  padding:20rpx 20rpx 0 20rpx;
+  float:left;
+}
+
+.item{
+  background:#fff;
+  padding:30rpx;
+  margin-top:20rpx;
+  float:left;
+  width:100%;
+  box-sizing: border-box;
+}
+.item>text{
+  font-family: SimHei;
+  font-size: 32rpx;
+  margin-bottom:20rpx;
+  display: block;
+}
+.contact image{
+  border-radius: 50%;
+  width:120rpx;
+  height:120rpx;
+  float:left;
+}
+.car-mes{
+  float:left;
+  margin-left:30rpx;
+}
+.contact .h2{
+  font-family: SimHei;
+  
+}
+.contact .h3{
+  color:#999;
+}
+
+.btn-red-mini{
+  border:0;
+  color:#fff;
+  background:#E83539;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  float:right;
+}
+.btn-red-mini image{
+  width:50rpx;
+  height:50rpx;
+  float:left;
+  margin:15rpx;
+}
+.btn-fx{
+  border:1rpx solid #eee;
+  color:#333;
+  background:#fff;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+}
+.btn-cz{
+  border:0;
+  color:#fff;
+  background:#FF2F34;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+  float: left;
+  width:48%;
+}
+.btn-gx{
+  border:0;
+  color:#fff;
+  background:#FE7E16;
+  font-size: 30rpx;
+  line-height:80rpx;
+  height:80rpx;
+  margin-top:40rpx;
+    float: right;
+  width:48%;
+}
+.btn-box{
+  padding:30rpx;
+  box-sizing: border-box;
+}
+.text-list text{
+  font-size: 26rpx;
+  color:#666;
+  display: block;
+}
+.pro-list text{
+  display: inline-block;
+  padding:0 20rpx;
+  margin-right:20rpx;
+  font-size: 28rpx;
+  background:#EBEEF7;
+  border-radius: 30rpx;
+}

@@ -125,6 +125,6 @@
     </navigator>
   </view>
 <view class="button-box">
-    <navigator class="add-btn">添加车位</navigator>
+    <navigator class="add-btn">添加共享</navigator>
   </view>
 </view>

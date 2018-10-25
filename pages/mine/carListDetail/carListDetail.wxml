@@ -1,0 +1,79 @@
+<!--pages/index/carListDetail/carListDetail.wxml-->
+<view class="content">  
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="box">
+    <view class="box-left">
+      <text class="h1 nowrap">从VB保存手动斯蒂芬五二二氧化硅</text>
+      <view class='star'>
+        <image src='/res/icons/star4.png'></image>
+        <text>4.6</text>
+        <text>分</text>
+      </view>
+    </view>
+    <view class="box-right">
+      <view class="price">
+        <image src="/res/icons/icon-yen.png"></image>
+        <text>15</text>
+        <text>/时</text>
+      </view>
+      <view class="count">
+        <text>共享</text>
+        <text>125</text>
+        <text>次</text>
+      </view>
+    </view>
+  </view>
+  <view class="adr">
+    <navigator>
+      <image src='/res/icons/icon-dw-black.png'></image>
+      <text class="nowrap">看见了看见了看见了家里空间里打开手机付款链接回复时刻发挥空间和大家看法</text>
+      <image src='/res/icons/right.png'></image>
+    </navigator>
+  </view>
+  <view class="time-detail">
+    <view class="reserve-middle">
+      <view class="list5">
+        <text>开始时间</text>
+        <view>06-26</view>
+      </view>
+      <view class="list5">
+        <text>周六</text>
+        <view>10：00</view>
+      </view>
+      <view class="list5">
+        <text class="tt">10H</text>
+        <image  src="/res/icons/toggle.png"></image>
+      </view>
+      <view class="list5">
+        <text>结束时间</text>
+        <view>06-26</view>
+      </view>
+      <view class="list5">
+        <text>周六</text>
+        <view>20：00</view>
+      </view>
+    </view>
+    <text class="red">当前时间可预约</text>
+    <!-- <text class="gray">当前时间不可预约</text> -->
+  </view>
+   <view class="item">
+    <text>评价</text>
+    <view class='pro-list'>
+      <text>宽宽宽</text>
+      <text>赞赞赞</text>
+      <text>大大大</text>
+    </view>
+  </view>
+  <view class="btn-box">
+    <button class='btn-cz'>充值</button>
+    <button class='btn-gx'>共享</button>
+    <button class='btn-fx'>分享给好友</button>
+  </view>
+</view>
