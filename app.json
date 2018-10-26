@@ -1,28 +1,27 @@
 {
   "pages": [
+    
     "pages/index/index",
-    
     "pages/index/share/share",
-    "pages/index/sharePlaceDetail/sharePlaceDetail",
-    
-    "pages/index/placeShareRule/placeShareRule",
-    "pages/index/carListDetailPay/carListDetailPay",
-    "pages/index/sharePlaceList/sharePlaceList",
     "pages/index/map/map",
-    
     "pages/index/search/search",
-    "pages/index/carMesSure/carMesSure",
+    "pages/index/sharePlaceList/sharePlaceList",
+    "pages/index/placeShareRule/placeShareRule",
+    "pages/index/sharePlaceDetail/sharePlaceDetail",
+    "pages/index/chooseMyCarPlace/chooseMyCarPlace",
+      
+      "pages/index/carListDetailPay/carListDetailPay",
+      "pages/index/carMesSure/carMesSure",
     
-    "pages/index/pay/insertMoney1/insertMoney1",
-    "pages/index/pay/insertMoney/insertMoney",
-    "pages/index/pay/payGd1/payGd1",
-    "pages/index/pay/payGd/payGd",
-    "pages/index/pay/payLs/payLs",
-    "pages/index/pay/pay",
-    "pages/index/pay/choose/choose",
-    "pages/index/choose/choose",
+    "pages/index/payment/payment",
+    "pages/index/payment/tempParkingPay/tempParkingPay",
+    "pages/index/payment/fixedParkingPay/fixedParkingPay",
+    "pages/index/payment/rechargePay/rechargePay",
+    "pages/index/payment/chooseCarNum/chooseCarNum",
     
-    "pages/index/carNumber/carNumber",
+      "pages/index/payment/insertMoney1/insertMoney1",
+      "pages/index/payment/payGd1/payGd1",
+      "pages/index/carNumber/carNumber",
 
     "pages/mine/mine",
     "pages/mine/login/login",
@@ -30,8 +29,7 @@
     
       "pages/mine/addForm/addForm",
       "pages/mine/carListDetail/carListDetail",
-      "pages/mine/order/order",
-    
+      "pages/mine/order/order",   
     
     "pages/mine/setting/setting",
     "pages/mine/accountSet/accountSet",

@@ -46,6 +46,11 @@ Page({
       return false;
     }
 
+    if(this.data.inputPhone == this.data.phone){
+      tips('请输入新手机号');
+      return false;
+    }
+
     wx.navigateTo({
       url: '../phoneCode/phoneCode?phone='+this.data.inputPhone,
     })

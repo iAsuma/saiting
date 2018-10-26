@@ -29,7 +29,7 @@ Component({
   methods: {
     openChoose: function () {
       wx.navigateTo({
-        url: '../choose/choose',
+        url: '../chooseMyCarPlace/chooseMyCarPlace',
       })
     },
     bindPickerChange: function (e) {

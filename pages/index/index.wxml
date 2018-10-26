@@ -25,7 +25,7 @@
         <text>停车优惠券，限时领取</text>
       </view>
       <view class="li">
-        <navigator url="pay/pay">
+        <navigator url="payment/payment">
         <image src='/res/images/icon-index3.png'></image>
         <view class="name">车位缴费</view>
         </navigator>

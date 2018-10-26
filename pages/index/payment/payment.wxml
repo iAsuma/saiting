@@ -1,14 +1,14 @@
 
 <view class="content">
-  <navigator class="set-li" url='../acountMes/acountMes'>
+  <navigator class="set-li" url='../payment/tempParkingPay/tempParkingPay'>
     <view>临时停车缴费</view>
     <image src='/res/icons/right.png'></image>
   </navigator>
-  <navigator class="set-li">
+  <navigator class="set-li" url='../payment/fixedParkingPay/fixedParkingPay'>
     <view>固定缴费</view>
     <image src='/res/icons/right.png'></image>
   </navigator>
-  <navigator class="set-li">
+  <navigator class="set-li" url='../payment/rechargePay/rechargePay'>
     <view>充值缴费</view>
     <image src='/res/icons/right.png'></image>
   </navigator>

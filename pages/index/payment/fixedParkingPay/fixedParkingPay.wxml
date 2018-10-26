@@ -1,6 +1,6 @@
 <!--pages/index/pay/payGd/payGd.wxml-->
 <view class="content">
-  <navigator class="set-li no-borde">
+  <navigator class="set-li no-borde" url='../chooseCarNum/chooseCarNum'>
     <view>车牌号</view>
     <text>苏A 66666</text>
   </navigator>
@@ -12,16 +12,11 @@
   </navigator>
   <navigator class="set-li">
     <view>车位号</view>
-    <text>a-15</text>
+    <text>2018/06/06</text>
   </navigator>
    <navigator class="set-li">
     <view>有效期至</view>
     <text>2019/08/08</text>
-  </navigator>
-   <navigator class="set-li">
-    <view>账户余额</view>
-    <image src='/res/icons/icon-yen.png'></image>
-    <text class="red">500</text>
   </navigator>
    <navigator class="set-li">
     <view>其它车牌</view>
@@ -29,25 +24,26 @@
     <text>苏A 66666</text>
   </navigator>
 </view>
-<view class="tishi">多个车牌需支付信息服务费1元/月</view>
+<view class="tishi">多个车牌需支付x信息服务费1元/月</view>
 <view class="content">
    <navigator class="set-li">
       <view>费用</view>
-      <input type='number' placeholder='请输入充值金额'/>
+      <view class="price-control">
+        <view class="minus">-</view>
+        <input value="12"/>
+        <view>+</view>
+      </view>
+      <image src='/res/icons/icon-yen.png'></image>
+      <text class="red">50</text>
   </navigator>
   <navigator class="set-li set-li-icon">
     <view>优惠券</view>
     <image src='/res/icons/right.png'></image>
     <text>无优惠券可用</text>
   </navigator>
-  <navigator class="set-li set-li-switch">
-    <view>免密支付</view>
-    <text>开通后下次自动扣款，可取消</text>
-    <switch bindchange="switch2Change"/>
-  </navigator>
 </view>
 <view class="content1">
-  <button class="exit-btn">立即充值</button>
+  <button class="exit-btn">立即支付</button>
 </view>
 
 
