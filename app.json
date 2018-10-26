@@ -4,7 +4,7 @@
     
     "pages/index/share/share",
     "pages/index/sharePlaceDetail/sharePlaceDetail",
-    "pages/index/licence/licence",
+    
     "pages/index/placeShareRule/placeShareRule",
     "pages/index/carListDetailPay/carListDetailPay",
     "pages/index/sharePlaceList/sharePlaceList",
@@ -41,6 +41,7 @@
     "pages/mine/userCarNum/userCarNum",
     "pages/mine/myCarPlace/myCarPlace",
     "pages/mine/creditScoreRule/creditScoreRule",
+    "pages/mine/licence/licence",
     
     "pages/keyboard/keyboard"
   ],

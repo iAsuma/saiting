@@ -1,66 +1,50 @@
-// pages/mine/chooseCarNum/chooseCarNum.js
+const app = getApp()
+const platesUrl = app.globalData.apiPre + '/mini/user/detail'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    numslist:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (app.globalData.sessionID == '') {
+      wx.redirectTo({
+        url: '../../mine/login/login',
+      })
+      return false;
+    }
+    
+    this._getPlates()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  addPlate:function(){
+    wx.navigateTo({
+      url: '../licence/licence',
+    })
   },
+  _getPlates:function(){
+    var _this = this
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    wx.request({
+      data: {},
+      method: 'POST',
+      header: {
+        'sessionid': app.globalData.sessionID
+      },
+      url: platesUrl,
+      success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200 && res.data.code == 100) {
+          _this.setData({
+            numslist: res.data.result
+          })
+        }
+      }
+    });
   }
 })

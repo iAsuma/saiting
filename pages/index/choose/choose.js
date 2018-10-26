@@ -57,8 +57,6 @@ Page({
     wx.navigateBack()
   },
   addPlace:function(e){
-    wx.navigateTo({
-      url: '../licence/licence',
-    })
+    wx.navigateBack()
   }
 })

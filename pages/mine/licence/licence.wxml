@@ -53,6 +53,6 @@
       </block>
     </view>
   </view>
-  <button class="btn-red" form-type="submit">下一步</button>
+  <button class="btn-red" form-type="submit">完成</button>
 </form>
 </view>

@@ -1,17 +1,12 @@
-<!--page/component/pages/public/public.wxml-->
 <page>
  <view class="form">
-    <view class="item">
+    <view class="item" wx:key="{{numslist}}">
       <text>车牌号</text>
-      <input class="priceIpt" value='xxx' disabled='true'></input>
-    </view>
-    <view class="item">
-      <text>车牌号</text>
-      <input class="priceIpt" value='xxx' disabled='true'></input>
+      <input class="priceIpt" value='{{item.licensePlate}}' disabled='true'></input>
     </view>
     <view class="clear"></view>
     <view class="btn-box">
-      <navigator class="btn-red" url='../../index/carNumber/carNumber'>添加车牌</navigator>
+      <button class="btn-red" bindtap='addPlate'>添加车牌</button>
     </view>
 </view>
 </page>

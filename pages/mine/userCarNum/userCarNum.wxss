@@ -1,7 +1,3 @@
-/* pages/mine/chooseCarNum/chooseCarNum.wxss */
-/* pages/mine/addForm/addForm.wxss */
-/* page/component/pages/public/public.wxss */
-
 .form{
   padding-top:0;
   border-top:20rpx solid #f8f8f8;

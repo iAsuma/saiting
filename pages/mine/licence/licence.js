@@ -208,10 +208,11 @@ Page({
     })
   },
   toNextSubmit:function(e){
-    console.log('form发生了submit事件，携带数据为：', e.detail)
-    wx.redirectTo({
-      url: '../choose/choose',
-    })
+    var pages = getCurrentPages();
+    var prePage = pages[pages.length-2]
+    prePage._getPlates()
+    
+    wx.navigateBack()
   }
 })
 
