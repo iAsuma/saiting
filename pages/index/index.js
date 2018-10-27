@@ -50,7 +50,7 @@ Page({
 
   bindscan:function(){
     wx.scanCode({
-      onlyFromCamera: true,
+      onlyFromCamera: false,
       success: (res) => {
         console.log(res)
       }

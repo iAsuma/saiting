@@ -13,16 +13,12 @@ map{
 }
 .input-box input{
   background: #E9ECF5;
-  color:#999;
   font-size: 28rpx;
   border-radius: 10rpx;
   padding: 0 20rpx;
   height:80rpx;
   line-height:80rpx;
   padding-left:80rpx;
-}
-.phcolor{
-  color:#BDBDBD;
 }
 .search-btn{
   width:80rpx;

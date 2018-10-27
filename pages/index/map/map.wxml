@@ -1,6 +1,6 @@
 <view class="content">
-  <navigator class="input-box" url="../search/search">
-    <input placeholder-class="phcolor" placeholder='搜索' disabled="false"></input>
+  <navigator class="input-box" hover-class="none" url="../search/search">
+    <input placeholder='搜索' disabled="true"></input>
     <view class="search-btn">
       <image src='/res/icons/search.png'></image>
     </view>
