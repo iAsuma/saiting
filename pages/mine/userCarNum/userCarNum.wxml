@@ -1,6 +1,6 @@
 <page>
  <view class="form">
-    <view class="item" wx:key="{{numslist}}">
+    <view class="item" wx:for="{{numslist}}">
       <text>车牌号</text>
       <input class="priceIpt" value='{{item.licensePlate}}' disabled='true'></input>
     </view>

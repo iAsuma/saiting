@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hasUserInfo:false,
     canIUse: wx.canIUse('button.open-type.openSetting')//openSetting基础库版本为2.0以上，满足了此版本已适合大部分需求
   },
   /**
@@ -21,16 +22,48 @@ Page({
    */
   onLoad: function (options) {
     from_page = options.from_page
+    var _this = this
+    var user = wx.getStorageSync('userAllData')
+    if (typeof user == 'undefined' || user == ""){
+      _this.setData({
+        hasUserInfo : false
+      })
+    }else{
+      _this.setData({
+        hasUserInfo: true
+      })
+    }
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  onGotUserInfo: function (e) {
+    if (e.detail.errMsg == 'getUserInfo:ok') {
+      wx.setStorageSync('userAllData', { userInfo: e.detail.userInfo, enStr: { encryptedData: e.detail.encryptedData, iv: e.detail.iv } })
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        layershow: true
+      })
+    } else {
+      wx.switchTab({
+        url: '../mine',
+      })
+    }
+  },
+  cancelAuthPhone:function(){
+    let jumpUrl = ''
+    if (from_page) {
+      jumpUrl = '../loginPhone/loginPhone?from_page=' + from_page
+    } else {
+      jumpUrl = '../loginPhone/loginPhone'
+    }
+    wx.redirectTo({
+      url: jumpUrl,
+    })
+  },
+  sureAuthPhone:function(){
+    this.setData({
+      layershow: false
+    })
   },
   getPhoneNumber: function(e){
-    var pages = getCurrentPages();
-    console.log(pages)
     if (e.detail.errMsg == 'getPhoneNumber:ok'){
       wx.getStorage({
         key: 'userAllData',

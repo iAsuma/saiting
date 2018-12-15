@@ -3,8 +3,14 @@
       <image src='/res/images/login.jpg'></image>
       <view class="mes">您当前还未登录，登录后可查看信息</view>
       <view class="res-submit">
-        <button wx:if="{{canIUse}}" type="primary" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>微信授权登录</button>
-        <button wx:else type="default">请升级微信或使用手机号登录</button>
+        <block wx:if="{{hasUserInfo}}">
+          <button wx:if="{{canIUse}}" type="primary" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>微信授权登录</button>
+          <button wx:else type="default">请升级微信或使用手机号登录</button>
+        </block>
+        <block wx:else>
+          <button type="primary" wx:if="{{canIUse}}" open-type="getUserInfo" lang="zh_CN"  bindgetuserinfo='onGotUserInfo'>微信授权登录</button>
+          <button wx:else type="default">请升级微信或使用手机号登录</button>
+        </block>
       </view>
       <navigator open-type='redirect' url='../loginPhone/loginPhone?from_page=1' class="title3">
         输入手机号码登录 >>
@@ -15,3 +21,12 @@
       </view>
   </view>
 </view>
+
+<block wx:if="{{layershow}}">
+<view class="layer"></view>
+<view class="layer-box">
+  <text>继续授权手机号</text>
+  <button class="right" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber' bindtap='sureAuthPhone'>确定</button>
+  <button class="left" bindtap='cancelAuthPhone'>取消</button>
+</view>
+</block>

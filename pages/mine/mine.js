@@ -41,9 +41,13 @@ Page({
     })
   },
   onGotUserInfo:function(e){
-    if (e.detail.errMsg == 'getUserInfo:ok'){
+    if (e.detail.errMsg == 'getUserInfo:ok'){      
       wx.setStorageSync('userAllData', { userInfo: e.detail.userInfo, enStr: { encryptedData: e.detail.encryptedData,iv:e.detail.iv}})
       app.globalData.userInfo = e.detail.userInfo
+      var next = getCurrentPages()[1]
+      next.setData({
+        hasUserInfo: true
+      })
     }else{
       wx.navigateBack()
     }

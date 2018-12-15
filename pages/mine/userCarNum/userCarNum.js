@@ -1,5 +1,5 @@
 const app = getApp()
-const platesUrl = app.globalData.apiPre + '/mini/user/detail'
+const platesUrl = app.globalData.apiPre + '/mini/car/detail'
 Page({
 
   /**
@@ -39,7 +39,7 @@ Page({
       url: platesUrl,
       success: function (res) {
         console.log(res)
-        if (res.statusCode == 200 && res.data.code == 100) {
+        if (res.statusCode == 200 && res.data.code == 100 ) {
           _this.setData({
             numslist: res.data.result
           })
