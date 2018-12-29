@@ -1,22 +1,39 @@
-# SAITING项目 GIT使用说明
+# SAITING项目说明
 
->	将原先github的ssh公钥复制到gitee中 并将拉取和推送代码命令中的主机`origin`改为`gitee`
+标签（空格分隔）： 非公开，内部项目请勿下载
 
-### 拉取远程代码并且合并到本地
-	git pull gitee master
+---
 
-### 初始化仓库 
-	git init
+内部开发使用git共享，需加入密钥
 
-### 将所有修改添加到暂存区
-	git add . 
+ **赛停小程序**
 
-### 将所有修改提交到本地仓库 
-	git commit -m '提交描述'
+> 进度说明：已暂停开发进度（缺少后端接口）
 
-### 将本地仓库代码推送到gitee的master分支 
-	git push gitee master 
-  
-  
-码云仓库地址：https://gitee.com/iAsuma/saiting  
-github仓库地址：https://github.com/iAsuma/saiting
+ - 静态页面已全部完成
+ - 部分未完成页面未更新至项目代码中
+
+
+----------
+
+
+## 目前缺少的接口 ##
+*基于甲方axure原型的基础上设计*
+
+ 1. 地图条件搜索相关接口
+ 2. 订单相关接口
+ 3. 缴费相关接口
+ 4. 扫码缴费相关接口
+ 5. 出行记录相关接口
+ 6. 账号设置中部分接口
+
+
+----------
+
+> 使用`git`下载后，在项目中删除本`README.md`文件，否则可能会在微信开发者工具中编译错误；若`github`仓库访问缓慢，可使用[码云地址][1]
+
+ 
+ 
+
+
+  [1]: https://gitee.com/iAsuma/saiting
