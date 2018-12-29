@@ -47,7 +47,6 @@ Page({
     })
     
   },
-
   bindscan:function(){
     wx.scanCode({
       onlyFromCamera: false,

@@ -58,7 +58,6 @@ Page({
       success: function (res) {
         if (res.statusCode == 200 && res.data.code == '100' && res.data.result.totalPages > 0) {
           
-          
         }
       }
     });

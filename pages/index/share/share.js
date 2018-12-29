@@ -10,7 +10,6 @@ Page({
     choosed: { fullname:'请选择车位'},
     wxApp: app.globalData
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
