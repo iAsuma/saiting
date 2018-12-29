@@ -2,6 +2,7 @@
 var words_len = 0
 var old_idx = 0
 var curr_value = { 'text': '苏'}
+
 Component({
   /**
    * 组件的属性列表
@@ -12,7 +13,6 @@ Component({
       value:'苏',
     }
   },
-
   /**
    * 组件的初始数据
    */
